@@ -45,11 +45,12 @@ class NakarteTrack extends BaseService {
 class NakarteUrlLoader {
     constructor() {
         this.loaders = {
-            nktk: this.loadFromTextEncodedTrack,
+            //nktk: this.loadFromTextEncodedTrack,
             nktl: this.loadFromTextEncodedTrackId,
-            nktu: this.loadFromUrlencodedUrls,
-            nktp: this.loadPoint,
-            nktj: this.loadFromJSON
+        //    nktl: this.load,
+        //    nktu: this.loadFromUrlencodedUrls,
+        //    nktp: this.loadPoint,
+        //    nktj: this.loadFromJSON
         };
     }
 
@@ -106,10 +107,10 @@ class NakarteUrl {
         return this._params.length > 0;
     }
 
-    async geoData() {
-        const promises = this._params.map(([paramName, value]) => new NakarteUrlLoader().geoData(paramName, value));
-        return flattenArray(await Promise.all(promises));
-    }
+//    async geoData() {
+//        const promises = this._params.map(([paramName, value]) => new NakarteUrlLoader().geoData(paramName, value));
+//        return flattenArray(await Promise.all(promises));
+//    }
 }
 
 export {NakarteTrack, NakarteUrl, NakarteUrlLoader};

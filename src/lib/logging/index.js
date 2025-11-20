@@ -33,25 +33,26 @@ function captureBreadcrumb(message, data = {}) {
 }
 
 function logEvent(eventName, extra) {
-    const url = 'https://nakarte.me/event';
+    console.write(eventName);
+//    const url = 'https://nakarte.me/event';
 
-    const data = {event: eventName.toString()};
-    data.data = {
-        ...extra,
-        beacon: true,
-        session: sessionId,
-        address: window.location.toString()
-    };
-    let s = JSON.stringify(data);
-    try {
-        navigator.sendBeacon(url, s);
-    } catch (e) {
-        data.data.beacon = false;
-        s = JSON.stringify(data);
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://nakarte.me/event');
-        xhr.send(s);
-    }
+//    const data = {event: eventName.toString()};
+//    data.data = {
+//        ...extra,
+//        beacon: true,
+//        session: sessionId,
+//        address: window.location.toString()
+//    };
+//    let s = JSON.stringify(data);
+//    try {
+//        navigator.sendBeacon(url, s);
+//    } catch (e) {
+//        data.data.beacon = false;
+//        s = JSON.stringify(data);
+//        const xhr = new XMLHttpRequest();
+//        xhr.open('POST', 'https://nakarte.me/event');
+//        xhr.send(s);
+//    }
 }
 
 export {captureMessage, captureException, captureBreadcrumb, logEvent, randId};

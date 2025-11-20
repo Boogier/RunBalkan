@@ -179,12 +179,14 @@ L.Control.TrackList = L.Control.extend({
                     <div class="button-minimize" data-bind="click: setMinimized"></div>
                 </div>
                 <div class="inputs-row" data-bind="visible: !readingFiles()">
-                    <a class="button add-track" title="New track" data-bind="click: onButtonNewTrackClicked"></a
-                    ><a class="button open-file" title="Open file" data-bind="click: loadFilesFromDisk"></a
-                    ><input type="text" class="input-url" placeholder="Track URL"
-                        data-bind="textInput: url, event: {keypress: onEnterPressedInInput, contextmenu: defaultEventHandle, mousemove: defaultEventHandle}"
-                    ><a class="button download-url" title="Download URL" data-bind="click: loadFilesFromUrl"></a
-                    ><a class="button menu-icon" data-bind="click: function(_,e){this.showMenu(e)}" title="Menu"></a>
+                    <!--
+                    <a class="button add-track" title="New track" data-bind="click: onButtonNewTrackClicked"></a>
+                    <a class="button open-file" title="Open file" data-bind="click: loadFilesFromDisk"></a>
+                    <input type="text" class="input-url" placeholder="Track URL"
+                        data-bind="textInput: url, event: {keypress: onEnterPressedInInput, contextmenu: defaultEventHandle, mousemove: defaultEventHandle}">
+                    <a class="button download-url" title="Download URL" data-bind="click: loadFilesFromUrl"></a>
+                    -->
+                    <a class="button menu-icon" data-bind="click: function(_,e){this.showMenu(e)}" title="Menu"></a>
                 </div>
                 <div style="text-align: center">
                     <div data-bind="
@@ -232,20 +234,24 @@ L.Control.TrackList = L.Control.extend({
             L.DomEvent.addListener(map.getContainer(), 'drop', this.onFileDragDrop, this);
             L.DomEvent.addListener(map.getContainer(), 'dragover', this.onFileDraging, this);
             this.menu = new Contextmenu([
-                    {text: 'Copy link for all tracks', callback: this.copyAllTracksToClipboard.bind(this)},
-                    {text: 'Copy link for visible tracks', callback: this.copyVisibleTracksToClipboard.bind(this)},
-                {
-                    text: 'Create new track from all visible tracks',
-                    callback: this.createNewTrackFromVisibleTracks.bind(this)
-                },
-                    () => ({
-                        text: 'Save all tracks to ZIP file',
-                        callback: this.saveAllTracksToZipFile.bind(this),
-                        disabled: !this.tracks().length
-                    }),
-                    '-',
-                    {text: 'Delete all tracks', callback: this.deleteAllTracks.bind(this)},
-                    {text: 'Delete hidden tracks', callback: this.deleteHiddenTracks.bind(this)}
+                //    {text: 'Copy link for all tracks', callback: this.copyAllTracksToClipboard.bind(this)},
+                //    {text: 'Copy link for visible tracks', callback: this.copyVisibleTracksToClipboard.bind(this)},
+                //{
+                //    text: 'Create new track from all visible tracks',
+                //    callback: this.createNewTrackFromVisibleTracks.bind(this)
+                //},
+                //() => ({
+                //    text: 'Load Balkan Tracks',
+                //    callback: this.loadBalkanTracks.bind(this),
+                //})
+                //() => ({
+                //    text: 'Save all tracks to ZIP file',
+                //    callback: this.saveAllTracksToZipFile.bind(this),
+                //    disabled: !this.tracks().length
+                //}),
+                //    '-',
+                //    {text: 'Delete all tracks', callback: this.deleteAllTracks.bind(this)},
+                //    {text: 'Delete hidden tracks', callback: this.deleteHiddenTracks.bind(this)}
                 ]
             );
             this._markerLayer = new L.Layer.CanvasMarkers(null, {
@@ -604,16 +610,16 @@ L.Control.TrackList = L.Control.extend({
                     return {text: `${track.name()}`, header: true};
                 },
                 '-',
-                {text: 'Rename', callback: this.renameTrack.bind(this, track)},
-                {text: 'Duplicate', callback: this.duplicateTrack.bind(this, track)},
-                {text: 'Reverse', callback: this.reverseTrack.bind(this, track)},
+                //{text: 'Rename', callback: this.renameTrack.bind(this, track)},
+                //{text: 'Duplicate', callback: this.duplicateTrack.bind(this, track)},
+                //{text: 'Reverse', callback: this.reverseTrack.bind(this, track)},
                 {text: 'Show elevation profile', callback: this.showElevationProfileForTrack.bind(this, track)},
-                '-',
-                {text: 'Delete', callback: this.removeTrack.bind(this, track)},
+                //'-',
+                //{text: 'Delete', callback: this.removeTrack.bind(this, track)},
                 '-',
                 {text: 'Save as GPX', callback: () => this.saveTrackAsFile(track, geoExporters.saveGpx, '.gpx')},
                 {text: 'Save as KML', callback: () => this.saveTrackAsFile(track, geoExporters.saveKml, '.kml')},
-                {text: 'Copy link for track', callback: this.copyTrackLinkToClipboard.bind(this, track)},
+                //{text: 'Copy link for track', callback: this.copyTrackLinkToClipboard.bind(this, track)},
                 {text: 'Extra', separator: true},
                 {
                     text: 'Save as GPX with added elevation (SRTM)',
@@ -1548,10 +1554,24 @@ L.Control.TrackList = L.Control.extend({
                 newTrackPoints.push(...points);
             }
 
-            this.addTrack({name: newTrackName, tracks: newTrackSegments, points: newTrackPoints});
-        },
+        this.addTrack({ name: newTrackName, tracks: newTrackSegments, points: newTrackPoints });
+    },
 
-        saveAllTracksToZipFile: async function() {
+    loadBalkanTracks: async function () {
+        const newTrackSegments = [];
+        const newTrackPoints = [];
+        const points = [];
+
+        points.push({ lat: 44.86, lng: 20.36 });
+        points.push({ lat: 44.96, lng: 20.46 });
+        newTrackSegments.push(points);
+
+        newTrackPoints.push({ lat: 44.89, lng: 20.39, name: 'Start' });
+
+        this.addTrack({ name: 'track 1', tracks: newTrackSegments, points: newTrackPoints });
+    },
+
+    saveAllTracksToZipFile: async function () {
             const tracks = this.tracks();
             const trackFilesData = [];
             const seenNames = new Set();
@@ -1620,7 +1640,7 @@ L.Control.TrackList = L.Control.extend({
             this._elevationControl = null;
         },
 
-        hasTracks: function() {
+        hasTracks: function () {
             return this.tracks().length > 0;
         },
 

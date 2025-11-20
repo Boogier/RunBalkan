@@ -91,7 +91,6 @@ function setUp() { // eslint-disable-line complexity
         keysToExcludeOnCopyLink: ['q', 'r']
     });
 
-    /* controls top-left corner */
 
     new L.Control.Caption(config.caption, {
             position: 'topleft'
@@ -250,6 +249,8 @@ function setUp() { // eslint-disable-line complexity
             }
         })();
     }
+
+    tracklist.loadBalkanTracks();
 
     if (hashState.hasKey('autoprofile') && hasTrackParamsInHash) {
         tracklist.once('loadedTracksFromParam', () => {

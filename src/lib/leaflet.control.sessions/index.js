@@ -282,15 +282,16 @@ const SessionsControl = L.Control.extend({
     },
 
     saveCurrentStateImmediate: function () {
-        const tracks = this.trackListControl.tracks();
-        if (!tracks.length) {
-            session.clearState();
-            return;
-        }
+        //const tracks = this.trackListControl.tracks();
+        //if (!tracks.length) {
+        //    session.clearState();
+        //    return;
+        //}
         const {hash} = window.location;
-        const trackNames = tracks.map((track) => track.name());
-        const tracksSerialized = this.trackListControl.serializeTracks(tracks);
-        session.saveState({hash, tracks: tracksSerialized, trackNames});
+        //const trackNames = tracks.map((track) => track.name());
+        //const tracksSerialized = this.trackListControl.serializeTracks(tracks);
+        //session.saveState({hash, tracks: tracksSerialized, trackNames});
+        session.saveState({ hash });
     },
 
     loadSession: async function () {
@@ -298,7 +299,7 @@ const SessionsControl = L.Control.extend({
         if (sessionSavedTracks) {
             this.loadingState = true;
             try {
-                this.trackListControl.loadTracksFromString(sessionSavedTracks, true);
+                //this.trackListControl.loadTracksFromString(sessionSavedTracks, true);
             } finally {
                 this.loadingState = false;
             }
