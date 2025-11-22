@@ -38,6 +38,7 @@ import '~/lib/leaflet.placemark';
 import '~/vendored/mapbbcode/FunctionButton';
 import Contextmenu from '~/lib/contextmenu';
 import iconMenu from './images/menu.png';
+import debounce from 'lodash/debounce';
 
 const locationErrorMessage = {
     0: 'Your browser does not support geolocation.',
@@ -251,9 +252,11 @@ function setUp() { // eslint-disable-line complexity
     }
 
     tracklist.loadBalkanTracks();
-    map.on('moveend zoomend', () => {
+    const handleBoundsChanged = debounce(() => {
         tracklist.reloadBalkanTracks();
-    });
+    }, 300);
+
+    map.on('moveend zoomend', handleBoundsChanged);
 
     if (hashState.hasKey('autoprofile') && hasTrackParamsInHash) {
         tracklist.once('loadedTracksFromParam', () => {
