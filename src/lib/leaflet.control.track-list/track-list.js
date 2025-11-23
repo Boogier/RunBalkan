@@ -1577,7 +1577,10 @@ L.Control.TrackList = L.Control.extend({
             responseType: 'json'
         });
         xhr.response['tracks'].forEach((tr) => {
-            const newTrackPoints = [];
+            let photos = [];
+            if (tr.Photos){
+                 photos = tr.Photos.map((p) => ({ lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] }));
+            }
 
             const segment = tr.trackPoints.map((pt) => ({ lat: pt[0], lng: pt[1] }));
             const segments = [];
@@ -1586,7 +1589,7 @@ L.Control.TrackList = L.Control.extend({
             this.addTrack({
                 name: tr.Name,
                 tracks: segments,
-                points: newTrackPoints
+                points: photos
             });
         });
     },
