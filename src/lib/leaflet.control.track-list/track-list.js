@@ -1,6 +1,7 @@
 import L from 'leaflet';
 import ko from 'knockout';
 import Contextmenu from '~/lib/contextmenu';
+import ImagePopup from '~/lib/ImagePopup';
 import '~/lib/knockout.component.progress/progress';
 import './track-list.css';
 import {selectFiles, readFiles} from '~/lib/file-read';
@@ -1434,21 +1435,24 @@ L.Control.TrackList = L.Control.extend({
             };
             this.setMarkerIcon(marker);
             this.setMarkerLabel(marker, srcPoint.name);
+            marker.thumbnail = srcPoint.thumbnail;
+            marker.fullsize = srcPoint.fullsize;
             track.markers.push(marker);
             marker._parentTrack = track;
             return marker;
         },
 
         onMarkerClick: function(e) {
-            new Contextmenu([
-                    {text: e.marker.label, header: true},
-                    '-',
-                    {text: 'Rename', callback: this.renamePoint.bind(this, e.marker)},
-                    {text: 'Move', callback: this.beginPointMove.bind(this, e.marker)},
-                    {text: 'Copy coordinates', callback: this.copyPointCoordinatesToClipboard.bind(this, e.marker, e)},
-                    {text: 'Delete', callback: this.removePoint.bind(this, e.marker)},
-                ]
-            ).show(e);
+            new ImagePopup(e.marker.fullsize).show(e);
+            // new Contextmenu([
+            //         {text: e.marker.label, header: true},
+            //         '-',
+            //         {text: 'Rename', callback: this.renamePoint.bind(this, e.marker)},
+            //         {text: 'Move', callback: this.beginPointMove.bind(this, e.marker)},
+            //         {text: 'Copy coordinates', callback: this.copyPointCoordinatesToClipboard.bind(this, e.marker, e)},
+            //         {text: 'Delete', callback: this.removePoint.bind(this, e.marker)},
+            //     ]
+            // ).show(e);
         },
 
         onMarkerEnter: function(e) {
