@@ -34,7 +34,7 @@ import * as coordFormats from '~/lib/leaflet.control.coordinates/formats';
 import {polygonArea} from '~/lib/polygon-area';
 import {polylineHasSelfIntersections} from '~/lib/polyline-selfintersects';
 
-const TRACKLIST_TRACK_COLORS = ['#77f', '#f95', '#0ff', '#f77', '#f7f', '#ee5'];
+const TRACKLIST_TRACK_COLORS = ['#000', '#f0f', '#77f', '#f95', '#0ff', '#f77', '#00f', '#ee5'];
 
 const TrackSegment = L.MeasuredLine.extend({
     includes: L.Polyline.EditMixin,
@@ -1339,10 +1339,18 @@ L.Control.TrackList = L.Control.extend({
         addTrack: function(geodata) {
             var color;
             color = geodata.color;
-            if (!(color >= 0 && color < this.colors.length)) {
-                color = this._lastTrackColor;
-                this._lastTrackColor = (this._lastTrackColor + 1) % this.colors.length;
+            if (!color) {
+                if (geodata.name == "Region bounds"){
+                    color = this.colors.length - 1;
+                }
+                else {
+                    color = 0;
+                }
             }
+            // if (!(color >= 0 && color < this.colors.length)) {
+            //     color = this._lastTrackColor;
+            //     this._lastTrackColor = (this._lastTrackColor + 1) % this.colors.length;
+            // }
             var track = {
                 name: ko.observable(geodata.name),
                 color: ko.observable(color),
