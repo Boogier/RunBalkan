@@ -14,7 +14,8 @@ const MapyCzProvider = BaseProvider.extend({
     name: 'Mapy.cz',
 
     options: {
-        apiUrl: urlViaCorsProxy('https://pro.mapy.cz/suggest/'),
+        //apiUrl: urlViaCorsProxy('https://pro.mapy.cz/suggest/'),
+        apiUrl: 'https://pro.mapy.cz/suggest/',
         attribution: {
             text: 'Mapy.cz',
             url: 'https://mapy.cz',
