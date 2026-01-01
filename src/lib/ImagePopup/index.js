@@ -30,6 +30,7 @@ class ImagePopup {
         if (!this._container) {
             return;
         }
+
         document.body.removeChild(this._container);
         this._container = null;
 

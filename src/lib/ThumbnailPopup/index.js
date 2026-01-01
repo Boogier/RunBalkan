@@ -3,18 +3,24 @@ import './ThumbnailPopup.css';
 class ThumbnailPopup {
     constructor(url) {
         this.url = url;
+        this.onKeyDown = this.onKeyDown.bind(this);
+        this.onMouseDown = this.onMouseDown.bind(this);
     }
 
     show(e, point) {
-        const container = this._container = document.createElement('div');
-        document.body.appendChild(container);
-        container.className = 'hover-image-popup';
+        if (this._container) {
+            return;
+        }
 
-        const popupImg = document.createElement("img");
+        this._container = document.createElement('div');
+        document.body.appendChild(this._container);
+        this._container.className = 'hover-image-popup';
+
+        const popupImg = document.createElement('img');
         popupImg.src = this.url;
-        container.appendChild(popupImg);
-        container.style.display = "block"
-        
+        this._container.appendChild(popupImg);
+        this._container.style.display = 'block';
+
         window.addEventListener('keydown', this.onKeyDown, true);
         window.addEventListener('mousedown', this.onMouseDown, true);
         window.addEventListener('touchstart', this.onMouseDown, true);
@@ -35,30 +41,31 @@ class ThumbnailPopup {
         window.removeEventListener('touchstart', this.onMouseDown, true);
     }
 
-    onKeyDown = (e) => {
+    onKeyDown(e) {
         if (e.keyCode === 27) {
             this.hide();
         }
-    };
+    }
 
-    onMouseDown = (e) => {
+    onMouseDown(e) {
         // Only honandle left mouse button (button 0) or touch events (no button property)
         if (e.button !== undefined && e.button !== 0) {
             return;
         }
 
         this.hide();
-    };
+    }
 
-        setPosition(x, y) {
-        const window_width = window.innerWidth,
-            window_height = window.innerHeight,
-            menu_width = this._container.offsetWidth,
-            menu_height = this._container.offsetHeight;
+    setPosition(x, y) {
+        const window_width = window.innerWidth;
+        const window_height = window.innerHeight;
+        const menu_width = this._container.offsetWidth;
+        const menu_height = this._container.offsetHeight;
+
         if (x + menu_width >= window_width) {
             x -= menu_width;
             if (x < 0) {
-               x = 0;
+                x = 0;
             }
         }
         if (y + menu_height >= window_height) {
@@ -70,7 +77,6 @@ class ThumbnailPopup {
         this._container.style.left = `${x}px`;
         this._container.style.top = `${y}px`;
     }
-
 }
 
 export default ThumbnailPopup;
