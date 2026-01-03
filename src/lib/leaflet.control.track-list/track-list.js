@@ -809,18 +809,21 @@ L.Control.TrackList = L.Control.extend({
             }
         },
 
+        // eslint-disable-next-line no-unused-vars
         onTrackSegmentClick: function(e) {
-            if (this.isPlacingPoint) {
-                return;
-            }
-            const trackSegment = e.target;
-            if (this._lineJoinActive) {
-                L.DomEvent.stopPropagation(e);
-                this.joinTrackSegments(trackSegment, isPointCloserToStart(e.target.getLatLngs(), e.latlng));
-            } else {
-                this.startEditTrackSegement(trackSegment);
-                L.DomEvent.stopPropagation(e);
-            }
+            // prevend track editing
+
+            // if (this.isPlacingPoint) {
+            //     return;
+            // }
+            // const trackSegment = e.target;
+            // if (this._lineJoinActive) {
+            //     L.DomEvent.stopPropagation(e);
+            //     this.joinTrackSegments(trackSegment, isPointCloserToStart(e.target.getLatLngs(), e.latlng));
+            // } else {
+            //     this.startEditTrackSegement(trackSegment);
+            //     L.DomEvent.stopPropagation(e);
+            // }
         },
 
         startEditTrackSegement: function(polyline) {
@@ -963,9 +966,9 @@ L.Control.TrackList = L.Control.extend({
 
         formatSegmentTooltip: function(segment) {
             const track = segment._parentTrack;
-            const trackSegments = this.getTrackPolylines(track);
-            const trackSegmentsCount = trackSegments.length;
-            const segmentOrdinalNumber = trackSegments.indexOf(segment) + 1;
+            //const trackSegments = this.getTrackPolylines(track);
+            // const trackSegmentsCount = trackSegments.length;
+            // const segmentOrdinalNumber = trackSegments.indexOf(segment) + 1;
 
             // avoid slow calculation of self-intersections due to brute-force algorithm
             const MAX_POINTS_FOR_INTERSECTIONS_CALCULATION = 1000;
@@ -996,13 +999,15 @@ L.Control.TrackList = L.Control.extend({
             if (!segmentArea) {
                 segmentArea = this.formatArea(polygonArea(points));
             }
+            const descr = track.descr();
+            //const r = descr.replaceAll('\n', '<br/>').replaceAll('\r', '');
             return `
-                <b>${track.name()}</b><br>
-                <br>
-                Segment number: ${segmentOrdinalNumber} / ${trackSegmentsCount}<br>
-                Segment length: ${this.formatLength(segment.getLength())}<br>
-                Segment area: ${segmentArea}
+                <b>${track.name()}</b>
+                ${descr ? '<br/><br/>' + descr.replaceAll('\n', '<br/>').replaceAll('\r', '') : ''}
             `;
+                // Segment number: ${segmentOrdinalNumber} / ${trackSegmentsCount}<br>
+                // Segment length: ${this.formatLength(segment.getLength())}<br>
+                // Segment area: ${segmentArea}
         },
 
         addTrackSegment: function(track, sourcePoints) {
@@ -1351,6 +1356,7 @@ L.Control.TrackList = L.Control.extend({
             // }
             var track = {
                 name: ko.observable(geodata.name),
+                descr: ko.observable(geodata.descr),
                 color: ko.observable(color),
                 visible: ko.observable(!geodata.trackHidden),
                 length: ko.observable(0),
@@ -1634,6 +1640,7 @@ L.Control.TrackList = L.Control.extend({
 
                 this.addTrack({
                     name: tr.Name,
+                    descr: tr.Descr,
                     tracks: segments,
                     points: photos,
                     color: tr.Color
