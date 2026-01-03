@@ -1002,8 +1002,10 @@ L.Control.TrackList = L.Control.extend({
             const descr = track.descr();
             //const r = descr.replaceAll('\n', '<br/>').replaceAll('\r', '');
             return `
-                <b>${track.name()}</b>
-                ${descr ? '<br/><br/>' + descr.replaceAll('\n', '<br/>').replaceAll('\r', '') : ''}
+                <div style="width: max-content; max-width: 800px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
+                    <b>${track.name()}</b>
+                    ${descr ? '<br/><br/>' + descr.replaceAll('\n', '<br/>').replaceAll('\r', '') : ''}
+                </div>
             `;
                 // Segment number: ${segmentOrdinalNumber} / ${trackSegmentsCount}<br>
                 // Segment length: ${this.formatLength(segment.getLength())}<br>
