@@ -25,7 +25,16 @@ class ThumbnailPopup {
         window.addEventListener('mousedown', this.onMouseDown, true);
         window.addEventListener('touchstart', this.onMouseDown, true);
 
-        this.setPosition(point.x, point.y);
+        if (popupImg.complete) {
+            // Position immediately in case image is cached
+            this.setPosition(point.x, point.y);
+        }
+        else {
+            // Wait for image to load before positioning so dimensions are correct
+            popupImg.onload = () => {
+            this.setPosition(point.x, point.y);
+            };
+        }
     }
 
     hide() {
@@ -57,6 +66,10 @@ class ThumbnailPopup {
     }
 
     setPosition(x, y) {
+        if (!this._container) {
+            return;
+        }
+
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         const menuWidth = this._container.offsetWidth;
