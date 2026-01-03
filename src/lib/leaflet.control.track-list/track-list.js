@@ -1584,7 +1584,7 @@ L.Control.TrackList = L.Control.extend({
         this.addTrack({ name: newTrackName, tracks: newTrackSegments, points: newTrackPoints });
     },
 
-    reloadBalkanTracks: async function () {
+    reloadBalkanTracks: async function (needToComplete) {
         let newBounds = this._map.getBounds();
         const diagonalMeters = newBounds.getNorthEast().distanceTo(newBounds.getSouthWest());
         let reduceTolerance = diagonalMeters / 1000;
@@ -1593,24 +1593,35 @@ L.Control.TrackList = L.Control.extend({
         }
 
         if (!currentBounds || (!currentBounds.contains(newBounds)) || (reduceTolerance * 3 < currentTolerance)) {
-            await this.loadBalkanTracks(newBounds, reduceTolerance);
+            await this.loadBalkanTracks(newBounds, reduceTolerance, needToComplete);
         }
     },
 
-    loadBalkanTracks: async function (bounds, tolerance) {
+    loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
         this.readingFiles(this.readingFiles() + 1);
         try {
-            this.deleteAllTracks();
             currentBounds = bounds;
             currentTolerance = tolerance;
 
             const paramString = currentBounds.toBBoxString() + ',' + currentTolerance + ',' + (TRACKLIST_TRACK_COLORS.length);
             console.log('Loading with bounds: ' + paramString);
 
+            if (!needToComplete()) {
+                console.log('Cancelled loading with bounds: ' + paramString);
+                return;
+            }
+
             const xhr = await fetch(`${config.balkanTracksUrl}?bounds=${paramString}`, {
                 method: 'GET',
                 responseType: 'json'
             });
+
+            if (!needToComplete()) {
+                console.log('Cancelled loading with bounds: ' + paramString);
+                return;
+            }
+
+            this.deleteAllTracks();
             xhr.response['tracks'].forEach((tr) => {
                 let photos = [];
                 if (tr.Photos) {

@@ -251,10 +251,20 @@ function setUp() { // eslint-disable-line complexity
         })();
     }
 
-    tracklist.reloadBalkanTracks();
+    // Track the latest load operation to prevent parallel executions
+    let balkanTracksLoadId = 0;
+    function reloadBalkanTracksLatestOnly() {
+        const currentLoadId = ++balkanTracksLoadId;
+
+        tracklist.reloadBalkanTracks(
+            () => currentLoadId === balkanTracksLoadId
+        );
+    }
+
+    reloadBalkanTracksLatestOnly();
     const handleBoundsChanged = debounce(() => {
-        tracklist.reloadBalkanTracks();
-    }, 300);
+        reloadBalkanTracksLatestOnly();
+    }, 500);
 
     map.on('moveend zoomend', handleBoundsChanged);
 
