@@ -1001,7 +1001,7 @@ L.Control.TrackList = L.Control.extend({
                 <div style="width: max-content; max-width: 800px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
                     <b>${track.name()}</b><br/>
                     <img src="https://www.strava.com/favicon.ico" width="16" height="16" style="vertical-align: middle; margin-right: 4px;" alt="Strava">
-                    <a href="https://strava.com/activities/${externalId}" target="_blank" rel="noopener noreferrer">
+                    <a href="https://strava.com/activities/${externalId}/overview" target="_blank" rel="noopener noreferrer">
                         Open in Strava
                     </a>
                     ${descr ? '<br/><br/>' + descr.replaceAll('\n', '<br/>').replaceAll('\r', '') : ''}
