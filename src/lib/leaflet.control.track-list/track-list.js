@@ -1666,7 +1666,6 @@ L.Control.TrackList = L.Control.extend({
     },
 
     loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
-        this.readingFiles(this.readingFiles() + 1);
         loadingModal.show('Loading...');
         try {
             currentBounds = bounds;
@@ -1714,7 +1713,6 @@ L.Control.TrackList = L.Control.extend({
             });
         } finally {
             loadingModal.hide();
-            this.readingFiles(this.readingFiles() - 1);
         }
     },
 
