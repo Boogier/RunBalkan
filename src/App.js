@@ -368,11 +368,11 @@ function setUp() { // eslint-disable-line complexity
                 layers.push(layerInfo);
             }
         });
-        const bounds = map.getBounds();
-        logging.logEvent('activeLayers', {
-            layers,
-            view: getLatLngBoundsLoggingInfo(bounds),
-        });
+        // const bounds = map.getBounds();
+        // logging.logEvent('activeLayers', {
+        //     layers,
+        //     view: getLatLngBoundsLoggingInfo(bounds),
+        // });
     }
 
     L.DomEvent.on(document, 'mousemove click touchend', L.Util.throttle(logUsedMaps, 30000));

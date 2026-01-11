@@ -33,6 +33,7 @@ import {parseNktkSequence} from './lib/parsers/nktk';
 import * as coordFormats from '~/lib/leaflet.control.coordinates/formats';
 import {polygonArea} from '~/lib/polygon-area';
 import {polylineHasSelfIntersections} from '~/lib/polyline-selfintersects';
+import {loadingModal} from '~/lib/loadingModal';
 
 const TRACKLIST_TRACK_COLORS = ['#000', '#f0f', '#77f', '#f95', '#0ff', '#f77', '#00f', '#ee5'];
 
@@ -99,6 +100,14 @@ function unwrapLatLngsCrossing180Meridian(latngs) {
         prevUnwrapped = lastUnwrapped;
     }
     return unwrapped;
+}
+
+function getMetersPerPixel(map) {
+    const bounds = map.getBounds();
+    const diagonalMeters = bounds.getNorthEast().distanceTo(bounds.getSouthWest());
+    const mapSize = map.getSize();
+    const diagonalPixels = Math.sqrt(mapSize.x * mapSize.x + mapSize.y * mapSize.y);
+    return diagonalMeters / diagonalPixels;
 }
 
 function closestPointToLineSegment(latlngs, segmentIndex, point) {
@@ -1621,13 +1630,35 @@ L.Control.TrackList = L.Control.extend({
         this.addTrack({ name: newTrackName, tracks: newTrackSegments, points: newTrackPoints });
     },
 
-    reloadBalkanTracks: async function (needToComplete) {
-        let newBounds = this._map.getBounds();
-        const diagonalMeters = newBounds.getNorthEast().distanceTo(newBounds.getSouthWest());
-        let reduceTolerance = diagonalMeters / 1000;
+    getTolerance: function() {
+        const metersPerPixel = Math.round(getMetersPerPixel(this._map));
+        //console.log('Meters per pixel:', metersPerPixel);
+
+        let reduceTolerance = metersPerPixel * 3;
         if (reduceTolerance < 50) {
             reduceTolerance = 0;
         }
+
+        //console.log('Tolerance = ', reduceTolerance);
+
+        return reduceTolerance;
+    },
+
+    // getToleranceOld: function() {
+    //     const diagonalMeters = newBounds.getNorthEast().distanceTo(newBounds.getSouthWest());
+    //     let reduceTolerance = diagonalMeters / 1000;
+    //     if (reduceTolerance < 50) {
+    //         reduceTolerance = 0;
+    //     }
+
+    //     return reduceTolerance;
+    // },
+
+    reloadBalkanTracks: async function (needToComplete) {
+        let newBounds = this._map.getBounds();
+ 
+        let reduceTolerance = this.getTolerance();
+
 
         if (!currentBounds || (!currentBounds.contains(newBounds)) || (reduceTolerance * 3 < currentTolerance)) {
             await this.loadBalkanTracks(newBounds, reduceTolerance, needToComplete);
@@ -1635,7 +1666,7 @@ L.Control.TrackList = L.Control.extend({
     },
 
     loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
-        this.readingFiles(this.readingFiles() + 1);
+        loadingModal.show('Loading...');
         try {
             currentBounds = bounds;
             currentTolerance = tolerance;
@@ -1658,6 +1689,8 @@ L.Control.TrackList = L.Control.extend({
                 return;
             }
 
+            console.log('xhr response size:', JSON.stringify(xhr.response).length);
+
             this.deleteAllTracks();
             xhr.response['tracks'].forEach((tr) => {
                 let photos = [];
@@ -1679,7 +1712,7 @@ L.Control.TrackList = L.Control.extend({
                 });
             });
         } finally {
-            this.readingFiles(this.readingFiles() - 1);
+            loadingModal.hide();
         }
     },
 
