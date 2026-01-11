@@ -729,6 +729,9 @@ L.Control.TrackList = L.Control.extend({
         },
 
         exportTrackAsFile: async function(track, exporter, extension, addElevations, allowEmpty) {
+            await this.updateBalkanTrack(track.id());
+            track = this.getTrackById(track.id());
+
             var lines = this.getTrackPolylines(track)
                 .map(function(line) {
                         return line.getFixedLatLngs();
@@ -1395,8 +1398,10 @@ L.Control.TrackList = L.Control.extend({
             // }
             var track = {
                 externalId: ko.observable(geodata.externalId),
+                id: ko.observable(geodata.id),
                 name: ko.observable(geodata.name),
                 descr: ko.observable(geodata.descr),
+                tolerance: ko.observable(geodata.tolerance),
                 color: ko.observable(color),
                 visible: ko.observable(!geodata.trackHidden),
                 length: ko.observable(0),
@@ -1555,6 +1560,17 @@ L.Control.TrackList = L.Control.extend({
             this.notifyTracksChanged();
         },
 
+        getTrackById: function(trackId) {
+            return this.tracks().find((t) => t.id() === trackId);
+        },
+
+        removeTrackById: function(trackId) {
+            const track = this.getTrackById(trackId);
+            if (track) {
+                this.removeTrack(track);
+            }
+        },
+
         deleteAllTracks: function() {
             var tracks = this.tracks().slice(0),
                 i;
@@ -1665,6 +1681,27 @@ L.Control.TrackList = L.Control.extend({
         }
     },
 
+    updateBalkanTrack: async function(trackId) {
+        const track = this.getTrackById(trackId);
+        if (!track) {
+            console.log('Track with id ' + trackId + ' not found, skipping update.');
+            return;
+        }
+
+        if (track.tolerance() === 0) {
+            console.log('Track with id ' + trackId + ' has tolerance = 0, skipping update.');
+            return;
+        }
+
+        const xhr = await fetch(`${config.balkanTracksUrl}?trackId=${trackId}`, {
+            method: 'GET',
+            responseType: 'json'
+        });
+
+        this.removeTrackById(trackId);
+        this.addTracksFromBalkanData(xhr.response['tracks'], 0);
+    },
+
     loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
         loadingModal.show('Loading...');
         try {
@@ -1692,28 +1729,34 @@ L.Control.TrackList = L.Control.extend({
             console.log('xhr response size:', JSON.stringify(xhr.response).length);
 
             this.deleteAllTracks();
-            xhr.response['tracks'].forEach((tr) => {
-                let photos = [];
-                if (tr.Photos) {
-                     photos = tr.Photos.map((p) => ({ lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] }));
-                }
-
-                const segment = tr.trackPoints.map((pt) => ({ lat: pt[0], lng: pt[1] }));
-                const segments = [];
-                segments.push(segment);
-
-                this.addTrack({
-                    externalId: tr.ExternalId,
-                    name: tr.Name,
-                    descr: tr.Descr,
-                    tracks: segments,
-                    points: photos,
-                    color: tr.Color
-                });
-            });
+            this.addTracksFromBalkanData(xhr.response['tracks'], tolerance);
         } finally {
             loadingModal.hide();
         }
+    },
+
+    addTracksFromBalkanData: function (tracks, tolerance) {
+        tracks.forEach((tr) => {
+            let photos = [];
+            if (tr.Photos) {
+                    photos = tr.Photos.map((p) => ({ lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] }));
+            }
+
+            const segment = tr.trackPoints.map((pt) => ({ lat: pt[0], lng: pt[1] }));
+            const segments = [];
+            segments.push(segment);
+
+            this.addTrack({
+                id: tr.Id,
+                externalId: tr.ExternalId,
+                name: tr.Name,
+                descr: tr.Descr,
+                tracks: segments,
+                points: photos,
+                color: tr.Color,
+                tolerance: tolerance
+            });
+        });
     },
 
     saveAllTracksToZipFile: async function () {
