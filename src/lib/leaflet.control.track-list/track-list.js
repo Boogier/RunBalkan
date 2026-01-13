@@ -1825,7 +1825,8 @@ L.Control.TrackList = L.Control.extend({
             this.fire('elevation-shown');
         },
 
-        showElevationProfileForTrack: function(track) {
+        showElevationProfileForTrack: async function(track) {
+            await this.updateBalkanTrack(track.id());
             var lines = this.getTrackPolylines(track),
                 path = [],
                 i;
