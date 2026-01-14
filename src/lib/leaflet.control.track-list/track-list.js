@@ -1725,15 +1725,16 @@ L.Control.TrackList = L.Control.extend({
             currentBounds = bounds;
             currentTolerance = tolerance;
 
-            const paramString = currentBounds.toBBoxString() + ',' + currentTolerance + ',' + (TRACKLIST_TRACK_COLORS.length);
-            console.log('Loading with bounds: ' + paramString);
+            const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}`;
+            console.log('Loading: ' + paramString);
 
             if (!needToComplete()) {
-                console.log('Cancelled loading with bounds: ' + paramString);
+                console.log('Cancelled loading: ' + paramString);
                 return;
             }
 
-            const xhr = await fetch(`${config.balkanTracksUrl}?bounds=${paramString}`, {
+            const url = `${config.balkanTracksUrl}?${paramString}`;
+            const xhr = await fetch(url, {
                 method: 'GET',
                 responseType: 'json'
             });
