@@ -33,7 +33,6 @@ import {parseNktkSequence} from './lib/parsers/nktk';
 import * as coordFormats from '~/lib/leaflet.control.coordinates/formats';
 import {polygonArea} from '~/lib/polygon-area';
 import {polylineHasSelfIntersections} from '~/lib/polyline-selfintersects';
-import {loadingModal} from '~/lib/loadingModal';
 
 const TRACKLIST_TRACK_COLORS = ['#000', '#f0f', '#77f', '#f95', '#0ff', '#f77', '#00f', '#ee5'];
 
@@ -1700,7 +1699,12 @@ L.Control.TrackList = L.Control.extend({
         const newTrackData = xhr.response['tracks'][0];
         const existingTrack = this.getTrackById(trackId);
         if (existingTrack) {
-            existingTrack.tolerance(0);
+            this.updateTrackSegments(existingTrack, newTrackData, 0);
+        }
+    },
+
+    updateTrackSegments: function(existingTrack, newTrackData, tolerance) {
+            existingTrack.tolerance(tolerance);
 
             // Remove all existing segments from the track
             const oldSegments = this.getTrackPolylines(existingTrack);
@@ -1716,16 +1720,20 @@ L.Control.TrackList = L.Control.extend({
 
             this.recalculateTrackLength(existingTrack);
             this.notifyTracksChanged();
-        }
+    },
+
+    getTracksToExclude: function (tolerance) {
+        const exclude = this.tracks().filter((tr) => tr.tolerance() <= tolerance).map((tr) => tr.id());
+        return exclude.join(',');
     },
 
     loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
-        loadingModal.show('Loading...');
+        this.readingFiles(this.readingFiles() + 1);
         try {
             currentBounds = bounds;
             currentTolerance = tolerance;
 
-            const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}`;
+            const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}&exclude=${this.getTracksToExclude(currentTolerance)}`;
             console.log('Loading: ' + paramString);
 
             if (!needToComplete()) {
@@ -1740,38 +1748,48 @@ L.Control.TrackList = L.Control.extend({
             });
 
             if (!needToComplete()) {
-                console.log('Cancelled loading with bounds: ' + paramString);
+                console.log('Cancelled loading after fetch: ' + paramString);
                 return;
             }
 
             console.log('xhr response size:', JSON.stringify(xhr.response).length);
 
-            this.deleteAllTracks();
-            this.addTracksFromBalkanData(xhr.response['tracks'], tolerance);
+            const tracks = xhr.response['tracks'];
+            if (!tracks || tracks.length === 0) {
+                console.log('No new tracks loaded.');
+                return;
+            }
+
+            tracks.forEach((tr) => {
+                const existingTrack = this.getTrackById(tr.Id);
+                if (existingTrack) {
+                    this.updateTrackSegments(existingTrack, tr, tolerance);
+                } else {
+                    this.addTrackFromBalkanData(tr, tolerance);
+                }
+            });
         } finally {
-            loadingModal.hide();
+            this.readingFiles(this.readingFiles() - 1);
         }
     },
 
-    addTracksFromBalkanData: function (tracks, tolerance) {
-        tracks.forEach((tr) => {
-            let photos = [];
-            if (tr.Photos) {
-                    photos = tr.Photos.map((p) => ({ lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] }));
-            }
+    addTrackFromBalkanData: function (tr, tolerance) {
+        let photos = [];
+        if (tr.Photos) {
+                photos = tr.Photos.map((p) => ({ lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] }));
+        }
 
-            const segments = this.createTrackSegments(tr);
+        const segments = this.createTrackSegments(tr);
 
-            this.addTrack({
-                id: tr.Id,
-                externalId: tr.ExternalId,
-                name: tr.Name,
-                descr: tr.Descr,
-                tracks: segments,
-                points: photos,
-                color: tr.Color,
-                tolerance: tolerance
-            });
+        this.addTrack({
+            id: tr.Id,
+            externalId: tr.ExternalId,
+            name: tr.Name,
+            descr: tr.Descr,
+            tracks: segments,
+            points: photos,
+            color: tr.Color,
+            tolerance: tolerance
         });
     },
 
