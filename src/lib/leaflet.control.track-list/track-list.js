@@ -1718,6 +1718,16 @@ L.Control.TrackList = L.Control.extend({
                 this.addTrackSegment(existingTrack, segmentPoints);
             });
 
+            if (newTrackData.Photos && newTrackData.Photos.length > 1 && existingTrack.markers.length === 1) {
+                // actual photos loaded instead of single
+                existingTrack.markers.forEach((marker) => this.removePoint(marker));
+                existingTrack.markers = [];
+                newTrackData.Photos.forEach((p) => {
+                    const marker = this.addPoint(existingTrack, { lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] });
+                    this._markerLayer.addMarker(marker);
+                });
+            }
+            
             this.recalculateTrackLength(existingTrack);
             this.notifyTracksChanged();
     },
