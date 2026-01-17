@@ -1743,7 +1743,7 @@ L.Control.TrackList = L.Control.extend({
             currentBounds = bounds;
             currentTolerance = tolerance;
 
-            const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}&exclude=${this.getTracksToExclude(currentTolerance)}`;
+            const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}&exclude=${this.getTracksToExclude(currentTolerance)}&tracksOnly=1`;
             console.log('Loading: ' + paramString);
 
             if (!needToComplete()) {
