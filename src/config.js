@@ -20,7 +20,8 @@ const config = {
     mapillaryRasterTilesUrl: 'https://mapillary.nakarte.me/{z}/{x}/{y}',
     urlsBypassCORSProxy: [new RegExp('^https://pkk\\.rosreestr\\.ru/', 'u')],
     elevationTileUrl: 'https://tiles.nakarte.me/elevation/{z}/{x}/{y}',
-    balkanTracksUrl: 'https://iorient.ru/runbalkan/gettracks.aspx',
+    balkanTracksUrl: 'https://iorient.ru/runbalkan/GetTracks.aspx',
+    balkanPhotosUrl: 'https://iorient.ru/runbalkan/GetPhotos.aspx',
     ...secrets,
 };
 

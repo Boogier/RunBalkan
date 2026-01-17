@@ -1762,7 +1762,7 @@ L.Control.TrackList = L.Control.extend({
                 return;
             }
 
-            console.log('xhr response size:', JSON.stringify(xhr.response).length);
+            console.log('GetTracks response size:', JSON.stringify(xhr.response).length);
 
             const tracks = xhr.response['tracks'];
             if (!tracks || tracks.length === 0) {
@@ -1776,7 +1776,16 @@ L.Control.TrackList = L.Control.extend({
                     this.updateTrackSegments(existingTrack, tr, tolerance);
                 } else {
                     this.addTrackFromBalkanData(tr, tolerance);
-                    this.loadBalkanPhotos(tr);
+
+                    this.photosToLoad.push(tr.Id);
+                    if (this.photosToLoad.length === 1) {
+                        //console.log('Queued photos load for trackId ' + tr.Id);
+                        this.loadBalkanPhotosPromise = this.loadBalkanPhotosPromise
+                            .then(async () => {
+                                await this.loadBalkanPhotos();
+                            })
+                            .catch(console.error);
+                    }
                 }
             });
         } finally {
@@ -1784,8 +1793,45 @@ L.Control.TrackList = L.Control.extend({
         }
     },
 
-    loadBalkanPhotos: async function (tr) {
+    photosToLoad: [],
 
+    loadBalkanPhotosPromise: Promise.resolve(),
+
+    loadBalkanPhotos: async function () {
+        if (this.photosToLoad.length === 0) {
+            //console.log('photosToLoad is empty.');
+            return;
+        }
+
+        const trackIds = this.photosToLoad.join(',');
+        this.photosToLoad = [];
+
+        //console.log('Loading photos for trackIds ' + trackIds);
+        const xhr = await fetch(`${config.balkanPhotosUrl}?trackIds=${trackIds}`, {
+            method: 'GET',
+            responseType: 'json'
+        });
+
+        if (xhr.status !== 200) {
+            console.log('Error loading photos for trackIds ' + trackIds + ': ' + xhr.response.message);
+            return;
+        }
+
+        console.log('GetPhotos response size:', JSON.stringify(xhr.response).length);
+        const photos = xhr.responseJSON;
+        const markers = [];
+
+        photos.forEach((p) => {
+            const existingTrack = this.getTrackById(p.TrackId);
+            if (!existingTrack) {
+                console.log('Track with id ' + p.TrackId + ' not found.');
+                return;
+            }
+
+            markers.push(...p.Photos.map((p) => this.addPoint(existingTrack, { lat: p[0], lng: p[1], thumbnail: p[2], fullsize: p[3] })));
+        });
+
+        this._markerLayer.addMarkers(markers);
     },
 
     addTrackFromBalkanData: function (tr, tolerance) {
