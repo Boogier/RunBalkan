@@ -969,7 +969,7 @@ L.Control.TrackList = L.Control.extend({
                     Bib: <b>${competitor.Bib}</b><br/>
                     Team: <b>${competitor.Team ? competitor.Team : 'Individual'}</b>
                     <ul>
-                        ${competitor.People.map(person => `<li>${person}</li>`).join('')}
+                        ${competitor.People.map((person) => `<li>${person}</li>`).join('')}
                     </ul>
                     
                     <a href="#" class="track-save-as-gpx-link" data-track-id="${track.id}" title="Save as GPX">
