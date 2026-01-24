@@ -4,12 +4,13 @@
 ```cmd
 git clone https://github.com/Boogier/RunBalkan.git
 cd RunBalkan
+git checkout iorient-map
 npm install
 ```
 
 #### Create a dummy `secrets.js` file:
 ```cmd
-cp src/secrets.js.template src/secrets.js
+copy src/secrets.js.template src/secrets.js
 ```
 
 #### Run dev server:
