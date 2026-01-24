@@ -49,8 +49,8 @@ const TrackSegment = L.MeasuredLine.extend({
 });
 TrackSegment.mergeOptions(L.Polyline.EditMixinOptions);
 
-let currentBounds;
-let currentTolerance;
+// let currentBounds;
+// let currentTolerance;
 
 // name: str
 // seen: Set[str]
@@ -960,11 +960,17 @@ L.Control.TrackList = L.Control.extend({
             // if (!segmentArea) {
             //     segmentArea = this.formatArea(polygonArea(points));
             // }
-            const descr = track.descr();
+            //const descr = track.descr();
+            const competitor = track.competitor();
             // const externalId = track.externalId();
             return `
-                <div style="width: max-content; max-width: min(800px, 80vw); word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
-                    <b>${track.name()}</b><br/>
+                <div style="width: max-content; max-width: min(500px, 80vw); word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
+                    Place: <b>${track.place()}</b><br/>
+                    Bib: <b>${competitor.Bib}</b><br/>
+                    Team: <b>${competitor.Team ? competitor.Team : 'Individual'}</b>
+                    <ul>
+                        ${competitor.People.map(person => `<li>${person}</li>`).join('')}
+                    </ul>
                     
                     <a href="#" class="track-save-as-gpx-link" data-track-id="${track.id}" title="Save as GPX">
                     <img src="${iconSave}" style="vertical-align: middle; margin: 4px;">GPX</a>
@@ -972,7 +978,6 @@ L.Control.TrackList = L.Control.extend({
                     <a href="#" class="track-save-as-kml-link" data-track-id="${track.id}" title="Save as KML">
                     <img src="${iconSave}" style="vertical-align: middle; margin: 4px;">KML</a>
                     
-                    ${descr ? '<br/><br/>' + descr.replaceAll('\n', '<br/>').replaceAll('\r', '') : ''}
                 </div>
             `;
         },
@@ -1374,7 +1379,8 @@ L.Control.TrackList = L.Control.extend({
                 externalId: ko.observable(geodata.externalId),
                 id: ko.observable(geodata.id),
                 name: ko.observable(geodata.name),
-                descr: ko.observable(geodata.descr),
+                place: ko.observable(geodata.place),
+                competitor: ko.observable(geodata.competitor),
                 tolerance: ko.observable(geodata.tolerance),
                 color: ko.observable(color),
                 visible: ko.observable(!geodata.trackHidden),
@@ -1710,65 +1716,65 @@ L.Control.TrackList = L.Control.extend({
         return exclude.join(',');
     },
 
-    loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
-        this.readingFiles(this.readingFiles() + 1);
-        try {
-            currentBounds = bounds;
-            currentTolerance = tolerance;
+    // loadBalkanTracks: async function (bounds, tolerance, needToComplete) {
+    //     this.readingFiles(this.readingFiles() + 1);
+    //     try {
+    //         currentBounds = bounds;
+    //         currentTolerance = tolerance;
 
-            const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}&exclude=${this.getTracksToExclude(currentTolerance)}&tracksOnly=1`;
-            console.log('Loading: ' + paramString);
+    //         const paramString = `rect=${currentBounds.toBBoxString()}&tolerance=${currentTolerance}&colors=${TRACKLIST_TRACK_COLORS.length}&exclude=${this.getTracksToExclude(currentTolerance)}&tracksOnly=1`;
+    //         console.log('Loading: ' + paramString);
 
-            if (!needToComplete()) {
-                console.log('Cancelled loading: ' + paramString);
-                return;
-            }
+    //         if (!needToComplete()) {
+    //             console.log('Cancelled loading: ' + paramString);
+    //             return;
+    //         }
 
-            const url = `${config.balkanTracksUrl}?${paramString}`;
-            const xhr = await fetch(url, {
-                method: 'GET',
-                responseType: 'json'
-            });
+    //         const url = `${config.balkanTracksUrl}?${paramString}`;
+    //         const xhr = await fetch(url, {
+    //             method: 'GET',
+    //             responseType: 'json'
+    //         });
 
-            if (!needToComplete()) {
-                console.log('Cancelled loading after fetch: ' + paramString);
-                return;
-            }
+    //         if (!needToComplete()) {
+    //             console.log('Cancelled loading after fetch: ' + paramString);
+    //             return;
+    //         }
 
-            console.log('GetTracks response size:', JSON.stringify(xhr.response).length);
+    //         console.log('GetTracks response size:', JSON.stringify(xhr.response).length);
 
-            const tracks = xhr.response['tracks'];
-            if (!tracks || tracks.length === 0) {
-                console.log('No new tracks loaded.');
-                return;
-            }
+    //         const tracks = xhr.response['tracks'];
+    //         if (!tracks || tracks.length === 0) {
+    //             console.log('No new tracks loaded.');
+    //             return;
+    //         }
 
-            tracks.forEach((tr) => {
-                const existingTrack = this.getTrackById(tr.Id);
-                if (existingTrack) {
-                    this.updateTrackSegments(existingTrack, tr, tolerance);
-                } else {
-                    this.addTrackFromBalkanData(tr, tolerance);
+    //         tracks.forEach((tr) => {
+    //             const existingTrack = this.getTrackById(tr.Id);
+    //             if (existingTrack) {
+    //                 this.updateTrackSegments(existingTrack, tr, tolerance);
+    //             } else {
+    //                 this.addTrackFromBalkanData(tr, tolerance);
 
-                    this.photosToLoad.push(tr.Id);
-                    if (this.photosToLoad.length === 1) {
-                        //console.log('Queued photos load for trackId ' + tr.Id);
-                        this.loadBalkanPhotosPromise = this.loadBalkanPhotosPromise
-                            .then(async () => {
-                                await this.loadBalkanPhotos();
-                            })
-                            .catch(console.error);
-                    }
-                }
-            });
-        } finally {
-            this.readingFiles(this.readingFiles() - 1);
-        }
-    },
+    //                 this.photosToLoad.push(tr.Id);
+    //                 if (this.photosToLoad.length === 1) {
+    //                     //console.log('Queued photos load for trackId ' + tr.Id);
+    //                     this.loadBalkanPhotosPromise = this.loadBalkanPhotosPromise
+    //                         .then(async () => {
+    //                             await this.loadBalkanPhotos();
+    //                         })
+    //                         .catch(console.error);
+    //                 }
+    //             }
+    //         });
+    //     } finally {
+    //         this.readingFiles(this.readingFiles() - 1);
+    //     }
+    // },
 
-    photosToLoad: [],
+    // photosToLoad: [],
 
-    loadBalkanPhotosPromise: Promise.resolve(),
+    // loadBalkanPhotosPromise: Promise.resolve(),
 
 
     addTrackFromBalkanData: function (tr, tolerance) {
@@ -1779,15 +1785,22 @@ L.Control.TrackList = L.Control.extend({
 
         const segments = this.createTrackSegments(tr);
 
+        const trackName = tr.Id === 0 
+            ? 'Start' 
+            : tr.Place + ' ' + 
+                (tr.Competitor.Team ? tr.Competitor.Team + ': ' : '') +
+                tr.Competitor.People.join(', ');
+
         this.addTrack({
             id: tr.Id,
             externalId: tr.ExternalId,
-            name: tr.Name,
-            descr: tr.Descr,
+            name: trackName,
+            competitor: tr.Competitor,
+            place: tr.Place,
             tracks: segments,
-            // points: photos,
             color: tr.Color,
-            tolerance: tolerance
+            tolerance: tolerance,
+            trackHidden: tr.Id !== 0
         });
     },
 
