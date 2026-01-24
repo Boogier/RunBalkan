@@ -1,8 +1,8 @@
 import L from 'leaflet';
 import ko from 'knockout';
 import Contextmenu from '~/lib/contextmenu';
-import ImagePopup from '~/lib/ImagePopup';
-import ThumbnailPopup from '~/lib/ThumbnailPopup';
+//import ImagePopup from '~/lib/ImagePopup';
+//import ThumbnailPopup from '~/lib/ThumbnailPopup';
 import '~/lib/knockout.component.progress/progress';
 import './track-list.css';
 import {selectFiles, readFiles} from '~/lib/file-read';
@@ -257,7 +257,7 @@ L.Control.TrackList = L.Control.extend({
                 zIndex: 1000,
                 printTransparent: true
             }).addTo(map);
-            this._markerLayer.on('markerclick markercontextmenu', this.onMarkerClick, this);
+            //this._markerLayer.on('markerclick markercontextmenu', this.onMarkerClick, this);
             this._markerLayer.on('markerenter', this.onMarkerEnter, this);
             this._markerLayer.on('markerleave', this.onMarkerLeave, this);
             map.on('resize', this._setAdaptiveHeight, this);
@@ -1472,39 +1472,39 @@ L.Control.TrackList = L.Control.extend({
             return marker;
         },
 
-        onMarkerClick: function(e) {
-            new ImagePopup(e.marker.fullsize).show();
+        // onMarkerClick: function(e) {
+        //     new ImagePopup(e.marker.fullsize).show();
 
-            // new Contextmenu([
-            //         {text: e.marker.label, header: true},
-            //         '-',
-            //         {text: 'Rename', callback: this.renamePoint.bind(this, e.marker)},
-            //         {text: 'Move', callback: this.beginPointMove.bind(this, e.marker)},
-            //         {text: 'Copy coordinates', callback: this.copyPointCoordinatesToClipboard.bind(this, e.marker, e)},
-            //         {text: 'Delete', callback: this.removePoint.bind(this, e.marker)},
-            //     ]
-            // ).show(e);
-        },
+        //     // new Contextmenu([
+        //     //         {text: e.marker.label, header: true},
+        //     //         '-',
+        //     //         {text: 'Rename', callback: this.renamePoint.bind(this, e.marker)},
+        //     //         {text: 'Move', callback: this.beginPointMove.bind(this, e.marker)},
+        //     //         {text: 'Copy coordinates', callback: this.copyPointCoordinatesToClipboard.bind(this, e.marker, e)},
+        //     //         {text: 'Delete', callback: this.removePoint.bind(this, e.marker)},
+        //     //     ]
+        //     // ).show(e);
+        // },
 
-        _currentImagePopup: null,
+        //_currentImagePopup: null,
 
         onMarkerEnter: function(e) {
             e.marker._parentTrack.hover(true);
 
             // marker’s position → convert to screen pixel coordinates
-            const point = this._map.latLngToContainerPoint(e.marker.latlng);
+            //const point = this._map.latLngToContainerPoint(e.marker.latlng);
 
-            this._currentImagePopup = new ThumbnailPopup(e.marker.thumbnail);
-            this._currentImagePopup.show(e, point);
+            //this._currentImagePopup = new ThumbnailPopup(e.marker.thumbnail);
+            //this._currentImagePopup.show(e, point);
         },
 
         onMarkerLeave: function(e) {
             e.marker._parentTrack.hover(false);
 
-            if (this._currentImagePopup) {
-                this._currentImagePopup.hide();
-                this._currentImagePopup = null;
-            }
+            // if (this._currentImagePopup) {
+            //     this._currentImagePopup.hide();
+            //     this._currentImagePopup = null;
+            // }
         },
 
         removePoint: function(marker) {
