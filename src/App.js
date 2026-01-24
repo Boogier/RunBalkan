@@ -286,7 +286,9 @@ function setUp() { // eslint-disable-line complexity
     }
 
     for (let param of tracksHashParams) {
-        bindHashStateReadOnly(param, tracklist.loadTrackFromParam.bind(tracklist, param));
+        // Keep nktl parameter in state for persistent linking
+        const keepInState = param === 'nktl';
+        bindHashStateReadOnly(param, tracklist.loadTrackFromParam.bind(tracklist, param), false, keepInState);
     }
 
     /* set map position */

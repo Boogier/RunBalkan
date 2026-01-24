@@ -110,10 +110,12 @@ const hashState = {
     }
 };
 
-function bindHashStateReadOnly(key, target, once) {
+function bindHashStateReadOnly(key, target, once, keepInState) {
     function onChange() {
         target(hashState.getState(key));
-        hashState.updateState(key, null);
+        if (!keepInState) {
+            hashState.updateState(key, null);
+        }
     }
     if (!once) {
         hashState.addEventListener(key, onChange);
