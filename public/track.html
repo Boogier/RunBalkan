@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/pages.css">
+    <title>Run-Balkan</title>
+    <meta name="description" content="A running route in the Balkans on Run-Balkan.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Run-Balkan">
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Map</a>
+
+    <h1 id="track-name">Loading…</h1>
+    <p id="track-description" class="track-description"></p>
+
+    <p id="track-links" hidden>
+        <a id="map-link" href="/" target="_blank" rel="noopener">View this route on the map</a>
+        &nbsp;·&nbsp;
+        <a href="/" target="_blank" rel="noopener">All running routes in the Balkans</a>
+    </p>
+
+    <footer>
+        <p>&copy; Boogier 2026</p>
+    </footer>
+
+    <script>
+        (function () {
+            // The track-info endpoint lives on the iOrient backend (data only); this page
+            // is hosted on the run-balkan site and renders that data for search engines and users.
+            var API_URL = 'https://iorient.ru/api/balkan/track-info';
+            var START_ZOOM = 13;
+
+            // trackId comes either from /track/{id} (rewritten to ?trackId=) or directly as ?trackId=.
+            function getTrackId() {
+                var fromQuery = new URLSearchParams(window.location.search).get('trackId');
+                if (fromQuery) {
+                    return fromQuery;
+                }
+                var m = window.location.pathname.match(/\/track\/(\d+)/);
+                return m ? m[1] : null;
+            }
+
+            function setMeta(name, content) {
+                var el = document.querySelector('meta[name="' + name + '"]');
+                if (el) {
+                    el.setAttribute('content', content);
+                }
+            }
+
+            function buildMapUrl(track) {
+                var nf = encodeURIComponent(track.name);
+                if (track.startLat != null && track.startLon != null) {
+                    return '/#m=' + START_ZOOM + '/' + track.startLat.toFixed(5) +
+                        '/' + track.startLon.toFixed(5) + '&l=O&nf=' + nf;
+                }
+                return '/#l=O&nf=' + nf;
+            }
+
+            function showNotFound() {
+                document.title = 'Track not found — Run-Balkan';
+                document.getElementById('track-name').textContent = 'Track not found';
+                document.getElementById('track-description').textContent =
+                    'This route could not be found. It may have been removed.';
+            }
+
+            function render(track) {
+                document.title = track.name + ' — Run-Balkan';
+                if (track.description) {
+                    setMeta('description', track.description.replace(/\s+/g, ' ').trim().slice(0, 160));
+                }
+                document.getElementById('track-name').textContent = track.name;
+                document.getElementById('track-description').textContent = track.description || '';
+                document.getElementById('map-link').setAttribute('href', buildMapUrl(track));
+                document.getElementById('track-links').hidden = false;
+            }
+
+            var trackId = getTrackId();
+            if (!trackId) {
+                showNotFound();
+                return;
+            }
+
+            fetch(API_URL + '?trackId=' + encodeURIComponent(trackId))
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('not found');
+                    }
+                    return response.json();
+                })
+                .then(render)
+                .catch(showNotFound);
+        })();
+    </script>
+</body>
+</html>
