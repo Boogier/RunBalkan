@@ -77,6 +77,12 @@ const plugins = [
         template: paths.appIndexHtml,
         minify: false,
     }),
+    new HtmlWebpackPlugin({
+        template: paths.appTrackHtml,
+        filename: 'track.html',
+        chunks: ['track'],
+        minify: false,
+    }),
     ...(isProduction || isDevelopment
         ? [
               new MiniCssExtractPlugin({
@@ -192,6 +198,7 @@ module.exports = {
 
     entry: {
         app: paths.appIndexJs,
+        track: paths.appTrackJs,
     },
 
     optimization: {
