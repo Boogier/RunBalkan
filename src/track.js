@@ -239,8 +239,11 @@ function render(track) {
     document.getElementById('track-name').textContent = track.name;
     document.getElementById('track-description').textContent = track.description || '';
     const mapLink = document.getElementById('map-link');
-    mapLink.setAttribute('href', buildMapUrl(track));
+    const mapUrl = buildMapUrl(track);
+    mapLink.setAttribute('href', mapUrl);
+    document.getElementById('track-map-caption-link').setAttribute('href', mapUrl);
     document.getElementById('track-links').hidden = false;
+    document.getElementById('track-map-caption').hidden = false;
     renderTrackMapPicture(trackId, mapLink);
 }
 
