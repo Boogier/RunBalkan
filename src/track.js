@@ -237,18 +237,18 @@ function closeLightbox() {
 document.getElementById('track-lightbox').addEventListener('click', closeLightbox);
 document.getElementById('track-lightbox-close').addEventListener('click', closeLightbox);
 
-function renderPhotos(thumbnails) {
-    if (!thumbnails || thumbnails.length === 0) {
+function renderPhotos(images) {
+    if (!images || images.length === 0) {
         return;
     }
     const grid = document.getElementById('track-photos');
-    thumbnails.forEach((url) => {
+    images.forEach(({thumbnailUrl, fullImageUrl}) => {
         const img = document.createElement('img');
         img.className = 'track-photo';
-        img.src = url;
+        img.src = thumbnailUrl;
         img.alt = '';
         img.loading = 'lazy';
-        img.addEventListener('click', () => openLightbox(url));
+        img.addEventListener('click', () => openLightbox(fullImageUrl || thumbnailUrl));
         grid.appendChild(img);
     });
     document.getElementById('track-photos-section').hidden = false;
@@ -275,7 +275,7 @@ function render(track) {
     document.getElementById('track-links').hidden = false;
     document.getElementById('track-map-caption').hidden = false;
     renderTrackMapPicture(trackId, mapLink);
-    renderPhotos(track.thumbnails);
+    renderPhotos(track.images);
 }
 
 if (trackId) {
