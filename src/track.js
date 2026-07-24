@@ -40,17 +40,17 @@ function setMeta(metaName, content) {
     }
 }
 
-function buildMapUrl(track) {
-    const nf = encodeURIComponent(track.name);
+function buildMapUrl(track, {withNameFilter = true} = {}) {
     const hasStart =
         track.startLat !== null &&
         track.startLat !== undefined &&
         track.startLon !== null &&
         track.startLon !== undefined;
+    const nf = withNameFilter ? `&nf=${encodeURIComponent(track.name)}` : '';
     if (hasStart) {
-        return `/#m=${START_ZOOM}/${track.startLat.toFixed(5)}/${track.startLon.toFixed(5)}&l=O&nf=${nf}`;
+        return `/#m=${START_ZOOM}/${track.startLat.toFixed(5)}/${track.startLon.toFixed(5)}&l=O${nf}`;
     }
-    return `/#l=O&nf=${nf}`;
+    return `/#l=O${nf}`;
 }
 
 function lngLatToWorldPixel(lng, lat, zoom) {
@@ -272,6 +272,7 @@ function render(track) {
     const mapUrl = buildMapUrl(track);
     mapLink.setAttribute('href', mapUrl);
     document.getElementById('track-map-caption-link').setAttribute('href', mapUrl);
+    document.getElementById('all-tracks-link').setAttribute('href', buildMapUrl(track, {withNameFilter: false}));
     document.getElementById('track-links').hidden = false;
     document.getElementById('track-map-caption').hidden = false;
     renderTrackMapPicture(trackId, mapLink);

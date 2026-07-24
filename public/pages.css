@@ -38,6 +38,11 @@ a:hover {
     white-space: pre-line;
 }
 
+.track-map-caption:not([hidden]) {
+    display: flex;
+    justify-content: space-between;
+}
+
 .track-map-link {
     display: block;
 }
