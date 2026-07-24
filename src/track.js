@@ -1,9 +1,21 @@
+import wellknown from 'wellknown';
+
 import config from '~/config';
 
 // The track-info endpoint lives on the same host as the Balkan backend (data only);
 // this page is hosted on the run-balkan site and renders that data for search engines and users.
 const API_URL = `${new URL(config.balkanServerUrl, window.location.origin).origin}/runbalkan/track-info`;
 const START_ZOOM = 13;
+
+// Static, non-interactive picture of the track shown in place of the "View this route on the
+// map" text link; clicking it still goes to the full interactive map.
+const TRACK_MAP_TILE_URL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+const TRACK_MAP_TILE_SIZE = 256;
+const TRACK_MAP_WIDTH = 600;
+const TRACK_MAP_HEIGHT = 360;
+const TRACK_MAP_PADDING = 20;
+const TRACK_MAP_MIN_ZOOM = 2;
+const TRACK_MAP_MAX_ZOOM = 16;
 
 // trackId comes either from /track/{id} (rewritten to ?trackId=) or directly as ?trackId=.
 function getTrackId() {
@@ -14,6 +26,8 @@ function getTrackId() {
     const m = window.location.pathname.match(/\/track\/(\d+)/u);
     return m ? m[1] : null;
 }
+
+const trackId = getTrackId();
 
 function setMeta(metaName, content) {
     const el = document.querySelector(`meta[name="${metaName}"]`);
@@ -35,6 +49,169 @@ function buildMapUrl(track) {
     return `/#l=O&nf=${nf}`;
 }
 
+function lngLatToWorldPixel(lng, lat, zoom) {
+    const scale = TRACK_MAP_TILE_SIZE * 2 ** zoom;
+    const x = ((lng + 180) / 360) * scale;
+    const sinLat = Math.sin((lat * Math.PI) / 180);
+    const y = (0.5 - Math.log((1 + sinLat) / (1 - sinLat)) / (4 * Math.PI)) * scale;
+    return {x, y};
+}
+
+function extractTrackSegments(wkt) {
+    const geometry = wellknown.parse(wkt);
+    const segments = [];
+    function visit(geom) {
+        if (!geom) {
+            return;
+        }
+        if (geom.type === 'GeometryCollection') {
+            geom.geometries.forEach(visit);
+        } else if (geom.type === 'LineString') {
+            segments.push(geom.coordinates.map(([lng, lat]) => ({lat, lng})));
+        } else if (geom.type === 'MultiLineString') {
+            geom.coordinates.forEach((line) => segments.push(line.map(([lng, lat]) => ({lat, lng}))));
+        }
+    }
+    visit(geometry);
+    return segments;
+}
+
+function fetchTrackSegments(id) {
+    return fetch(`${config.balkanTracksUrl}&trackId=${encodeURIComponent(id)}`)
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data) => {
+            const trackData = data && data.tracks && data.tracks[0];
+            if (!trackData || !trackData.trackPoints) {
+                return null;
+            }
+            return extractTrackSegments(trackData.trackPoints);
+        })
+        .catch(() => null);
+}
+
+function loadTileImage(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => resolve(null);
+        img.src = url;
+    });
+}
+
+function chooseZoom(minLat, maxLat, minLng, maxLng) {
+    const availableWidth = TRACK_MAP_WIDTH - 2 * TRACK_MAP_PADDING;
+    const availableHeight = TRACK_MAP_HEIGHT - 2 * TRACK_MAP_PADDING;
+    let zoom = TRACK_MAP_MAX_ZOOM;
+    while (zoom > TRACK_MAP_MIN_ZOOM) {
+        const nw = lngLatToWorldPixel(minLng, maxLat, zoom);
+        const se = lngLatToWorldPixel(maxLng, minLat, zoom);
+        if (se.x - nw.x <= availableWidth && se.y - nw.y <= availableHeight) {
+            break;
+        }
+        zoom -= 1;
+    }
+    return zoom;
+}
+
+function getTrackMapBounds(segments) {
+    const points = segments.flat();
+    let minLat = Infinity;
+    let maxLat = -Infinity;
+    let minLng = Infinity;
+    let maxLng = -Infinity;
+    for (const {lat, lng} of points) {
+        minLat = Math.min(minLat, lat);
+        maxLat = Math.max(maxLat, lat);
+        minLng = Math.min(minLng, lng);
+        maxLng = Math.max(maxLng, lng);
+    }
+    return {minLat, maxLat, minLng, maxLng};
+}
+
+function paintBackground(canvas) {
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#e8e8e8';
+    ctx.fillRect(0, 0, TRACK_MAP_WIDTH, TRACK_MAP_HEIGHT);
+}
+
+async function paintTiles(canvas, originX, originY, zoom) {
+    const tilesPerAxis = 2 ** zoom;
+    const tileMinX = Math.floor(originX / TRACK_MAP_TILE_SIZE);
+    const tileMaxX = Math.floor((originX + TRACK_MAP_WIDTH) / TRACK_MAP_TILE_SIZE);
+    const tileMinY = Math.max(0, Math.floor(originY / TRACK_MAP_TILE_SIZE));
+    const tileMaxY = Math.min(tilesPerAxis - 1, Math.floor((originY + TRACK_MAP_HEIGHT) / TRACK_MAP_TILE_SIZE));
+
+    const ctx = canvas.getContext('2d');
+    const tileLoads = [];
+    for (let tx = tileMinX; tx <= tileMaxX; tx += 1) {
+        const wrappedX = ((tx % tilesPerAxis) + tilesPerAxis) % tilesPerAxis;
+        for (let ty = tileMinY; ty <= tileMaxY; ty += 1) {
+            const url = TRACK_MAP_TILE_URL.replace('{z}', zoom).replace('{x}', wrappedX).replace('{y}', ty);
+            tileLoads.push(
+                loadTileImage(url).then((img) => {
+                    if (img) {
+                        ctx.drawImage(img, tx * TRACK_MAP_TILE_SIZE - originX, ty * TRACK_MAP_TILE_SIZE - originY);
+                    }
+                })
+            );
+        }
+    }
+    await Promise.all(tileLoads);
+}
+
+function paintTrackLines(canvas, segments, originX, originY, zoom) {
+    const ctx = canvas.getContext('2d');
+    ctx.strokeStyle = '#e6332a';
+    ctx.lineWidth = 3;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    for (const segment of segments) {
+        if (segment.length < 2) {
+            continue;
+        }
+        ctx.beginPath();
+        segment.forEach(({lat, lng}, i) => {
+            const p = lngLatToWorldPixel(lng, lat, zoom);
+            const x = p.x - originX;
+            const y = p.y - originY;
+            if (i === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+        });
+        ctx.stroke();
+    }
+}
+
+async function drawTrackMap(canvas, segments) {
+    const {minLat, maxLat, minLng, maxLng} = getTrackMapBounds(segments);
+    const zoom = chooseZoom(minLat, maxLat, minLng, maxLng);
+    const center = lngLatToWorldPixel((minLng + maxLng) / 2, (minLat + maxLat) / 2, zoom);
+    const originX = center.x - TRACK_MAP_WIDTH / 2;
+    const originY = center.y - TRACK_MAP_HEIGHT / 2;
+
+    canvas.width = TRACK_MAP_WIDTH;
+    canvas.height = TRACK_MAP_HEIGHT;
+    paintBackground(canvas);
+    await paintTiles(canvas, originX, originY, zoom);
+    paintTrackLines(canvas, segments, originX, originY, zoom);
+}
+
+function renderTrackMapPicture(id, mapLink) {
+    fetchTrackSegments(id).then((segments) => {
+        if (!segments || segments.length === 0) {
+            return;
+        }
+        const canvas = document.createElement('canvas');
+        drawTrackMap(canvas, segments).then(() => {
+            mapLink.textContent = '';
+            mapLink.appendChild(canvas);
+            document.getElementById('track-map-attribution').hidden = false;
+        });
+    });
+}
+
 function showNotFound() {
     document.title = 'Track not found — Run-Balkan';
     document.getElementById('track-name').textContent = 'Track not found';
@@ -49,11 +226,12 @@ function render(track) {
     }
     document.getElementById('track-name').textContent = track.name;
     document.getElementById('track-description').textContent = track.description || '';
-    document.getElementById('map-link').setAttribute('href', buildMapUrl(track));
+    const mapLink = document.getElementById('map-link');
+    mapLink.setAttribute('href', buildMapUrl(track));
     document.getElementById('track-links').hidden = false;
+    renderTrackMapPicture(trackId, mapLink);
 }
 
-const trackId = getTrackId();
 if (trackId) {
     fetch(`${API_URL}?trackId=${encodeURIComponent(trackId)}`)
         .then((response) => {
