@@ -44,7 +44,7 @@ a:hover {
 
 .track-map-link canvas {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border: 1px solid #ccc;
     border-radius: 6px;

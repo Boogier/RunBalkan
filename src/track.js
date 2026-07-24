@@ -11,8 +11,12 @@ const START_ZOOM = 13;
 // map" text link; clicking it still goes to the full interactive map.
 const TRACK_MAP_TILE_URL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const TRACK_MAP_TILE_SIZE = 256;
-const TRACK_MAP_WIDTH = 600;
-const TRACK_MAP_HEIGHT = 360;
+// Canvas width tracks the width of the surrounding text column instead of a fixed size,
+// so the picture lines up with the description text instead of looking like a small stamp.
+const TRACK_MAP_ASPECT = 0.6;
+const TRACK_MAP_DEFAULT_WIDTH = 600;
+const TRACK_MAP_MIN_WIDTH = 280;
+const TRACK_MAP_MAX_WIDTH = 900;
 const TRACK_MAP_PADDING = 20;
 const TRACK_MAP_MIN_ZOOM = 2;
 const TRACK_MAP_MAX_ZOOM = 16;
@@ -98,9 +102,15 @@ function loadTileImage(url) {
     });
 }
 
-function chooseZoom(minLat, maxLat, minLng, maxLng) {
-    const availableWidth = TRACK_MAP_WIDTH - 2 * TRACK_MAP_PADDING;
-    const availableHeight = TRACK_MAP_HEIGHT - 2 * TRACK_MAP_PADDING;
+function getTrackMapWidth() {
+    const container = document.getElementById('track-links');
+    const measured = (container && container.clientWidth) || TRACK_MAP_DEFAULT_WIDTH;
+    return Math.round(Math.min(TRACK_MAP_MAX_WIDTH, Math.max(TRACK_MAP_MIN_WIDTH, measured)));
+}
+
+function chooseZoom(minLat, maxLat, minLng, maxLng, width, height) {
+    const availableWidth = width - 2 * TRACK_MAP_PADDING;
+    const availableHeight = height - 2 * TRACK_MAP_PADDING;
     let zoom = TRACK_MAP_MAX_ZOOM;
     while (zoom > TRACK_MAP_MIN_ZOOM) {
         const nw = lngLatToWorldPixel(minLng, maxLat, zoom);
@@ -128,18 +138,18 @@ function getTrackMapBounds(segments) {
     return {minLat, maxLat, minLng, maxLng};
 }
 
-function paintBackground(canvas) {
+function paintBackground(canvas, width, height) {
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#e8e8e8';
-    ctx.fillRect(0, 0, TRACK_MAP_WIDTH, TRACK_MAP_HEIGHT);
+    ctx.fillRect(0, 0, width, height);
 }
 
-async function paintTiles(canvas, originX, originY, zoom) {
+async function paintTiles(canvas, originX, originY, zoom, width, height) {
     const tilesPerAxis = 2 ** zoom;
     const tileMinX = Math.floor(originX / TRACK_MAP_TILE_SIZE);
-    const tileMaxX = Math.floor((originX + TRACK_MAP_WIDTH) / TRACK_MAP_TILE_SIZE);
+    const tileMaxX = Math.floor((originX + width) / TRACK_MAP_TILE_SIZE);
     const tileMinY = Math.max(0, Math.floor(originY / TRACK_MAP_TILE_SIZE));
-    const tileMaxY = Math.min(tilesPerAxis - 1, Math.floor((originY + TRACK_MAP_HEIGHT) / TRACK_MAP_TILE_SIZE));
+    const tileMaxY = Math.min(tilesPerAxis - 1, Math.floor((originY + height) / TRACK_MAP_TILE_SIZE));
 
     const ctx = canvas.getContext('2d');
     const tileLoads = [];
@@ -185,16 +195,18 @@ function paintTrackLines(canvas, segments, originX, originY, zoom) {
 }
 
 async function drawTrackMap(canvas, segments) {
+    const width = getTrackMapWidth();
+    const height = Math.round(width * TRACK_MAP_ASPECT);
     const {minLat, maxLat, minLng, maxLng} = getTrackMapBounds(segments);
-    const zoom = chooseZoom(minLat, maxLat, minLng, maxLng);
+    const zoom = chooseZoom(minLat, maxLat, minLng, maxLng, width, height);
     const center = lngLatToWorldPixel((minLng + maxLng) / 2, (minLat + maxLat) / 2, zoom);
-    const originX = center.x - TRACK_MAP_WIDTH / 2;
-    const originY = center.y - TRACK_MAP_HEIGHT / 2;
+    const originX = center.x - width / 2;
+    const originY = center.y - height / 2;
 
-    canvas.width = TRACK_MAP_WIDTH;
-    canvas.height = TRACK_MAP_HEIGHT;
-    paintBackground(canvas);
-    await paintTiles(canvas, originX, originY, zoom);
+    canvas.width = width;
+    canvas.height = height;
+    paintBackground(canvas, width, height);
+    await paintTiles(canvas, originX, originY, zoom, width, height);
     paintTrackLines(canvas, segments, originX, originY, zoom);
 }
 
