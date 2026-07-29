@@ -2,9 +2,9 @@ import wellknown from 'wellknown';
 
 import config from '~/config';
 
-// The track-info endpoint lives on the same host as the Balkan backend (data only);
+// The track-info endpoint lives alongside the rest of the Balkan backend;
 // this page is hosted on the run-balkan site and renders that data for search engines and users.
-const API_URL = `${new URL(config.balkanServerUrl, window.location.origin).origin}/runbalkan/track-info`;
+const API_URL = `${new URL(config.balkanServerUrl, window.location.origin).href}track-info`;
 const START_ZOOM = 13;
 
 // Static, non-interactive picture of the track shown in place of the "View this route on the
@@ -224,31 +224,56 @@ function renderTrackMapPicture(id, mapLink) {
     });
 }
 
-function openLightbox(url) {
+let lastFocusedPhoto = null;
+
+function openLightbox(url, triggerEl) {
+    lastFocusedPhoto = triggerEl || null;
     document.getElementById('track-lightbox-img').setAttribute('src', url);
     document.getElementById('track-lightbox').hidden = false;
+    document.getElementById('track-lightbox-close').focus();
 }
 
 function closeLightbox() {
     document.getElementById('track-lightbox').hidden = true;
     document.getElementById('track-lightbox-img').setAttribute('src', '');
+    if (lastFocusedPhoto) {
+        lastFocusedPhoto.focus();
+        lastFocusedPhoto = null;
+    }
 }
 
 document.getElementById('track-lightbox').addEventListener('click', closeLightbox);
 document.getElementById('track-lightbox-close').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (keyEvent) => {
+    if (keyEvent.key === 'Escape' && !document.getElementById('track-lightbox').hidden) {
+        closeLightbox();
+    }
+});
 
 function renderPhotos(images) {
     if (!images || images.length === 0) {
         return;
     }
     const grid = document.getElementById('track-photos');
-    images.forEach(({thumbnailUrl, fullImageUrl}) => {
+    images.forEach(({thumbnailUrl, fullImageUrl}, index) => {
         const img = document.createElement('img');
         img.className = 'track-photo';
         img.src = thumbnailUrl;
-        img.alt = '';
+        img.alt = `Track photo ${index + 1}`;
         img.loading = 'lazy';
-        img.addEventListener('click', () => openLightbox(fullImageUrl || thumbnailUrl));
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.setAttribute('aria-label', `Open photo ${index + 1} in full size`);
+        function openThisPhoto() {
+            openLightbox(fullImageUrl || thumbnailUrl, img);
+        }
+        img.addEventListener('click', openThisPhoto);
+        img.addEventListener('keydown', (keyEvent) => {
+            if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+                keyEvent.preventDefault();
+                openThisPhoto();
+            }
+        });
         grid.appendChild(img);
     });
     document.getElementById('track-photos-section').hidden = false;

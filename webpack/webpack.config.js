@@ -75,6 +75,7 @@ const plugins = [
     ...(isProduction ? [new CopyWebpackPlugin({patterns: [{from: paths.appPublic, to: ''}]})] : []),
     new HtmlWebpackPlugin({
         template: paths.appIndexHtml,
+        chunks: ['app'],
         minify: false,
     }),
     new HtmlWebpackPlugin({
