@@ -75,6 +75,13 @@ const plugins = [
     ...(isProduction ? [new CopyWebpackPlugin({patterns: [{from: paths.appPublic, to: ''}]})] : []),
     new HtmlWebpackPlugin({
         template: paths.appIndexHtml,
+        chunks: ['app'],
+        minify: false,
+    }),
+    new HtmlWebpackPlugin({
+        template: paths.appTrackHtml,
+        filename: 'track.html',
+        chunks: ['track'],
         minify: false,
     }),
     ...(isProduction || isDevelopment
@@ -192,6 +199,7 @@ module.exports = {
 
     entry: {
         app: paths.appIndexJs,
+        track: paths.appTrackJs,
     },
 
     optimization: {

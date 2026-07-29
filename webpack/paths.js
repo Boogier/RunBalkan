@@ -12,5 +12,7 @@ module.exports = {
     appPublic: resolveApp('public'),
     appIndexJs: resolveApp('src/index.js'),
     appIndexHtml: resolveApp('src/index.html'),
+    appTrackJs: resolveApp('src/track.js'),
+    appTrackHtml: resolveApp('src/track.html'),
     appSrc: resolveApp('src'),
 };

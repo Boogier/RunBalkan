@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/pages.css">
+    <title>Run-Balkan</title>
+    <meta name="description" content="A running route in the Balkans on Run-Balkan.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Run-Balkan">
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Map</a>
+
+    <h1 id="track-name">Loading…</h1>
+    <p id="track-description" class="track-description"></p>
+
+    <p id="track-map-caption" class="track-map-caption" hidden>
+        <a id="track-map-caption-link" href="/">Click the map below to explore the track</a>
+        <a id="all-tracks-link" href="/">Or explore all running ideas!</a>
+    </p>
+    <p id="track-links" hidden>
+        <a id="map-link" href="/" class="track-map-link">View this route on the map</a>
+        <span id="track-map-attribution" class="track-map-attribution" hidden>
+            <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">&copy; OpenStreetMap contributors</a>
+        </span>
+    </p>
+
+    <section id="track-photos-section" hidden>
+        <h2>Photo gallery</h2>
+        <div id="track-photos" class="track-photos"></div>
+    </section>
+
+    <div id="track-lightbox" class="track-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" hidden>
+        <button type="button" id="track-lightbox-close" class="track-lightbox-close" aria-label="Close">&times;</button>
+        <img id="track-lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; Boogier 2026</p>
+    </footer>
+</body>
+</html>
