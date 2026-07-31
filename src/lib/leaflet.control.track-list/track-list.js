@@ -782,8 +782,10 @@ L.Control.TrackList = L.Control.extend({
         },
 
         exportTrackAsFile: async function(track, exporter, extension, addElevations, allowEmpty) {
-            await this.updateBalkanTrack(track.id());
-            track = this.getTrackById(track.id());
+            if (track.id()) {
+                await this.updateBalkanTrack(track.id());
+                track = this.getTrackById(track.id());
+            }
 
             var lines = this.getTrackPolylines(track)
                 .map(function(line) {
