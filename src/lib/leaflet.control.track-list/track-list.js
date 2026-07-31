@@ -36,6 +36,8 @@ import * as coordFormats from '~/lib/leaflet.control.coordinates/formats';
 import {polygonArea} from '~/lib/polygon-area';
 import {polylineHasSelfIntersections} from '~/lib/polyline-selfintersects';
 import iconSave from '~/images/save.png';
+import iconMountain from '~/images/mountain-16.png';
+import iconOpenInANewWindow from '~/images/open-in-new-window-16.png';
 
 const TRACKLIST_TRACK_COLORS = ['#000', '#f0f', '#77f', '#f95', '#0ff', '#f77', '#00f', '#ee5'];
 
@@ -657,20 +659,41 @@ L.Control.TrackList = L.Control.extend({
                 //{text: 'Reverse', callback: this.reverseTrack.bind(this, track)},
                 //'-',
                 //{text: 'Delete', callback: this.removeTrack.bind(this, track)},
-                '-',
-                {text: 'Save as GPX', callback: () => this.saveTrackAsFile(track, geoExporters.saveGpx, '.gpx')},
-                {text: 'Save as KML', callback: () => this.saveTrackAsFile(track, geoExporters.saveKml, '.kml')},
+                '-'
+            ];
+            if (track.id()) {
+                items.push(
+                    {
+                        text: `<img src="${iconOpenInANewWindow}" width="16" height="16" ` +
+                            'style="vertical-align: middle; margin-right: 4px;">Show the track in a new window',
+                        callback: this.openTrackInSeparateWindow.bind(this, track)
+                    },
+                    '-'
+                );
+            }
+            const saveIconHtml = `<img src="${iconSave}" width="16" height="16" style="vertical-align: middle; margin-right: 4px;">`;
+            items.push(
+                {text: `${saveIconHtml}Save as GPX`, callback: () => this.saveTrackAsFile(track, geoExporters.saveGpx, '.gpx')},
+                {text: `${saveIconHtml}Save as KML`, callback: () => this.saveTrackAsFile(track, geoExporters.saveKml, '.kml')},
                 //{text: 'Copy link for track', callback: this.copyTrackLinkToClipboard.bind(this, track)},
                 '-',
-                {text: 'Show elevation profile', callback: this.showElevationProfileForTrack.bind(this, track)},
-                {text: 'Save as GPX with added elevation (SRTM)', callback: this.saveTrackAsFile.bind(this, track, geoExporters.saveGpxWithElevations, '.gpx', true)}
+                {
+                    text: `<img src="${iconMountain}" width="16" height="16" ` +
+                        'style="vertical-align: middle; margin-right: 4px;">Show elevation profile',
+                    callback: this.showElevationProfileForTrack.bind(this, track)
+                },
+                {text: `${saveIconHtml}Save as GPX with added elevation (SRTM)`, callback: this.saveTrackAsFile.bind(this, track, geoExporters.saveGpxWithElevations, '.gpx', true)}
                 // {text: 'Extra', separator: true},
                 // {
                 //     text: 'Save as GPX with added elevation (SRTM)',
                 //     callback: this.saveTrackAsFile.bind(this, track, geoExporters.saveGpxWithElevations, '.gpx', true),
                 // },
-            ];
+            );
             track._actionsMenu = new Contextmenu(items);
+        },
+
+        openTrackInSeparateWindow: function(track) {
+            window.open(`/track.html?trackId=${track.id()}`, '_blank', 'noopener');
         },
 
         onButtonAddSegmentClicked: function(track) {
@@ -1042,18 +1065,26 @@ L.Control.TrackList = L.Control.extend({
             }
             const descr = track.descr();
             const externalId = track.externalId();
+            const trackId = track.id();
             return `
                 <div style="width: max-content; max-width: min(800px, 80vw); word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
                     <b>${track.name()}</b><br/>
+                    <a href="https://strava.com/activities/${externalId}/overview" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 8px;">
                     <img src="https://www.strava.com/favicon.ico" width="16" height="16" style="vertical-align: middle; margin-right: 4px;">
-                    <a href="https://strava.com/activities/${externalId}/overview" target="_blank" rel="noopener noreferrer">
                         Open in Strava
                     </a>
-                    
-                    <a href="#" class="track-save-as-gpx-link" data-track-id="${track.id}" title="Save as GPX">
+
+                    ${trackId ? `
+                    <a href="/track.html?trackId=${trackId}" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 8px;">
+                    <img src="${iconOpenInANewWindow}" width="16" height="16" style="vertical-align: middle; margin-right: 4px;">
+                        Open in a new window
+                    </a>
+                    ` : ''}
+
+                    <a href="#" class="track-save-as-gpx-link" data-track-id="${track.id}" title="Save as GPX" style="display: inline-block; margin-right: 8px;">
                     <img src="${iconSave}" style="vertical-align: middle; margin: 4px;">GPX</a>
-                    
-                    <a href="#" class="track-save-as-kml-link" data-track-id="${track.id}" title="Save as KML">
+
+                    <a href="#" class="track-save-as-kml-link" data-track-id="${track.id}" title="Save as KML" style="display: inline-block;">
                     <img src="${iconSave}" style="vertical-align: middle; margin: 4px;">KML</a>
                     
                     ${descr ? '<br/><br/>' + descr.replaceAll('\n', '<br/>').replaceAll('\r', '') : ''}
