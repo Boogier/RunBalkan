@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
@@ -119,19 +119,19 @@
 
 </head>
 <body>
-    <a href="/" class="back-link">← Back to Map</a>
+    <a href="/" class="back-link">← Na mapu Run-Balkan</a>
 
     <h1>Kulturni događaji u Beogradu</h1>
 
     <div class="events-toolbar">
-        <select id="typeFilter" aria-label="Event type">
+        <select id="typeFilter" aria-label="Tip događaja">
             <option value="">Svi tipovi</option>
         </select>
-        <input id="textFilter" type="search" placeholder="Pretraži po naslovu ili mestu" aria-label="Search">
+        <input id="textFilter" type="search" placeholder="Pretraži po naslovu ili mestu" aria-label="Pretraga">
         <span id="updatedAt" class="events-updated"></span>
     </div>
 
-    <div id="events"><p class="events-message">Loading…</p></div>
+    <div id="events"><p class="events-message">Učitavanje…</p></div>
 
     <footer>
         <p>&copy; Boogier 2026</p>
@@ -233,7 +233,7 @@
                     body.appendChild(el('p', 'event-description', ev.description));
                 }
                 if (ev.source) {
-                    body.appendChild(el('div', 'event-source', 'Source: ' + ev.source));
+                    body.appendChild(el('div', 'event-source', 'Izvor: ' + ev.source));
                 }
 
                 row.appendChild(body);
@@ -267,7 +267,7 @@
                 if (shown) {
                     container.appendChild(fragment);
                 } else {
-                    container.appendChild(el('p', 'events-message', 'No events found.'));
+                    container.appendChild(el('p', 'events-message', 'Nema pronađenih događaja.'));
                 }
             }
 
@@ -324,7 +324,7 @@
                 .then(init)
                 .catch(function () {
                     container.textContent = '';
-                    container.appendChild(el('p', 'events-message', 'Could not load events. Please try again later.'));
+                    container.appendChild(el('p', 'events-message', 'Nije moguće učitati događaje. Pokušajte ponovo kasnije.'));
                 });
         })();
     </script>
