@@ -72,7 +72,20 @@ const DevToolPlugin = isProduction ? Webpack.SourceMapDevToolPlugin : Webpack.Ev
 
 const plugins = [
     ...(isProduction ? [new CleanWebpackPlugin()] : []),
-    ...(isProduction ? [new CopyWebpackPlugin({patterns: [{from: paths.appPublic, to: ''}]})] : []),
+    ...(isProduction
+        ? [
+              new CopyWebpackPlugin({
+                  patterns: [
+                      {
+                          from: paths.appPublic,
+                          to: '',
+                          // Events.json is a dev-only stub; in production it is served by the backend
+                          globOptions: {ignore: ['**/Events.json']},
+                      },
+                  ],
+              }),
+          ]
+        : []),
     new HtmlWebpackPlugin({
         template: paths.appIndexHtml,
         chunks: ['app'],
