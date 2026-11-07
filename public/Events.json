@@ -1,0 +1,3305 @@
+{
+  "UpdatedAt": "2026-11-07T17:14:47+01:00",
+  "Events": [
+    {
+      "date": "2026-11-07T19:00",
+      "type": "Koncert",
+      "title": "Alex Solely",
+      "place": "Sala BGF",
+      "description": "Nagrađivani kompozitor Alex Solely 7. novembra predstavlja svoju muziku u Sali BGF, Studentski trg 11., nastupajući sa kamernim orkestrom „Muzikon”. Beogradski koncert usledio je nakon nastupa u Italiji i Austriji i donosi prošireni program za klavir i gudače. Veče će obuhvatiti izbor originalnih…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/alex_solely_28901",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/98540d6d-5bde-493c-bef8-42cb197a4f2e___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-07T19:00",
+      "type": "Opera",
+      "title": "Тоска",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђакома Пучинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/toska",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7444/home/toskabaner.jpg"
+    },
+    {
+      "date": "2026-11-07T19:30",
+      "type": "Predstava",
+      "title": "Фестивал кореографских минијатура",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "у организацији УБУС-а",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/festival-koreografskih-minijatura",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/system/0/images/ubus_7.nov.png"
+    },
+    {
+      "date": "2026-11-07T20:00",
+      "type": "Predstava",
+      "title": "Garderober",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Ronald Harvud. Režija: Paolo Mađeli. Igraju: Voja Brajović, Sloboda Mićalović, Branka Petrić, Miki Manojlović, Marta Bogosavljević, Miloš Samolov, Nikola Rakočević, Simo Đukić, Rade Stojiljković/Andrija Urošević, Nemanja Aćimović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/en/performance/the-dresser/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/04/Garderober-Latinica-scaled.jpg"
+    },
+    {
+      "date": "2026-11-07T20:00",
+      "type": "Predstava",
+      "title": "Naši roditelji",
+      "place": "BDP",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/nasi-roditelji",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a1d535a63a50f71e935f44c_Screenshot_2026-05-29-15-52-13-836_com.viber.voip-edit.jpg"
+    },
+    {
+      "date": "2026-11-07T20:00",
+      "type": "Predstava",
+      "title": "Oda radosti",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "F. Šili",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/oda-radosti/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/01/09-1.jpg"
+    },
+    {
+      "date": "2026-11-07T20:00",
+      "type": "Koncert",
+      "title": "Željko Vasić",
+      "place": "Sava Centar - Plava dvorana",
+      "description": "Foto: Goran Đukanović/Studio Photogenic",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/zeljko_vasic_27731",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/d65ff7c1-648f-4bc4-8891-b025fa533e74___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-07T20:30",
+      "type": "Predstava",
+      "title": "Čista kuća",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Rul",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/cista-kuca/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2022/10/09.jpg"
+    },
+    {
+      "date": "2026-11-08T11:00",
+      "type": "Koncert",
+      "title": "БЕОГРАДСКЕ ПРОМЕНАДЕ",
+      "place": "Велика дворана",
+      "description": "Владимир Тошић, 50 година деловања. Организатор: Центар за музику. УЛАЗ СЛОБОДАН",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/beogradske-promenade-8-11-2026-u-11-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/11/Vladimir-Tosic-HD-180x180.png"
+    },
+    {
+      "date": "2026-11-08T12:00",
+      "type": "Opera",
+      "title": "Чаробна фрула",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "опера за децу В. А. Моцарта, у извођењу Оперског студија „Борислав Поповић“",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/carobna-frula-1",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8302/home/carobna_frula_baner.jpg"
+    },
+    {
+      "date": "2026-11-08T19:30",
+      "type": "Predstava",
+      "title": "Нора - луткина кућа",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "драма Хенрика Ибзена",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/nora-lutkina-kuca",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7518/home/nora_baner.jpg"
+    },
+    {
+      "date": "2026-11-08T20:00",
+      "type": "Predstava",
+      "title": "Gladni duhovi",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "K. Keli",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/gladni-duhovi-consumed/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/09/34-1.jpg"
+    },
+    {
+      "date": "2026-11-08T20:00",
+      "type": "Predstava",
+      "title": "Naši roditelji",
+      "place": "BDP",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/nasi-roditelji",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a1d535a63a50f71e935f44c_Screenshot_2026-05-29-15-52-13-836_com.viber.voip-edit.jpg"
+    },
+    {
+      "date": "2026-11-08T20:00",
+      "type": "Predstava",
+      "title": "Sveti Georgije ubiva aždahu",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Dušan Kovačević. Režija: Milan Neskovic. Igraju: Nikola Rakočević, Jovana Belović, Milan Marić, Ognjen Nikola Radulović, Nebojša Ljubišić, Teodor Vinčić, Srđan Timarov, Aleksej Bjelogrlić, Joakim Tasić, Miloš Samolov, Zoran Cvijanović, Aleksandar Đurica, Anđelika Simić, Marko Janketić, Lazar Đukić…",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/sveti-georgije-ubiva-azdahu/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2024/11/Sveti-Georgie-Latinica_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-08T20:00",
+      "type": "Koncert",
+      "title": "Tommy Emmanuel",
+      "place": "Sava Centar - Plava dvorana",
+      "description": "Tommy Emmanuel važi za jednog od najboljih akustičnih gitarista na svetu i za jednog od najvećih virtuoza gitare današnjice. Muzikom je počeo da se bavi veoma rano – gitaru je svirao još kao dete, a prve profesionalne nastupe imao je i pre nego što je krenuo u školu. Njegov stil sviranja zasniva se…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/tommy_emmanuel_26182",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/306b22be-697d-48e1-b339-edd83cf9354e___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-08T20:30",
+      "type": "Predstava",
+      "title": "Ova će biti ista",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Bajac",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=ova-ce-biti-ista-stasa-bajac-premijera&lang=lat",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2021/06/22.png"
+    },
+    {
+      "date": "2026-11-09T19:30",
+      "type": "Predstava",
+      "title": "Una",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "S. Koprivica, po romanu M. Kapora",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/una/42/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/42/90/400x300/dsc09632-17796.jpg"
+    },
+    {
+      "date": "2026-11-09T20:00",
+      "type": "Predstava",
+      "title": "Edip",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Sofokle. Režija: Vito Taufer. Igraju: Milan Marić, Nataša Ninković, Srđan Timarov, Bojan Dimitrijević, Aleksandar Đurica, Miloš Samolov, Nebojša Ljubišić, Zoran Cvijanović, Joakim Tasić, Marko Radojević, Milan Bobić, Luka Antonijević, Luka Sević, Veljko Stevanović, Darko Golić (kontrabas), Luka…",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/edip/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2022/07/Edip-Latinica-sajt-385x535.jpg"
+    },
+    {
+      "date": "2026-11-09T20:00",
+      "type": "Predstava",
+      "title": "Obraćanje naciji",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "A. Čelestini",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/obracanje-naciji/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/05/09-1.jpg"
+    },
+    {
+      "date": "2026-11-09T20:30",
+      "type": "Predstava",
+      "title": "Beogradska trilogija",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Biljana Srbljanović. Režija: Ivan Vanja Alač. Igraju: Ognjen Nikola Radulović, Miloš Macura, Lenka Petrović, Đorđe Mitrović, Nikolina Vujević",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/beogradska-trilogija/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2021/04/Beogradska-Trilogija-5-Latinica-1-385x535.jpg"
+    },
+    {
+      "date": "2026-11-09T20:30",
+      "type": "Predstava",
+      "title": "Ovaj će biti drugačiji",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Bajac",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=ovaj-ce-biti-drugaciji-stasa-bajac",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/07-2.jpg"
+    },
+    {
+      "date": "2026-11-10T19:00",
+      "type": "Koncert",
+      "title": "Uriah Heep",
+      "place": "Sava Centar",
+      "description": "Жанр: metal, rock, folk blues, indie alternative. С участием: Heavy Pettin",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43445646-uriah-heep-at-sava-centar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/14365/huge_avatar"
+    },
+    {
+      "date": "2026-11-10T19:00",
+      "type": "Balet",
+      "title": "Лабудово језеро",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет Петра Иљича Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/labudovo-jezero-1",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7501/home/labudovo_jezero_baner.jpg"
+    },
+    {
+      "date": "2026-11-10T19:30",
+      "type": "Predstava",
+      "title": "Sa druge strane jastuka",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Juga Radivojevića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/Sa%20druge%20strane%20jastuka",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2020/09/sa-druge-strane-jastuka-plakat-600x857.jpg"
+    },
+    {
+      "date": "2026-11-10T20:00",
+      "type": "Koncert",
+      "title": "Los Vivancos",
+      "place": "mts dvorana",
+      "description": "\"Eksplozivna mešavina flamenka, muzike i akrobatike! Oni su sinovi legendarnog Pedra Vivankosa Garsije, osnivača škole plesa, muzike i borilačkih veština u Barseloni.U njegovoj trupi plesala su i deca. Bio je oženjen sedam puta i ima 39 potomaka. „Mi nismo sekta. Mi smo neobična, ali prelepa…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/los_vivancos_27510",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/e34e58f8-01a1-43d3-8670-5eb902589e04___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-10T20:00",
+      "type": "Koncert",
+      "title": "URIAH HEEP",
+      "place": "Sava Centar",
+      "description": "Oproštajna turneja „The Magician’s Farewell“. Britanske hard rok legende Uriah Heep najavljuju svoju poslednju turneju „The Magician’s Farewell“ sa ekskluzivnim nastupom u Beogradu 10. novembra u Sava Centru. Ovaj koncert predstavlja posebno oproštajno obraćanje regionu u kojem su Uriah Heep…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/uriah_heep_27331",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/23588359-1f86-4b3d-b0e9-f09418d2f18f___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-10T20:00",
+      "type": "Koncert",
+      "title": "Маја Рајковић",
+      "place": "ФОАЈЕ",
+      "description": "Маја Рајковић, клавирски реситал. Вагнер и Лист. музички дијалог. ДЕТАЉНИЈЕ. УЛАЗ СЛОБОДАН",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/maja-rajkovic-10-11-2026-u-20-foaje/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/11/maja-1920x1080-169-ratio-1080x1080.png"
+    },
+    {
+      "date": "2026-11-10T20:30",
+      "type": "Predstava",
+      "title": "Власт",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Бранислава Нушића у адаптацији Милана Нешковића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/vlast",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7517/home/vlast_baner.jpg"
+    },
+    {
+      "date": "2026-11-11T20:00",
+      "type": "Predstava",
+      "title": "Knjiga o milutinu",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Danko Popović. 400. извођење",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/knjiga-o-milutinu-deo-prvi/10/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/10/90/400x300/dsc01632-95723.jpg"
+    },
+    {
+      "date": "2026-11-11T20:00",
+      "type": "Predstava",
+      "title": "VANjA, SONjA, MAŠA I OSTALI",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "K. Djurang",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/vanja-sonja-masa-i-ostali/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/11/02.jpg"
+    },
+    {
+      "date": "2026-11-11T20:30",
+      "type": "Koncert",
+      "title": "Magla bend",
+      "place": "Sava Centar - Plava dvorana",
+      "description": "Foto: Stefan Đaković. Vizual: agencija Vrisak",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/magla_bend_28746",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/11a303e5-9c93-4879-802c-57555be2684f___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-11T20:30",
+      "type": "Predstava",
+      "title": "Čekaonica",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "B. Liješević, B. Dimitrijević",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=cekaonica-b-lijesevic-b-dimitrijevic&lang=lat",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/DSC4964.jpg"
+    },
+    {
+      "date": "2026-11-11T21:00",
+      "type": "Koncert",
+      "title": "Hugo Race Fatalists",
+      "place": "KC GRAD",
+      "description": "Hugo Race više od trideset godina piše pesme, svira, producira, obilazi zemaljsku kuglu izvodeći svoje i tuđe numere, muzicirajući sa sijaset poznatih i nepoznatih faca iz branše. 1984. sa 20 godina bio je član Nick Cave & The Bad Seed i kao gitarista učestvovao na legendarnom prvom albumu „From…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/hugo_race_fatalists_27518",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/6deb9906-9632-444b-90bb-f696648ba141___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-12T19:30",
+      "type": "Predstava",
+      "title": "Balkan ekspres",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Darijana Mihajlovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://bilet.pozoristeterazije.com/repertoar.php",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2025/04/ikonica-za-najavu-predstave-balkan-ekspres.jpg"
+    },
+    {
+      "date": "2026-11-12T19:30",
+      "type": "Predstava",
+      "title": "Sportsko srce",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Đorđe Milosavljević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/sportsko-srce/23/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/23/90/1200x800/jak01842-63357.jpg?v=3"
+    },
+    {
+      "date": "2026-11-12T20:00",
+      "type": "Koncert",
+      "title": "BDB Trio",
+      "place": "Klub Bluz i Pivo",
+      "description": "BDB Trio donosi veče savremenog jazz fusiona, u kojem se džez improvizacija susreće sa rhythm & bluesom, a svaki nastup postaje jedinstven muzički razgovor. Američko-sarajevski trio poznat je po energičnim nastupima i specifičnoj muzičkoj hemiji, koju je gradio na klupskim scenama širom sveta — od…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/bdb_trio_28896",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/22c32014-f8f7-4aba-8a3a-d63f2b91fcc1___640x360.png"
+    },
+    {
+      "date": "2026-11-12T20:00",
+      "type": "Koncert",
+      "title": "Halid Muslimović",
+      "place": "Sava Centar",
+      "description": "",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/halid_muslimovic_27437",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/0b3efdc0-b8d6-48ea-b165-52cb47e01279___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-12T20:00",
+      "type": "Koncert",
+      "title": "Koncert muzičke edukacije Slobodno pevaj - \"Glas Erosa\"",
+      "place": "SPRAT",
+      "description": "",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/koncert_muzicke_edukacije_slobodno_pevaj_glas_erosa_28852",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/512fa48e-f688-42fc-9d15-f00196c48418___640x360.png"
+    },
+    {
+      "date": "2026-11-12T20:00",
+      "type": "Predstava",
+      "title": "Putujuće pozorište Šopalović",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Ljubomir Simović. Režija: Jagoš Marković. Igraju: Dragan Bjelogrlić (*Milan Gutović), Olga Odanović / Jasna Đuričić, Marko Janketić, Jovana Belović, Nenad Jezdić, Anita Mančić, Ljubomir Bandović, Sanja Marković, Irfan Mensur, Miloš Samolov, Milica Sužnjević, Miona Marković, Ana Lečić, Teodora…",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/putujuce-pozoriste-sopalovic/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2020/02/Putujuce...Latinica-NEW-2_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-12T20:00",
+      "type": "Predstava",
+      "title": "Rolerkoster",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "J. Kajgo. DAN POZORIŠTA",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/rolerkoster-2/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2022/03/Dara.jpg"
+    },
+    {
+      "date": "2026-11-12T20:30",
+      "type": "Predstava",
+      "title": "Strujosek",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "A. Radivojević. DAN POZORIŠTA",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=strujosek-a-radivojevic",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/FINAL-DSC_3592-q.jpg"
+    },
+    {
+      "date": "2026-11-12T20:30",
+      "type": "Predstava",
+      "title": "Наш разред",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Тадеуша Слобођанека",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/nas-razred",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7534/home/nas_razred_baner.jpg"
+    },
+    {
+      "date": "2026-11-12T21:00",
+      "type": "Koncert",
+      "title": "Ki Klop",
+      "place": "Kc Grad",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43487180-ki-klop-at-kc-grad",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/10357355/huge_avatar"
+    },
+    {
+      "date": "2026-11-12T21:00",
+      "type": "Koncert",
+      "title": "ZHIVA",
+      "place": "Karmakoma club",
+      "description": "ZHIVA najavljuje koncert 12. novembra u beogradskom klubu Karmakoma, gde će, pored pesama sa prva dva albuma „Preterujem“ i „ZHIVA ZDRAVA“, predstaviti i novi materijal sa prvog dela trećeg albuma „NESTAJEM / Opstajem.”. Novi album zamišljen je kao dvodelna celina, a njegov prvi deo je objavljen 9…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/zhiva_28818",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/bc041bf8-406d-4249-8dba-677a464f1749___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-13",
+      "type": "Koncert",
+      "title": "TRIBUTE MARATON SERBIA",
+      "place": "Dorćol Platz",
+      "description": "Po prvi put u Beogradu, internacionalni festival tribute act muzike - Tribute Maraton Serbia! Muzika koju svi znamo, volimo i slušamo celog života, sada i uživo kod nas, naglas na razglas! Festival Tribute Maraton Serbia okuplja kvalitetne tribute act bendove, internacionalno i lokalno, da ožive…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/tribute_maraton_serbia__28395",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/5b4794f4-171f-439d-b7e7-95aa186b5b47.jpeg"
+    },
+    {
+      "date": "2026-11-13T19:00",
+      "type": "Balet",
+      "title": "Лабудово језеро",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет Петра Иљича Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/labudovo-jezero-1",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7501/home/labudovo_jezero_baner.jpg"
+    },
+    {
+      "date": "2026-11-13T19:30",
+      "type": "Predstava",
+      "title": "Kralj Ibi",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kralj-ibi",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/699a10eccbe93fe261112edc_DSC04994.jpg"
+    },
+    {
+      "date": "2026-11-13T19:30",
+      "type": "Predstava",
+      "title": "Profesionalac",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/profesionalac/53/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/53/90/400x300/dsc00048-66204.jpg"
+    },
+    {
+      "date": "2026-11-13T19:30",
+      "type": "Predstava",
+      "title": "Žene na ivici nervnog sloma",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Nebojše Bradića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/zene-na-ivici-nervnog-sloma/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2023/10/vece-mjuzikla_-instagram-post.jpg"
+    },
+    {
+      "date": "2026-11-13T20:00",
+      "type": "Predstava",
+      "title": "Edip",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Sofokle. Režija: Vito Taufer. Igraju: Milan Marić, Nataša Ninković, Srđan Timarov, Bojan Dimitrijević, Aleksandar Đurica, Miloš Samolov, Nebojša Ljubišić, Zoran Cvijanović, Joakim Tasić, Marko Radojević, Milan Bobić, Luka Antonijević, Luka Sević, Veljko Stevanović, Darko Golić (kontrabas), Luka…",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/edip/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2022/07/Edip-Latinica-sajt-385x535.jpg"
+    },
+    {
+      "date": "2026-11-13T20:00",
+      "type": "Predstava",
+      "title": "Kafa i cigarete - pozdrav iz beograda",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "M. Knežević",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=kafa-i-cigarete-pozdrav-iz-beograda-m-knezevic",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/FINAL-_193.jpg"
+    },
+    {
+      "date": "2026-11-13T20:00",
+      "type": "Koncert",
+      "title": "Nikola Rokvić",
+      "place": "Sava Centar",
+      "description": "",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/nikola_rokvic_26806",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/fcf6d907-2e04-441f-9d89-7a18e4ef0d59___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-13T20:00",
+      "type": "Koncert",
+      "title": "Saša Kovačević",
+      "place": "Sportska dvorana \"Veliki park\"",
+      "description": "",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/sasa_kovacevic_28135",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/b5f7f468-1659-4019-8b7f-0cec73f2e5a0___640x360.png"
+    },
+    {
+      "date": "2026-11-13T20:00",
+      "type": "Koncert",
+      "title": "НИКОЛАЈ ЛУГАНСКИ",
+      "place": "Велика дворана",
+      "description": "НИКОЛАЈ ЛУГАНСКИ, клавир. Програм: Шуман, Шопен. Улазнице: 2.000, 3.000, 4.000",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/nikolaj-luganski-13-11-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/09/LUGANSKI-900x900.jpeg"
+    },
+    {
+      "date": "2026-11-13T20:30",
+      "type": "Predstava",
+      "title": "Strujosek",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "A. Radivojević",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=strujosek-a-radivojevic",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/FINAL-DSC_3592-q.jpg"
+    },
+    {
+      "date": "2026-11-13T20:30",
+      "type": "Predstava",
+      "title": "Божји људи",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "по мотивима прозе Борисава Станковића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/bozji-ljudi",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8309/home/baner_blj.jpg"
+    },
+    {
+      "date": "2026-11-13T21:00",
+      "type": "Koncert",
+      "title": "Bigru i Paja Kratak",
+      "place": "Pivnica Tchardak",
+      "description": "",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/bigru_i_paja_kratak_28938",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/c7e29330-b87a-4cf0-9152-e1d5c23ad22b___640x360.png"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "Koncert",
+      "title": "Conway the Machine",
+      "place": "Drugstore Beograd",
+      "description": "С участием: Daringer, MEYHEM LAUREN NIHIL, Spejs Noksi, Phillie P, DJ GOCE (MKD), VINILIJADA",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43477144-conway-the-machine-at-drugstore-beograd",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/9766659/huge_avatar"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "Koncert",
+      "title": "Extrawelt",
+      "place": "Belgrade",
+      "description": "Жанр: electronic. С участием: Alex Tolstey",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43470163-extrawelt-at-unknown-venue",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/786526/huge_avatar"
+    },
+    {
+      "date": "2026-11-14T19:00",
+      "type": "Predavanje",
+      "title": "14.11 | Максим Кабир | NODA Space",
+      "place": "NODA Space",
+      "description": "В Белграде, 14 ноября, в NODA SPACE состоится лекция-разбор экранизаций романов Стивена Кинга. Ее проведет популярный хоррор-писатель Максим Кабир. Начало в 19:00. Любите ли вы Стивена Кинга? Режиссёры, например, его просто обожают. По произведениям Короля снято четыре сотни фильмов! Достаточно…",
+      "source": "Qtickets",
+      "url": "https://belgrad.qtickets.events/256905-1411-maksim-kabir-noda-space",
+      "imageUrl": "https://cdn.qtickets.tech/thumbs/601416_360_0_0_0_auto_90_82141b62.webp"
+    },
+    {
+      "date": "2026-11-14T19:00",
+      "type": "Opera",
+      "title": "Набуко",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђузепеа Вердија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/nabuko",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/34/home/nabuko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-11-14T19:30",
+      "type": "Predstava",
+      "title": "Flashdance",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Vladana Đurkovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/fles-dens/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2021/11/flashdance-slicica-za-sajt-smanjena.png"
+    },
+    {
+      "date": "2026-11-14T19:30",
+      "type": "Predstava",
+      "title": "Kralj Ibi",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kralj-ibi",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/699a10eccbe93fe261112edc_DSC04994.jpg"
+    },
+    {
+      "date": "2026-11-14T20:00",
+      "type": "Predstava",
+      "title": "64",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "T. Štivičić",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/64/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2021/04/32.jpg"
+    },
+    {
+      "date": "2026-11-14T20:00",
+      "type": "Koncert",
+      "title": "Aleksandra Radović",
+      "place": "Sava Centar",
+      "description": "REGIONALNA POP DIVA ALEKSANDRA RADOVIĆ PONOVO U SAVA CENTRU. Nakon dve godine, Aleksandra se vraća pred beogradsku publiku kako bi još jednom priredila veče ispunjeno emocijama, vrhunskom muzikom i atmosferom po kojoj su njeni koncerti prepoznatljivi. Publika će imati priliku da uživa u najvećim…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/aleksandra_radovic_26798",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/46930e87-6c1b-45ef-8ca8-62e2a2b5782f___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-14T20:00",
+      "type": "Koncert",
+      "title": "HARI MATA HARI",
+      "place": "Kulturni centar Čačak",
+      "description": "",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/hari_mata_hari_28741",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/992c1c8b-ac6f-4634-8905-c0b495f11251___640x360.jpeg"
+    },
+    {
+      "date": "2026-11-14T20:00",
+      "type": "Predstava",
+      "title": "Knjiga o milutinu",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Danko Popović",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/knjiga-o-milutinu-deo-prvi/10/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/10/90/400x300/dsc01632-95723.jpg"
+    },
+    {
+      "date": "2026-11-14T20:00",
+      "type": "Predstava",
+      "title": "Narodni poslanik",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Branislav Nušić. Režija: Vito Taufer. Igraju: Dragan Mićanović, Sloboda Mićalović, Srđan Timarov, Miodrag Dragičević, Nataša Ninković, Aleksandar Đurica, Branko Vidaković, Marta Bogosavljević, Goran Šušljik, Zoran Cvijanović, Lazar Nikolić, Lazar Đukić",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/narodni-poslanik/%20%20%20",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2025/11/Narodni-Latinica-385x535.jpg"
+    },
+    {
+      "date": "2026-11-14T20:30",
+      "type": "Predstava",
+      "title": "Akademija smeha",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "K. Mitani",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/akademija-smeha/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/06/24.jpg"
+    },
+    {
+      "date": "2026-11-14T20:30",
+      "type": "Predstava",
+      "title": "MaMa",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Maga Magazinović. Režija: Jelena Zablaćanski. Igraju: Jelena Zablaćanski",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/mama/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/09/MaMa-Latinica-scaled.jpg"
+    },
+    {
+      "date": "2026-11-14T20:30",
+      "type": "Predstava",
+      "title": "Сумњиво лице",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Бранислава Нушића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/sumnjivo-lice-4",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8321/home/sumnjivo_baner.jpg"
+    },
+    {
+      "date": "2026-11-15T18:00",
+      "type": "Koncert",
+      "title": "Kamelot",
+      "place": "Hangar",
+      "description": "Жанр: metal. С участием: Exit Eden, Temperance",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43102955-kamelot-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/367042/huge_avatar"
+    },
+    {
+      "date": "2026-11-15T19:30",
+      "type": "Predstava",
+      "title": "Kralj Ibi",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kralj-ibi",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/699a10eccbe93fe261112edc_DSC04994.jpg"
+    },
+    {
+      "date": "2026-11-15T19:30",
+      "type": "Predstava",
+      "title": "Дервиш и смрт",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "Борислав Михајловић Михиз / Егон Савин, по роману Меше Селимовића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/dervis-i-smrt",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/5/home/006.jpg"
+    },
+    {
+      "date": "2026-11-15T20:00",
+      "type": "Predstava",
+      "title": "Avgust u okrugu osejdž",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "T. Lets",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/avgust-u-okrugu-osejdz/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/FINAL-DSC_0002.jpg"
+    },
+    {
+      "date": "2026-11-15T20:00",
+      "type": "Predstava",
+      "title": "Vatre",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Marija Velasko (na osnovu proze `Vatre` Margerit Jursenar © Gallimard). Režija: Karma Portačeli. Igraju: Sloboda Mićalović, Anđelika Simić, Milena Vasić, Nikola Rakočević, Iva Manojlović, Damjan Kecojević, Rosa Renom, Kivani Menolašina Hulijan",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/vatre/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2023/01/Vatre-Lat-plakat_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-15T20:30",
+      "type": "Predstava",
+      "title": "Konstelacije",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "N. Pejn. stoto izvođenje",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=konstelacije-n-pejn",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2016/03/DSC_8111-copy.jpg"
+    },
+    {
+      "date": "2026-11-15T20:30",
+      "type": "Predstava",
+      "title": "Рибарске свађе",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Карла Голдонија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/ribarske-svadje-1",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7536/home/ribarske_svadje_plakat_sajt.jpg"
+    },
+    {
+      "date": "2026-11-16T19:30",
+      "type": "Predstava",
+      "title": "Tre sorele",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Stevan Koprivica. 200. извођење",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/tre-sorele/12/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/12/90/400x300/jak01205-18396.jpg"
+    },
+    {
+      "date": "2026-11-16T19:30",
+      "type": "Predstava",
+      "title": "Урнебесна трагедија",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "комедија Душана Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/urnebesna-tragedija",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7533/home/urnebesna_baner.jpg"
+    },
+    {
+      "date": "2026-11-16T20:00",
+      "type": "Predstava",
+      "title": "Knjiga o milutinu",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Danko Popović",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/knjiga-o-milutinu-deo-prvi/10/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/10/90/400x300/dsc01632-95723.jpg"
+    },
+    {
+      "date": "2026-11-16T20:00",
+      "type": "Koncert",
+      "title": "Svetski dan flamenka u Domu omladine Beograda: EL SONIDO DE LA VIDA – ZVUK ŽIVOTA",
+      "place": "DOB//Amerikana",
+      "description": "Guitar Art Festival i Dom omladine Beograda, uz podršku Ambasade Španije u Beogradu, obeležavaju Svetski dan flamenka, 16. novembar, koncertom EL SONIDO DE LA VIDA – ZVUK ŽIVOTA, koji će biti održan u sali Amerikana DOB, sa početkom u 20 časova. Ulaznice su u pretprodaji na svim eFinity prodajnim…",
+      "source": "Dom omladine",
+      "url": "https://domomladine.org/koncerti/svetski-dan-flamenka-u-domu-omladine-beograda-el-sonido-de-la-vida-zvuk-zivota/",
+      "imageUrl": "https://domomladine.org/wp-content/uploads/2026/11/Flamenko_Kvadrat_1080x1080-1024x1024.jpg"
+    },
+    {
+      "date": "2026-11-16T20:00",
+      "type": "Predstava",
+      "title": "VANjA, SONjA, MAŠA I OSTALI",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "K. Djurang",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/vanja-sonja-masa-i-ostali/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/11/02.jpg"
+    },
+    {
+      "date": "2026-11-16T20:30",
+      "type": "Predstava",
+      "title": "Posaditi drvo",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "A. Žitkovski",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/posaditi-drvo/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2022/06/08-scaled.jpg"
+    },
+    {
+      "date": "2026-11-16T20:30",
+      "type": "Predstava",
+      "title": "Успаванка за Алексију Рајчић",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Ђорђа Косића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/uspavanka-za-aleksiju-rajcic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7523/home/aleksija_baner.jpg"
+    },
+    {
+      "date": "2026-11-17T19:30",
+      "type": "Predstava",
+      "title": "Cigani lete u nebo",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Vladimira Lazića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/cigani-lete-u-nebo/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2021/12/cigani-lete-u-nebo.jpg"
+    },
+    {
+      "date": "2026-11-17T19:30",
+      "type": "Predstava",
+      "title": "Laž",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/laz",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651bf4d86141842984a5f5e9_laz.avif"
+    },
+    {
+      "date": "2026-11-17T19:30",
+      "type": "Predstava",
+      "title": "Profesionalac",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/profesionalac/53/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/53/90/400x300/dsc00048-66204.jpg"
+    },
+    {
+      "date": "2026-11-17T19:30",
+      "type": "Predstava",
+      "title": "Мајстор и Маргарита",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "драматизација Кате Ђармати по роману Михаила Булгакова",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/majstor-i-margarita",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8235/home/1000x300_sajt.jpg"
+    },
+    {
+      "date": "2026-11-17T20:00",
+      "type": "Predstava",
+      "title": "Otac",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "F. Zeler",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/otac/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/03/08.jpg"
+    },
+    {
+      "date": "2026-11-17T20:00",
+      "type": "Predstava",
+      "title": "Ričard Drugi",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Vilijam Šekspir. Režija: Boris Liješević. Igraju: Milan Marić, Vojin Ćetković, Igor Samobor, Aleksandar Đurica, Anđelika Simić, Sanja Marković, Aleksej Bjelogrlić, Danilo Milovanović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/ricard-drugi/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/03/Ricard-drugi.-Latinica_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-17T20:30",
+      "type": "Predstava",
+      "title": "Gubitnik",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Tomas Bernhard / Aleksandar Sergejevič Puškin. Režija: Nataša Radulović. Igraju: Teodor Vinčić, Joakim Tasić, Stojša Oljačić, Lenka Petrović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/gubitnik/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2023/04/Gubitnik-platak-lat-385x535.jpg"
+    },
+    {
+      "date": "2026-11-17T20:30",
+      "type": "Predstava",
+      "title": "Ova će biti ista",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Bajac",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=ova-ce-biti-ista-stasa-bajac-premijera&lang=lat",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2021/06/22.png"
+    },
+    {
+      "date": "2026-11-17T20:30",
+      "type": "Koncert",
+      "title": "Vapors of Morphine",
+      "place": "Elektropionir",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43479876-vapors-of-morphine-at-elektropionir",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/8486333/huge_avatar"
+    },
+    {
+      "date": "2026-11-17T20:30",
+      "type": "Predstava",
+      "title": "Мали брачни злочини",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Ерика Емануела Шмита",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/mali-bracni-zlocini",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/75/home/1003.jpg"
+    },
+    {
+      "date": "2026-11-18T19:00",
+      "type": "Balet",
+      "title": "Ко то тамо пева",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет на музику Војислава Вокија Костића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/ko-to-tamo-peva",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/51/home/ko_to_tamo_peva_baner.jpg"
+    },
+    {
+      "date": "2026-11-18T19:30",
+      "type": "Predstava",
+      "title": "Laž",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/laz",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651bf4d86141842984a5f5e9_laz.avif"
+    },
+    {
+      "date": "2026-11-18T19:30",
+      "type": "Predstava",
+      "title": "Profesionalac",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/profesionalac/53/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/53/90/400x300/dsc00048-66204.jpg"
+    },
+    {
+      "date": "2026-11-18T20:00",
+      "type": "Predstava",
+      "title": "Art",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "J. Reza",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=art-jasmina-reza-2&lang=lat",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2020/01/24.jpg"
+    },
+    {
+      "date": "2026-11-18T20:00",
+      "type": "Predstava",
+      "title": "Gospođica",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Ivo Andrić. Režija: Gorčin Stojanović. Igraju: Nataša Ninković, Vojislav Brajović, Marija Vicković, Srđan Timarov, Jasmina Avramović, Milan Marić/Lazar Đukić, Marko Baćović/Aleksandar Đurica, Vesna Stanković, Anđelika Simić/Nikolina Vujević, Stefan Bundalo / Ognjen Nikola Radulović, Dejan Dedić",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/gospodjica/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2019/05/PLAKAT-Gospodjica-385x535.jpg"
+    },
+    {
+      "date": "2026-11-18T20:00",
+      "type": "Koncert",
+      "title": "LUCA MINNELLI",
+      "place": "Sava Centar",
+      "description": "Italijanska romantika, veličanstveni tenor i instrumentalni ansambl uživo. Zamislite veče u kojem svakodnevne brige ostaju iza vas, dok vas muzika vodi pravo u srce sunčane Italije, u svet lepote, strasti i emocija. 18. novembra na sceni Sava Centra nastupiće Luca Minnelli — italijanski tenor…",
+      "source": "tickets.rs",
+      "url": "https://tickets.rs/event/luca_minnelli_26773",
+      "imageUrl": "https://assets.tickets.rs/123abc321/0/Images/65f8c99e-9bbe-4d47-ba3e-14f7c164fb69___640x360.png"
+    },
+    {
+      "date": "2026-11-18T20:00",
+      "type": "Koncert",
+      "title": "Vapors of Morphine",
+      "place": "Elektropionir",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43479877-vapors-of-morphine-at-elektropionir",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/8486333/huge_avatar"
+    },
+    {
+      "date": "2026-11-18T20:00",
+      "type": "Koncert",
+      "title": "БАЛКАНСКИ ЖУБОР",
+      "place": "Велика дворана",
+      "description": "УЛАЗНИЦЕ: 1.200 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/balkanski-zubor-18-11-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2018/08/IMG_2650-480x480.jpg"
+    },
+    {
+      "date": "2026-11-18T20:30",
+      "type": "Predstava",
+      "title": "Moj muž",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Rumena Bužarovska. Režija: Jovana Tomić. Igraju: Sanja Marković, Jovana Belović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/rs/performance/%D0%BA%D0%B0%D1%81%D0%BF%D0%B0%D1%80-2/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2021/02/Moj-muz-Latinica-818x1134.jpg"
+    },
+    {
+      "date": "2026-11-18T20:30",
+      "type": "Predstava",
+      "title": "Ovaj će biti drugačiji",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Bajac",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=ovaj-ce-biti-drugaciji-stasa-bajac",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/07-2.jpg"
+    },
+    {
+      "date": "2026-11-18T20:30",
+      "type": "Predstava",
+      "title": "Централа за хумор",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Ђорђа Косића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/centrala-za-humor",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8262/home/banercentrala.jpg"
+    },
+    {
+      "date": "2026-11-19",
+      "type": "Koncert",
+      "title": "André Rieu",
+      "place": "Belgrade Arena",
+      "description": "Жанр: classical",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/42832346-andre-rieu-at-belgrade-arena",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/537148/huge_avatar"
+    },
+    {
+      "date": "2026-11-19T19:30",
+      "type": "Predstava",
+      "title": "Balkan ekspres",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Darijana Mihajlovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://bilet.pozoristeterazije.com/repertoar.php",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2025/04/ikonica-za-najavu-predstave-balkan-ekspres.jpg"
+    },
+    {
+      "date": "2026-11-19T19:30",
+      "type": "Predstava",
+      "title": "Laž",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/laz",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651bf4d86141842984a5f5e9_laz.avif"
+    },
+    {
+      "date": "2026-11-19T19:30",
+      "type": "Predstava",
+      "title": "Una",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "S. Koprivica, po romanu M. Kapora",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/una/42/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/42/90/400x300/dsc09632-17796.jpg"
+    },
+    {
+      "date": "2026-11-19T20:00",
+      "type": "Predstava",
+      "title": "Gladni duhovi",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "K. Keli",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/gladni-duhovi-consumed/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/09/34-1.jpg"
+    },
+    {
+      "date": "2026-11-19T20:00",
+      "type": "Predstava",
+      "title": "Mihael Kolhas",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "engleski titl. Hajnrih fon Klajst. Režija: Boris Liješević. Igraju: Vojin Ćetković, Miodrag Dragičević, Vojislav Brajović, Nikola Rakočević, Zoran Cvijanović, Milena Vasić, Aleksej Bjelogrlić, Miloš Samolov, Kralj Čačka",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/mihael-kolhas/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2024/03/Mihael-Kolhas-Latinica_page-0001-1-385x535.jpg"
+    },
+    {
+      "date": "2026-11-19T20:30",
+      "type": "Predstava",
+      "title": "Ceo život za godinu dana",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "V. Davidović; N. Plavanjac (po motivima TV serije Ace Popovića)",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/ceo-zivot-za-godinu-dana/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/09/34.jpg"
+    },
+    {
+      "date": "2026-11-19T20:30",
+      "type": "Predstava",
+      "title": "Није смрт бицикло (да ти га украду)",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Биљане Србљановић",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/nije-smrt-biciklo-da-ti-ga-ukradu",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7545/home/biciklo_baner.jpg"
+    },
+    {
+      "date": "2026-11-20",
+      "type": "Koncert",
+      "title": "Picastro",
+      "place": "Guvernanta drinks & decadence",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43493218-picastro-at-guvernanta-drinks-and-decadence",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/444760/huge_avatar"
+    },
+    {
+      "date": "2026-11-20",
+      "type": "Koncert",
+      "title": "Sinisa Tamamovic",
+      "place": "Hangar",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43409290-sinisa-tamamovic-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/3167596/huge_avatar"
+    },
+    {
+      "date": "2026-11-20T19:30",
+      "type": "Predstava",
+      "title": "Klaustrofobična komedija",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/klaustrofobicna-komedija/19/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/19/90/400x300/kk-nova-48222.jpg"
+    },
+    {
+      "date": "2026-11-20T19:30",
+      "type": "Predstava",
+      "title": "Producenti",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Juga Radivojevića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/producenti/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2024/01/ph-vladimir-opsenica-Pozoriste-na-Terazijama-Producenti-DSCF1364.jpg"
+    },
+    {
+      "date": "2026-11-20T20:00",
+      "type": "Predstava",
+      "title": "Milunka",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/milunka-savic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/69cb9bc22097664abb531c7a_Milunka%20foto%20Dragana%20Udovicic%20(5).jpg"
+    },
+    {
+      "date": "2026-11-20T20:00",
+      "type": "Predstava",
+      "title": "Moje pozorište",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "Autorski projekat Borisa Liješevića",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/moje-pozoriste/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2025/05/23-scaled.jpg"
+    },
+    {
+      "date": "2026-11-20T20:00",
+      "type": "Predstava",
+      "title": "Sofka",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Narodno pozorište Niš. Borisav Stanković. Režija: Irfan Mensur. Igraju: Milica Majkić, Miroslav Jović, Aleksandar Krstić, Vesna Stanković, Dragana Jovanović, Ivana Nedović, Stefan Mladenović, Uroš Milojević, Danilo Petrović, Katarina Mitić, Andrija Mitić, Sava Janković, Contra Dance Studio",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/sofka/",
+      "imageUrl": "https://www.narodnopozoristenis.rs/wp-content/uploads/2026/09/Sofka-plakat-1097x1536.jpg"
+    },
+    {
+      "date": "2026-11-20T20:00",
+      "type": "Koncert",
+      "title": "Френсис и Андрушченко",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Мајкл Фрaнсис. Солиста: Михаил Андрушченко, виолина",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/majkl-frensis-i-mihail-andrushchenko/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2026-11-20T20:30",
+      "type": "Predstava",
+      "title": "Akademija smeha",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "K. Mitani",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/akademija-smeha/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/06/24.jpg"
+    },
+    {
+      "date": "2026-11-21T19:30",
+      "type": "Predstava",
+      "title": "Osama - kasaba u njujorku",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "V.Kecmanović, K.Peševski, D.Bajić",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/osama-kasaba-u-njujorku/15/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/15/90/400x300/dsc09548-34697.jpg"
+    },
+    {
+      "date": "2026-11-21T20:00",
+      "type": "Predstava",
+      "title": "Milunka",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/milunka-savic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/69cb9bc22097664abb531c7a_Milunka%20foto%20Dragana%20Udovicic%20(5).jpg"
+    },
+    {
+      "date": "2026-11-21T20:00",
+      "type": "Predstava",
+      "title": "Moje pozorište",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "Autorski projekat Borisa Liješevića",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/moje-pozoriste/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2025/05/23-scaled.jpg"
+    },
+    {
+      "date": "2026-11-21T20:00",
+      "type": "Predstava",
+      "title": "Voz",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Kormak Makarti",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/voz/21/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/21/90/400x300/voz_vukelic-3-45900.jpg"
+    },
+    {
+      "date": "2026-11-21T20:30",
+      "type": "Predstava",
+      "title": "Ova će biti ista",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Bajac",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=ova-ce-biti-ista-stasa-bajac-premijera&lang=lat",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2021/06/22.png"
+    },
+    {
+      "date": "2026-11-21T20:30",
+      "type": "Predstava",
+      "title": "Балкански шпијун",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "трагикомедија Душана Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/balkanski-spijun",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7497/home/balkanski_baner.jpg"
+    },
+    {
+      "date": "2026-11-22T17:00",
+      "type": "Opera",
+      "title": "Снежана и седам патуљака",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "опера за децу Драгана Каролића, у извођењу Оперског студија „Борислав Поповић“",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/snezana-i-sedam-patuljaka",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7526/home/snezana_novi_baner.jpg"
+    },
+    {
+      "date": "2026-11-22T19:00",
+      "type": "Opera",
+      "title": "На уранку",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Станислава Биничког",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/na-uranku-2",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/system/0/images/noshow2.jpg"
+    },
+    {
+      "date": "2026-11-22T19:30",
+      "type": "Predstava",
+      "title": "Flashdance",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Vladana Đurkovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/fles-dens/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2021/11/flashdance-slicica-za-sajt-smanjena.png"
+    },
+    {
+      "date": "2026-11-22T19:30",
+      "type": "Predstava",
+      "title": "Ljubav u savamali",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Ivan M. Lalić",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/ljubav-u-savamali/14/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/14/90/400x300/pbl_2198-43434.jpg"
+    },
+    {
+      "date": "2026-11-22T20:00",
+      "type": "Predstava",
+      "title": "Korporativna bajka",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "V. Mićunović, S. Obradović",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/korporativna-bajka/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/05/33.jpg"
+    },
+    {
+      "date": "2026-11-22T20:00",
+      "type": "Predstava",
+      "title": "Kuća",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Nebojša Ilić",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/kuca/28/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/28/90/400x300/kuca-1-17769.jpg"
+    },
+    {
+      "date": "2026-11-22T20:00",
+      "type": "Koncert",
+      "title": "Muzičko-plesna flamenko predstava PISMA IZ ŠPANIJE",
+      "place": "DOB//Amerikana",
+      "description": "„Pisma iz Španije“ je muzičko-plesna flamenko predstava inspirisana putopisima, pismima i razmišljanjima Jovana Dučića, Miloša Crnjanskog i Ive Andrića o Španiji. Šta zapravo tražimo kada krenemo u neku drugu zemlju? Nova mesta, drugačiji život — ili mogućnost da postanemo neko drugi? Ulaznice se…",
+      "source": "Dom omladine",
+      "url": "https://domomladine.org/koncerti/muzicko-plesna-flamenko-predstava-pisma-iz-spanije/",
+      "imageUrl": "https://domomladine.org/wp-content/uploads/2026/08/1080x1080-1-1024x1024.png"
+    },
+    {
+      "date": "2026-11-22T20:00",
+      "type": "Predstava",
+      "title": "Ričard Drugi",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Vilijam Šekspir. Režija: Boris Liješević. Igraju: Milan Marić, Vojin Ćetković, Igor Samobor, Aleksandar Đurica, Anđelika Simić, Sanja Marković, Aleksej Bjelogrlić, Danilo Milovanović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/ricard-drugi/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/03/Ricard-drugi.-Latinica_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-22T20:30",
+      "type": "Predstava",
+      "title": "Ovaj će biti drugačiji",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Bajac",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=ovaj-ce-biti-drugaciji-stasa-bajac",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/07-2.jpg"
+    },
+    {
+      "date": "2026-11-22T20:30",
+      "type": "Predstava",
+      "title": "Preobražaj",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Franc Kafka. Režija: Marko Torlaković. Igraju: Iva Manojlović, Marko Pavlovski, Stojša Oljačić, Sara Pavlović, Hristina Tatić",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/preobrazaj/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2024/10/Preobrazaj-Latinica_page-0001-818x1134.jpg"
+    },
+    {
+      "date": "2026-11-23T19:30",
+      "type": "Predstava",
+      "title": "Ожалошћена породица",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "комедија Бранислава Нушића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/ozaloscena-porodica",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7489/home/ozaloscena_baner.jpg"
+    },
+    {
+      "date": "2026-11-23T20:00",
+      "type": "Predstava",
+      "title": "Korporativna bajka",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "V. Mićunović, S. Obradović",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/korporativna-bajka/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/05/33.jpg"
+    },
+    {
+      "date": "2026-11-23T20:00",
+      "type": "Koncert",
+      "title": "Plattenbau",
+      "place": "Kulturni Centar (KC) GRAD",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43344983-plattenbau-at-kulturni-centar-grad",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/8342533/huge_avatar"
+    },
+    {
+      "date": "2026-11-23T20:00",
+      "type": "Predstava",
+      "title": "Pučina",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Branislav Nušić. Režija: Egon Savin. Igraju: Nenad Jezdić, Sloboda Mićalović, Ljubomir Bandović, Vesna Stanković / Milena Vasić, Janko Cekić (*Bojan Lazarov), Cvijeta Mesić, Jovana Belović / Iva Manojlović, Bojan Dimitrijević, Nebojša Milovanović, Marko Baćović / Goran Šušljik, Maja Kolundžija…",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/rs/performance/%D0%BF%D1%83%D1%87%D0%B8%D0%BD%D0%B0/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2020/10/Pucina-2-Latinica-1.jpg"
+    },
+    {
+      "date": "2026-11-23T20:00",
+      "type": "Predstava",
+      "title": "Voz",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Kormak Makarti",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/voz/21/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/21/90/400x300/voz_vukelic-3-45900.jpg"
+    },
+    {
+      "date": "2026-11-23T20:30",
+      "type": "Predstava",
+      "title": "Ceo život za godinu dana",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "V. Davidović; N. Plavanjac (po motivima TV serije Ace Popovića)",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/ceo-zivot-za-godinu-dana/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/09/34.jpg"
+    },
+    {
+      "date": "2026-11-23T20:30",
+      "type": "Predstava",
+      "title": "Сумњиво лице",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Бранислава Нушића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/sumnjivo-lice-4",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8321/home/sumnjivo_baner.jpg"
+    },
+    {
+      "date": "2026-11-24T19:30",
+      "type": "Predstava",
+      "title": "Brodvejske vragolije",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Nebojše Bradića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/brodvejske-vragolije/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2019/09/Webp.net-resizeimage.jpg"
+    },
+    {
+      "date": "2026-11-24T19:30",
+      "type": "Predstava",
+      "title": "Велика драма",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "драма Синише Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/velika-drama",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/2/home/vd_baner.jpg"
+    },
+    {
+      "date": "2026-11-24T20:00",
+      "type": "Predstava",
+      "title": "Gladni duhovi",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "K. Keli",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/gladni-duhovi-consumed/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/09/34-1.jpg"
+    },
+    {
+      "date": "2026-11-24T20:00",
+      "type": "Predstava",
+      "title": "Hotel Slobodan promet",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Žorž Fejdo. Režija: Boris Liješević. Igraju: Vojin Ćetković, Anđelika Simić, Srđan Timarov, Milena Vasić, Dragan Jovanović / Andrija Milošević, Bojan Dimitrijević, Milica Gojković / Marija Klanac, Miodrag Dragičević, Amar Ćorović / Ognjen Nikola Radulović, Marija Klanac / Marija Žeravica, Sanja…",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/hotel-slobodan-promet/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2019/05/PLAKAT-Hotel-Slobodan-promet-385x535.jpg"
+    },
+    {
+      "date": "2026-11-24T20:00",
+      "type": "Predstava",
+      "title": "Ne igraj na Engleze",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/ne-igraj-na-engleze",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c0047f09b786562038146_Ne-igraj-na-Engleze.avif"
+    },
+    {
+      "date": "2026-11-24T20:00",
+      "type": "Predstava",
+      "title": "Pasivno pušenje",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Nebojša Romčević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/pasivno-pusenje/18/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/18/90/400x300/pasivno-pusenje-sarme-12902.jpg"
+    },
+    {
+      "date": "2026-11-24T20:30",
+      "type": "Predstava",
+      "title": "MaMa",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Maga Magazinović. Režija: Jelena Zablaćanski. Igraju: Jelena Zablaćanski",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/mama/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/09/MaMa-Latinica-scaled.jpg"
+    },
+    {
+      "date": "2026-11-24T20:30",
+      "type": "Predstava",
+      "title": "Režim isceljenja",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "T. Šljivar",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/rezim-isceljenja/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2025/10/13-scaled.jpg"
+    },
+    {
+      "date": "2026-11-24T20:30",
+      "type": "Predstava",
+      "title": "Балкански шпијун",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "трагикомедија Душана Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/balkanski-spijun",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7497/home/balkanski_baner.jpg"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "Koncert",
+      "title": "Arab Strap",
+      "place": "Zappa Baza",
+      "description": "Жанр: indie alternative",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43227161-arab-strap-at-zappa-baza",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/197829/huge_avatar"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "Koncert",
+      "title": "Come (GR)",
+      "place": "klub under",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43430190-come-gr-at-klub-under",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/10415680/huge_avatar"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "Koncert",
+      "title": "Little BIG",
+      "place": "Hangar Stage 3",
+      "description": "Жанр: electronic",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43200574-little-big-at-hangar-stage-3",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/4472958/huge_avatar"
+    },
+    {
+      "date": "2026-11-25T19:00",
+      "type": "Koncert",
+      "title": "Kreator",
+      "place": "Hangar",
+      "description": "Жанр: metal, rock. С участием: Overkill",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43444679-kreator-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/81459/huge_avatar"
+    },
+    {
+      "date": "2026-11-25T19:00",
+      "type": "Opera",
+      "title": "На уранку",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Станислава Биничког",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/na-uranku-2",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/system/0/images/noshow2.jpg"
+    },
+    {
+      "date": "2026-11-25T19:30",
+      "type": "Predstava",
+      "title": "Profesionalac",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/profesionalac/53/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/53/90/400x300/dsc00048-66204.jpg"
+    },
+    {
+      "date": "2026-11-25T19:30",
+      "type": "Predstava",
+      "title": "Žene na ivici nervnog sloma",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Nebojše Bradića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/zene-na-ivici-nervnog-sloma/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2023/10/vece-mjuzikla_-instagram-post.jpg"
+    },
+    {
+      "date": "2026-11-25T20:00",
+      "type": "Predstava",
+      "title": "Art",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "J. Reza",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=art-jasmina-reza-2&lang=lat",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2020/01/24.jpg"
+    },
+    {
+      "date": "2026-11-25T20:00",
+      "type": "Predstava",
+      "title": "Garderober",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Ronald Harvud. Režija: Paolo Mađeli. Igraju: Voja Brajović, Sloboda Mićalović, Branka Petrić, Miki Manojlović, Marta Bogosavljević, Miloš Samolov, Nikola Rakočević, Simo Đukić, Rade Stojiljković/Andrija Urošević, Nemanja Aćimović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/en/performance/the-dresser/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/04/Garderober-Latinica-scaled.jpg"
+    },
+    {
+      "date": "2026-11-25T20:00",
+      "type": "Predstava",
+      "title": "Ne igraj na Engleze",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/ne-igraj-na-engleze",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c0047f09b786562038146_Ne-igraj-na-Engleze.avif"
+    },
+    {
+      "date": "2026-11-25T20:30",
+      "type": "Predstava",
+      "title": "Režim isceljenja",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "T. Šljivar",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/rezim-isceljenja/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2025/10/13-scaled.jpg"
+    },
+    {
+      "date": "2026-11-25T20:30",
+      "type": "Predstava",
+      "title": "Царство мрака",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Лава Николајевича Толстоја",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/carstvo-mraka",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7480/home/carstvo_mraka_baner_sajt.jpg"
+    },
+    {
+      "date": "2026-11-26T19:00",
+      "type": "Koncert",
+      "title": "My Own Private Alaska",
+      "place": "Klub Fest",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43108829-my-own-private-alaska-at-klub-fest",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/1087977/huge_avatar"
+    },
+    {
+      "date": "2026-11-26T19:30",
+      "type": "Predstava",
+      "title": "Bajka o pozorištu",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Vladimir Đurđević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/bajka-o-pozoristu/20/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/20/90/400x300/jak06527-99717.jpg"
+    },
+    {
+      "date": "2026-11-26T20:00",
+      "type": "Predstava",
+      "title": "Knjiga o milutinu",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Danko Popović",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/knjiga-o-milutinu-deo-prvi/10/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/10/90/400x300/dsc01632-95723.jpg"
+    },
+    {
+      "date": "2026-11-26T20:00",
+      "type": "Predstava",
+      "title": "Rolerkoster",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "J. Kajgo",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/rolerkoster-2/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2022/03/Dara.jpg"
+    },
+    {
+      "date": "2026-11-26T20:00",
+      "type": "Predstava",
+      "title": "Tramvaj zvani želja",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/tramvaj-zvani-zelja",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c0cf48d39321af29dacf8_Tramvaj-zvani-z%CC%8Celja.avif"
+    },
+    {
+      "date": "2026-11-26T20:00",
+      "type": "Predstava",
+      "title": "Vrat od stakla",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Biljana Srbljanovic. Režija: Jagoš Marković. Igraju: Jelisaveta Sablić, Vesna Trivalić, Anita Mančić, Milica Gojković / Jovana Belović, Dragan Mićanović, Irfan Mensur, Marko Janketić, Slobodan Tešić, Lazar Đukić (*Bojan Lazarov), Miloš Samolov, Ana Radović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/vrat-od-stakla/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2019/05/PLAKAT-Vrat-od-stakla-385x535.jpg"
+    },
+    {
+      "date": "2026-11-26T20:00",
+      "type": "Koncert",
+      "title": "ДИВНА ЉУБОЈЕВИЋ и МЕЛОДИ",
+      "place": "Велика дворана",
+      "description": "Божићни триптих. С НАМИ БОГ. Улазнице: 3.000, 3.800 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/divna-ljubojevic-i-melodi-26-11-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/08/Divna-Visit-Serbia_page-0001-1667x1667.jpg"
+    },
+    {
+      "date": "2026-11-26T20:30",
+      "type": "Predstava",
+      "title": "Audijencija",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Nezavisna produkcija Arhangel studio. Vaclav Havel. Režija: Milan Nešković. Igraju: Nikola Rakočević, Miodrag Radonjić",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/audijencija/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2022/10/audijencija1_instagram-385x535.jpg"
+    },
+    {
+      "date": "2026-11-26T20:30",
+      "type": "Predstava",
+      "title": "Režim ljubavi",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "T. Šljivar",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=rezim-ljubavi-tanja-sljivar",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/01-1.jpg"
+    },
+    {
+      "date": "2026-11-26T20:30",
+      "type": "Predstava",
+      "title": "Хасанагиница",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Љубомира Симовића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/hasanaginica",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/17/home/hasanaginica_baner.jpg"
+    },
+    {
+      "date": "2026-11-27T19:30",
+      "type": "Predstava",
+      "title": "Mamma mia!",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Juga Radivojevića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/mamma-mia/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2018/09/Mamma-Mia.png"
+    },
+    {
+      "date": "2026-11-27T19:30",
+      "type": "Predstava",
+      "title": "Udovica živog čoveka",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/udovica-zivog-coveka/30/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/30/90/400x300/dsc05327-79867.jpg"
+    },
+    {
+      "date": "2026-11-27T20:00",
+      "type": "Predstava",
+      "title": "Heda Gabler",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Henrik Ibzen. Režija: Iva Milošević. Igraju: Jovana Belović, Joakim Tasić, Nebojša Milovanović, Milica Mihajlović, Marko Janketić, Lenka Petrović, Katarina Veljović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/rs/performance/hedda-gabler/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2025/04/Hedda-Latinica_page-0001-818x1134.jpg"
+    },
+    {
+      "date": "2026-11-27T20:00",
+      "type": "Predstava",
+      "title": "Otac",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "F. Zeler",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/otac/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/03/08.jpg"
+    },
+    {
+      "date": "2026-11-27T20:00",
+      "type": "Predstava",
+      "title": "Tramvaj zvani želja",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/tramvaj-zvani-zelja",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c0cf48d39321af29dacf8_Tramvaj-zvani-z%CC%8Celja.avif"
+    },
+    {
+      "date": "2026-11-27T20:00",
+      "type": "Koncert",
+      "title": "Рајскин и Морo",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Данијел Рајскин. Солиста: Едгар Моро, виолончело",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/danijel-rajskin-i-edgar-moro/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2026-11-27T20:30",
+      "type": "Predstava",
+      "title": "Režim ljubavi",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "T. Šljivar",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/?repertoar=rezim-ljubavi-tanja-sljivar",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2019/11/01-1.jpg"
+    },
+    {
+      "date": "2026-11-27T20:30",
+      "type": "Predstava",
+      "title": "Достојевски - мој живот",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "дуодрама према мотивима мемоара „Сећања“ Ане Г. Достојевски",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/dostojevski-moj-zivot",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8263/home/dostojevski_baner.jpg"
+    },
+    {
+      "date": "2026-11-28",
+      "type": "Koncert",
+      "title": "Altın Gün",
+      "place": "Hangar",
+      "description": "С участием: MOMO. (BRA)",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43465150-altin-gun-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/8959089/huge_avatar"
+    },
+    {
+      "date": "2026-11-28T14:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-11-28T19:30",
+      "type": "Predstava",
+      "title": "Profesionalac",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/profesionalac/53/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/53/90/400x300/dsc00048-66204.jpg"
+    },
+    {
+      "date": "2026-11-28T19:30",
+      "type": "Predstava",
+      "title": "Zona zamfirova",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Kokana Mladenovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/zona-zamfirova/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2019/03/ZonaManeonline.jpg"
+    },
+    {
+      "date": "2026-11-28T20:00",
+      "type": "Predstava",
+      "title": "Oda radosti",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "F. Šili",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/oda-radosti/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/01/09-1.jpg"
+    },
+    {
+      "date": "2026-11-28T20:00",
+      "type": "Predstava",
+      "title": "Ričard Drugi",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Vilijam Šekspir. Režija: Boris Liješević. Igraju: Milan Marić, Vojin Ćetković, Igor Samobor, Aleksandar Đurica, Anđelika Simić, Sanja Marković, Aleksej Bjelogrlić, Danilo Milovanović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/ricard-drugi/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2026/03/Ricard-drugi.-Latinica_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-28T20:00",
+      "type": "Predstava",
+      "title": "To kad uvati ne pušta",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Miodrag Karadžić",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/to-kad-uvati-ne-pusta/29/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/29/90/400x300/jak06434-63405.jpg"
+    },
+    {
+      "date": "2026-11-28T20:00",
+      "type": "Predstava",
+      "title": "Tramvaj zvani želja",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/tramvaj-zvani-zelja",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c0cf48d39321af29dacf8_Tramvaj-zvani-z%CC%8Celja.avif"
+    },
+    {
+      "date": "2026-11-28T20:00",
+      "type": "Koncert",
+      "title": "Вече италијанске музике",
+      "place": "Велика дворана",
+      "description": "ДЕТАЉНИЈЕ. Улазнице: 9.300, 7.000, 4.600 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/vece-italijanske-muzike-28-11-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/09/marija-jelic-1080x1080.jpg"
+    },
+    {
+      "date": "2026-11-28T20:30",
+      "type": "Predstava",
+      "title": "Akademija smeha",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "K. Mitani",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/akademija-smeha/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/06/24.jpg"
+    },
+    {
+      "date": "2026-11-28T20:30",
+      "type": "Predstava",
+      "title": "Сањао сам да сам се пробудио",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "црна комедија Жељка Хубача",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/sanjao-sam-da-sam-se-probudio",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7540/home/sanjao_baner.jpg"
+    },
+    {
+      "date": "2026-11-29",
+      "type": "Koncert",
+      "title": "Napalm Death",
+      "place": "Zappa Barka",
+      "description": "Жанр: metal. С участием: Master, Brat, Goatburner",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43479598-napalm-death-at-zappa-barka",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/191492/huge_avatar"
+    },
+    {
+      "date": "2026-11-29T19:00",
+      "type": "Opera",
+      "title": "Травијата",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђузепа Вердија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/travijata",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/42/home/travijata1.jpg"
+    },
+    {
+      "date": "2026-11-29T19:30",
+      "type": "Predstava",
+      "title": "Sa druge strane jastuka",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Juga Radivojevića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/Sa%20druge%20strane%20jastuka",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2020/09/sa-druge-strane-jastuka-plakat-600x857.jpg"
+    },
+    {
+      "date": "2026-11-29T19:30",
+      "type": "Predstava",
+      "title": "Udovica živog čoveka",
+      "place": "Zvezdara teatar, Scena `Bata Stojković`",
+      "description": "Dušan Kovačević",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/udovica-zivog-coveka/30/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/30/90/400x300/dsc05327-79867.jpg"
+    },
+    {
+      "date": "2026-11-29T20:00",
+      "type": "Predstava",
+      "title": "Narodni poslanik",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "engleski titl. Branislav Nušić. Režija: Vito Taufer. Igraju: Dragan Mićanović, Sloboda Mićalović, Srđan Timarov, Miodrag Dragičević, Nataša Ninković, Aleksandar Đurica, Branko Vidaković, Marta Bogosavljević, Goran Šušljik, Zoran Cvijanović, Lazar Nikolić, Lazar Đukić",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/narodni-poslanik/%20%20%20",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2025/11/Narodni-Latinica-385x535.jpg"
+    },
+    {
+      "date": "2026-11-29T20:00",
+      "type": "Predstava",
+      "title": "Oda radosti",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "F. Šili",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/oda-radosti/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/01/09-1.jpg"
+    },
+    {
+      "date": "2026-11-29T20:00",
+      "type": "Predstava",
+      "title": "Voz",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Kormak Makarti",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/voz/21/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/21/90/400x300/voz_vukelic-3-45900.jpg"
+    },
+    {
+      "date": "2026-11-29T20:30",
+      "type": "Predstava",
+      "title": "Ceo život za godinu dana",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "V. Davidović; N. Plavanjac (po motivima TV serije Ace Popovića)",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/predstave/ceo-zivot-za-godinu-dana/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2026/09/34.jpg"
+    },
+    {
+      "date": "2026-11-29T20:30",
+      "type": "Predstava",
+      "title": "Disko svinje",
+      "place": "JDP, Studio Ćirilov",
+      "description": "Enda Volš. Režija: Simo Đukić. Igraju: Veljko Stevanović, Sara Simović",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/disko-svinje/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2023/12/Disko-svinje-Latinica-mali_page-0001-385x535.jpg"
+    },
+    {
+      "date": "2026-11-29T20:30",
+      "type": "Predstava",
+      "title": "Уображени болесник",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Ж. Б. П. Молијера",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/uobrazeni-bolesnik",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8236/home/baner_uobrazeni.jpg"
+    },
+    {
+      "date": "2026-11-30T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-11-30T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-11-30T20:00",
+      "type": "Predstava",
+      "title": "Knjiga o milutinu",
+      "place": "Zvezdara teatar, Nova Scena",
+      "description": "Danko Popović",
+      "source": "Zvezdara teatar",
+      "url": "https://zvezdarateatar.rs/predstava/knjiga-o-milutinu-deo-prvi/10/",
+      "imageUrl": "https://zvezdarateatar.rs/images/show/10/90/400x300/dsc01632-95723.jpg"
+    },
+    {
+      "date": "2026-11-30T20:00",
+      "type": "Predstava",
+      "title": "Limeni doboš",
+      "place": "JDP, Scena `Ljuba Tadić`",
+      "description": "Po motivima romana Gintera Grasa. Režija: Vasil Hristov. Igraju: Miodrag Dragičević, Jovana Belović, Marko Janketić, Joakim Tasić, Iva Manojlović, Lazar Đukić, Tamara Šustić, Teodor Vinčić",
+      "source": "JDP",
+      "url": "https://www.jdp.rs/performance/limeni-dobos/",
+      "imageUrl": "https://www.jdp.rs/wp-content/uploads/2023/11/Limeni-dobos-NOVI-LAT_page-0001-scaled.jpg"
+    },
+    {
+      "date": "2026-11-30T20:00",
+      "type": "Predstava",
+      "title": "Obraćanje naciji",
+      "place": "Atelje 212, Scena Mira Trailović",
+      "description": "A. Čelestini",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/obracanje-naciji/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2023/05/09-1.jpg"
+    },
+    {
+      "date": "2026-11-30T20:30",
+      "type": "Predstava",
+      "title": "Čista kuća",
+      "place": "Atelje 212, Scena Petar Kralj",
+      "description": "S. Rul",
+      "source": "Atelje 212",
+      "url": "https://atelje212.rs/repertoar/cista-kuca/",
+      "imageUrl": "https://atelje212.rs/wp-content/uploads/2022/10/09.jpg"
+    },
+    {
+      "date": "2026-11-30T20:30",
+      "type": "Predstava",
+      "title": "Ситнице које живот значе",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драматизација Ђорђа Косића по роману Лоренца Маронеа",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/sitnice-koje-zivot-znace",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7527/home/sitnice_baner.jpg"
+    },
+    {
+      "date": "2026-12-01T19:00",
+      "type": "Koncert",
+      "title": "The Ocean",
+      "place": "Zappa Barka",
+      "description": "Жанр: metal. С участием: Psychonaut (be), The Devil's Trade",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43273457-ocean-at-zappa-barka",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/331451/huge_avatar"
+    },
+    {
+      "date": "2026-12-01T19:00",
+      "type": "Opera",
+      "title": "Кармен",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Жоржа Бизеа",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/karmen",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/30/home/karmen_baner.jpg"
+    },
+    {
+      "date": "2026-12-01T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "Premijera",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-12-01T20:30",
+      "type": "Predstava",
+      "title": "Покондирена тиква",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Јована Стерије Поповића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pokondirena-tikva-1",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7543/home/pokondirena_baner.jpg"
+    },
+    {
+      "date": "2026-12-02T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-02T20:00",
+      "type": "Predstava",
+      "title": "Prljave ruke (CZK Tivat)",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "RUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/prljave-ruke-czk-tivat",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a26820c07c2173d874b9d11_81635165_2664245483640484_2806986532114661376_n.jpg"
+    },
+    {
+      "date": "2026-12-02T20:30",
+      "type": "Predstava",
+      "title": "Није смрт бицикло (да ти га украду)",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Биљане Србљановић",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/nije-smrt-biciklo-da-ti-ga-ukradu",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7545/home/biciklo_baner.jpg"
+    },
+    {
+      "date": "2026-12-03T17:00",
+      "type": "Predstava",
+      "title": "Čovek u moru (MGL)",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "MonoRUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/covek-u-moru-mgl",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6aedada6c8884ab2cf1acfc7_Covek%20u%20moru%202.jpg"
+    },
+    {
+      "date": "2026-12-03T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-03T19:00",
+      "type": "Koncert",
+      "title": "Самое большое простое число",
+      "place": "Zappa Barka",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43300634-samoie-bolshoie-prostoie-chislo-at-zappa-barka",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/2451461/huge_avatar"
+    },
+    {
+      "date": "2026-12-03T19:30",
+      "type": "Predstava",
+      "title": "Mister dolar",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u adaptaciji i režiji Vladimira Lazića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/mister-dolar/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2018/12/dolaronline.jpg"
+    },
+    {
+      "date": "2026-12-03T19:30",
+      "type": "Predstava",
+      "title": "Nora (MGL)",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "RUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/besi-mgl",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6accca2a2294003c8997a799_Nora_2000x1250px_foto-Peter-Giodani_4315__ScaleMaxWidthWzE5MTld.jpg"
+    },
+    {
+      "date": "2026-12-03T20:00",
+      "type": "Koncert",
+      "title": "СБПЧ • Белград • Новый альбом и ваши любимые песни! 0+",
+      "place": "Zappa Barka",
+      "description": "СБПЧ — самая искренняя группа из тех, на чьих концертах так хочется танцевать. И самая танцевальная из тех, на чьих концертах вы точно будете смеяться и плакать. В ноябре СБПЧ привозят в Белград новый альбом, который обещает стать самым танцевальным в истории группы. Их концерты похожи одновременно…",
+      "source": "Qtickets",
+      "url": "https://belgrad.qtickets.events/238992-sbpch-novyy-albom",
+      "imageUrl": "https://cdn.qtickets.tech/thumbs/591695_360_0_0_0_auto_90_428f07c6.webp"
+    },
+    {
+      "date": "2026-12-03T20:30",
+      "type": "Predstava",
+      "title": "Госпођа Олга",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "драма Милутина Бојића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/gospodja-olga",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8286/home/gospodja_olga_baner.jpg"
+    },
+    {
+      "date": "2026-12-04T19:30",
+      "type": "Predstava",
+      "title": "Mamma mia!",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Juga Radivojevića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/predstave/mamma-mia/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2018/09/Mamma-Mia.png"
+    },
+    {
+      "date": "2026-12-04T19:30",
+      "type": "Predstava",
+      "title": "Године врана",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "драма Синише Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/godine-vrana",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7522/home/godine_vrana_baner.jpg"
+    },
+    {
+      "date": "2026-12-04T20:00",
+      "type": "Predstava",
+      "title": "Sve predivne stvari",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "Premijera. MonoRUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/sve-predivne-stvari",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6aedb156d97f67b341366372_IMG_20261105_181753.jpg"
+    },
+    {
+      "date": "2026-12-04T20:00",
+      "type": "Koncert",
+      "title": "Блох, Малофејев, Савић",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Александер Блох. Солисти: Александeр Малофејев, клавир; Јован Савић, труба",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/bloh-malofejev-savic/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2026-12-04T20:30",
+      "type": "Predstava",
+      "title": "Божји људи",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "по мотивима прозе Борисава Станковића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/bozji-ljudi",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/8309/home/baner_blj.jpg"
+    },
+    {
+      "date": "2026-12-05T17:00",
+      "type": "Predstava",
+      "title": "The atelier of wonder",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Royal Academy of Dance - ASD, Ballet School of Belgrade. Gostovanje",
+      "source": "Pozorište na Terazijama",
+      "url": "https://bilet.pozoristeterazije.com/repertoar.php",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2026/10/Ana-Dosen.png"
+    },
+    {
+      "date": "2026-12-05T18:00",
+      "type": "Predstava",
+      "title": "Džeki (Dramski teatar Skoplje)",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "MonoRUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/dzeki-dramski-teatar-skoplje",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6aedb2549a7609a9c25816d6_Dzeki1.jpg"
+    },
+    {
+      "date": "2026-12-05T19:00",
+      "type": "Koncert",
+      "title": "Ductape",
+      "place": "klub under",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43357021-ductape-at-klub-under",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/4119256/huge_avatar"
+    },
+    {
+      "date": "2026-12-05T19:00",
+      "type": "Opera",
+      "title": "Севиљски берберин",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/seviljski-berberin",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/39/home/seviljski_baner.jpg"
+    },
+    {
+      "date": "2026-12-05T19:30",
+      "type": "Predstava",
+      "title": "Buba u uhu (Dramski teatar Skoplje)",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "RUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/buba-u-uhu-dramski-teatar-skoplje",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a26858b5d249cf04796052e_IMG_3713-1-scaled.jpg"
+    },
+    {
+      "date": "2026-12-05T20:00",
+      "type": "Predstava",
+      "title": "A čime se ti baviš?",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Plesna predstava u koreografiji Branka Mitrovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://pozoristeterazije.com/a-cime-se-ti-bavis/",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2024/10/a-cime-se-ti-bavis.jpg"
+    },
+    {
+      "date": "2026-12-06T18:00",
+      "type": "Predstava",
+      "title": "Štorija Bokezice (CZKT)",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "MonoRUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/storija-bokezice-czkt",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6aedb3319f571baeb85e92cd_IMG_20261105_132439.jpg"
+    },
+    {
+      "date": "2026-12-06T19:30",
+      "type": "Predstava",
+      "title": "Balkan ekspres",
+      "place": "Pozorište na Terazijama, Velika scena",
+      "description": "Mjuzikl u režiji Darijana Mihajlovića",
+      "source": "Pozorište na Terazijama",
+      "url": "https://bilet.pozoristeterazije.com/repertoar.php",
+      "imageUrl": "https://pozoristeterazije.com/wp-content/uploads/2025/04/ikonica-za-najavu-predstave-balkan-ekspres.jpg"
+    },
+    {
+      "date": "2026-12-06T19:30",
+      "type": "Predstava",
+      "title": "Ljubavnice (Kamerni teatar 55)",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "RUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/ljubavnice-kamerni-teatar-55",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a26846d0814ef90338fccbe_470019341_917384930578873_3767479708590141445_n.jpg"
+    },
+    {
+      "date": "2026-12-06T19:30",
+      "type": "Predstava",
+      "title": "Велика драма",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "драма Синише Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/velika-drama",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/2/home/vd_baner.jpg"
+    },
+    {
+      "date": "2026-12-06T20:30",
+      "type": "Predstava",
+      "title": "Покондирена тиква",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "комедија Јована Стерије Поповића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pokondirena-tikva-1",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7543/home/pokondirena_baner.jpg"
+    },
+    {
+      "date": "2026-12-07T18:00",
+      "type": "Predstava",
+      "title": "Zemlja vukova (Ulysses)",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "MonoRUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/zemlja-vukova-ulysses",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6aedb48a47c58b5f6deb3640_Zemlja%20vukova%202.jpg"
+    },
+    {
+      "date": "2026-12-07T19:00",
+      "type": "Koncert",
+      "title": "W.A.S.P.",
+      "place": "Hangar",
+      "description": "Жанр: metal, rock",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43160599-wasp-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/483747/huge_avatar"
+    },
+    {
+      "date": "2026-12-07T19:30",
+      "type": "Predstava",
+      "title": "Na čijoj strani (Kazalište Ulysses)",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "RUTA",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/na-cijoj-strani-kazaliste-ulysses",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6aedcec676464a85bf657770_FOTKA-ZA-WEB-PREDSTAVE-1.jpg"
+    },
+    {
+      "date": "2026-12-07T20:30",
+      "type": "Predstava",
+      "title": "Балкански шпијун",
+      "place": "Narodno pozorište, Сцена „Раша Плаовић”",
+      "description": "трагикомедија Душана Ковачевића",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/balkanski-spijun",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7497/home/balkanski_baner.jpg"
+    },
+    {
+      "date": "2026-12-08T19:00",
+      "type": "Opera",
+      "title": "Травијата",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђузепа Вердија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/travijata",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/42/home/travijata1.jpg"
+    },
+    {
+      "date": "2026-12-08T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-12-09T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-09T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-12-10",
+      "type": "Koncert",
+      "title": "The KVB",
+      "place": "Zappa Barka",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43446154-kvb-at-zappa-barka",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/402740/huge_avatar"
+    },
+    {
+      "date": "2026-12-10T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-11T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-12-11T20:00",
+      "type": "Koncert",
+      "title": "Кочановски и Падмор",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Станислав Кочановски. Солиста: Марк Падмор, тенор",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/kochanovski-i-padmor/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2026-12-12T19:00",
+      "type": "Opera",
+      "title": "Севиљски берберин",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/seviljski-berberin",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/39/home/seviljski_baner.jpg"
+    },
+    {
+      "date": "2026-12-12T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-12-12T20:00",
+      "type": "Koncert",
+      "title": "Koncert: INFEST – ANGER STILL REMAINS",
+      "place": "DOB//Klub",
+      "description": "Dve decenije nakon objavljivanja svog debitantskog albuma „Anger Will Remain“, INFEST obeležava ovaj jubilej koncertom u Beogradu! Veče posvećeno sirovoj energiji, beskompromisnom zvuku i ekstremnoj muzici, uz gostovanje bendova Oathbringer iz Kragujevca i Sunovrat iz Beograda.",
+      "source": "Dom omladine",
+      "url": "https://domomladine.org/koncerti/koncert-infest-anger-still-remains/",
+      "imageUrl": "https://domomladine.org/wp-content/uploads/2026/10/1080x1080-1024x1024.png"
+    },
+    {
+      "date": "2026-12-13T19:30",
+      "type": "Predstava",
+      "title": "Kus petlić",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/kus-petlic",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/695eea779a8105afc3073876_KUS%20PETLIC%202.png"
+    },
+    {
+      "date": "2026-12-13T20:00",
+      "type": "Koncert",
+      "title": "Гала концерт са Ланг Лангом у Сава центру",
+      "place": "Сава Центар",
+      "description": "Солиста: Ланг Ланг, клавир",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/gala-kontsert-sa-lang-langom-u-sava-tsentru/",
+      "imageUrl": ""
+    },
+    {
+      "date": "2026-12-13T20:00",
+      "type": "Koncert",
+      "title": "Николај Кузњецов, клавир",
+      "place": "Велика дворана",
+      "description": "ПРОГРАМ. Улазнице: 2.500, 2.900 и 3.500 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/nikolaj-kuznjecov-klavir-13-12-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/09/1920x1080-2-1080x1080.jpg"
+    },
+    {
+      "date": "2026-12-14T19:30",
+      "type": "Predstava",
+      "title": "Više od igre",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/vise-od-igre-1-2-3-deo",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6833176837531bc850530ef1_drugi%20progon%20(106).JPG"
+    },
+    {
+      "date": "2026-12-15T19:30",
+      "type": "Predstava",
+      "title": "Svaka ptica svome jatu",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/svaka-ptica-svome-jatu",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/67ebb0e40530c52c7c0d2030_DSC09594.avif"
+    },
+    {
+      "date": "2026-12-16T19:00",
+      "type": "Opera",
+      "title": "Пепељуга",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pepeljuga",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/36/home/pepeljuga_sajt.jpg"
+    },
+    {
+      "date": "2026-12-16T19:30",
+      "type": "Predstava",
+      "title": "Šarlota Kasteli",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/sarlota-castelli",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6784fabb4e1c5a2d543cab9f_Sarlota%20Kasteli%20progon%20foto%20Dragana%20Udovicic.avif"
+    },
+    {
+      "date": "2026-12-16T20:00",
+      "type": "Koncert",
+      "title": "Вокални ансамбл ЕДВАРД ГРИГ",
+      "place": "Велика дворана",
+      "description": "Божићни триптих. Улазнице: 2.200, 3.000 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/ansambl-edvard-grig-16-12-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/09/Edvard-Grig-SAJT-Kolarac-1280x1280.jpg"
+    },
+    {
+      "date": "2026-12-17T19:00",
+      "type": "Opera",
+      "title": "Пепељуга",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pepeljuga",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/36/home/pepeljuga_sajt.jpg"
+    },
+    {
+      "date": "2026-12-17T19:30",
+      "type": "Predstava",
+      "title": "1984",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/1984",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/65688deb91c42972389de82a_1985.avif"
+    },
+    {
+      "date": "2026-12-18T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-18T19:30",
+      "type": "Predstava",
+      "title": "(Pra)faust",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/pra-faust",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651bf24e0579c550c284b23a_pra-faust.avif"
+    },
+    {
+      "date": "2026-12-18T20:00",
+      "type": "Koncert",
+      "title": "Гранди и Канг",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Елијас Гранди. Солиста: Клара-Јуми Канг, виолина",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/grandi-i-kang/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2026-12-19",
+      "type": "Koncert",
+      "title": "Silicone Soul",
+      "place": "KULT",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43498017-silicone-soul-at-kult",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/484942/huge_avatar"
+    },
+    {
+      "date": "2026-12-19T20:00",
+      "type": "Predstava",
+      "title": "Gidionov čvor",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/gidionov-cvor",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/67d020d028893765a6dd8b78_DSC02492.avif"
+    },
+    {
+      "date": "2026-12-20T19:30",
+      "type": "Predstava",
+      "title": "Bogojavljenska noć",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/bogojavljenska-noc",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a071b945735c60498c422a2_SAVE_20260515_151022.jpg"
+    },
+    {
+      "date": "2026-12-21T20:00",
+      "type": "Koncert",
+      "title": "ГУНХИЛД КАРЛИНГ",
+      "place": "Велика дворана",
+      "description": "Улазнице: 3.400, 4.200 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/gunhild-karling-21-12-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/09/Gunhild-Carling-Kolarac-SAJT-e1789578802377-450x450.jpg"
+    },
+    {
+      "date": "2026-12-22T19:00",
+      "type": "Opera",
+      "title": "Пепељуга",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pepeljuga",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/36/home/pepeljuga_sajt.jpg"
+    },
+    {
+      "date": "2026-12-22T19:30",
+      "type": "Predstava",
+      "title": "Crno zlato",
+      "place": "BDP, Velika scena \"Olivera i Rade\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/crno-zlato-3",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/69b16c3f12a560519fdf837e_DSC00652_resized%20-%20Copy.jpg"
+    },
+    {
+      "date": "2026-12-22T20:00",
+      "type": "Koncert",
+      "title": "ГУНХИЛД КАРЛИНГ",
+      "place": "Велика дворана",
+      "description": "Улазнице: 3.400, 4.200 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/gunhild-karling-22-12-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/09/Gunhild-Carling-Kolarac-SAJT-e1789578802377-450x450.jpg"
+    },
+    {
+      "date": "2026-12-23T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-23T20:00",
+      "type": "Predstava",
+      "title": "Pozicija deteta",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/pozicija-deteta",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/67d0207709f63340cdb17418_9A.avif"
+    },
+    {
+      "date": "2026-12-24T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-24T20:00",
+      "type": "Predstava",
+      "title": "Yankee Rose",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/yankee-rose",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c062c18e81fe687b3736f_yankee-rose.avif"
+    },
+    {
+      "date": "2026-12-24T20:00",
+      "type": "Koncert",
+      "title": "Новогодишњи концерт Београдске филхармоније",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/novogodisnji-koncert-beogradske-filharmonije/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/GLAVNI-BANER-FINAL-1.webp"
+    },
+    {
+      "date": "2026-12-25T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-25T20:00",
+      "type": "Predstava",
+      "title": "Crna kutija",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/crna-kutija",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c1a8617a252234aad4bb4_Crna-kutija-foto-Dragana-Udovicic-12_resize-1070x580.avif"
+    },
+    {
+      "date": "2026-12-25T20:00",
+      "type": "Koncert",
+      "title": "Новогодишњи концерт Београдске филхармоније",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/novogodishni-kontsert-beogradske-filharmonije/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/GLAVNI-BANER-FINAL-1.webp"
+    },
+    {
+      "date": "2026-12-26",
+      "type": "Koncert",
+      "title": "Valeron",
+      "place": "Nevera",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43490990-valeron-at-nevera",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/9397204/huge_avatar"
+    },
+    {
+      "date": "2026-12-26T19:00",
+      "type": "Opera",
+      "title": "Пепељуга",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pepeljuga",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/36/home/pepeljuga_sajt.jpg"
+    },
+    {
+      "date": "2026-12-26T20:00",
+      "type": "Predstava",
+      "title": "Trpele",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/trpele",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c18af83052688977c60ab_trpele.avif"
+    },
+    {
+      "date": "2026-12-27T20:00",
+      "type": "Predstava",
+      "title": "Naši roditelji",
+      "place": "BDP",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/nasi-roditelji",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/6a1d535a63a50f71e935f44c_Screenshot_2026-05-29-15-52-13-836_com.viber.voip-edit.jpg"
+    },
+    {
+      "date": "2026-12-28T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-29T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-29T20:00",
+      "type": "Predstava",
+      "title": "Ne igraj na Engleze",
+      "place": "BDP, Mala scena \"Pepi\"",
+      "description": "",
+      "source": "BDP",
+      "url": "https://www.bdp.rs/predstave/ne-igraj-na-engleze",
+      "imageUrl": "https://cdn.prod.website-files.com/65113fe76c53533e3fe3f7c0/651c0047f09b786562038146_Ne-igraj-na-Engleze.avif"
+    },
+    {
+      "date": "2026-12-30T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2026-12-30T20:00",
+      "type": "Koncert",
+      "title": "Симфонијски оркестар РТС",
+      "place": "Велика дворана",
+      "description": "Позивамо вас на величанствену музичку завршницу 2026. године! „Немачки реквијем“ Јоханеса Брамса у извођењу Симфонијског оркестра РТС-а, Хора РТС-а и Мешовитог хора Факултета музичке уметности. Солисти су Биљана Јовановић, сопран, и Паул Армин Еделман, баритон. Диригује Србољуб Динић. Видимо се у…",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/simfonijski-orkestar-rts-30-12-2026-u-20-velika-dvorana/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/11/BRAHMS-FB-Event-1920x1005-1005x1005.png"
+    },
+    {
+      "date": "2026-12-31T21:30",
+      "type": "Koncert",
+      "title": "Новогодишњи концерт на Коларцу РАМБО АМАДЕУС",
+      "place": "Коларац",
+      "description": "Улазнице: 5.000 дин.",
+      "source": "Kolarac",
+      "url": "https://www.kolarac.rs/koncerti/novogodisnji-koncert-na-kolarcu-rambo-amadeus-31-12-2026-u-21-30/",
+      "imageUrl": "https://www.kolarac.rs/wp-content/uploads/2026/10/RAMBO-1067x1067.jpg"
+    },
+    {
+      "date": "2027-01-05T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2027-01-09T19:00",
+      "type": "Opera",
+      "title": "Севиљски берберин",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/seviljski-berberin",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/39/home/seviljski_baner.jpg"
+    },
+    {
+      "date": "2027-01-13T20:00",
+      "type": "Predstava",
+      "title": "Новогодишњи гала концерт",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/novogodisnji-gala-koncert",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7914/home/gala.jpg"
+    },
+    {
+      "date": "2027-01-14T19:00",
+      "type": "Balet",
+      "title": "Крцко Орашчић",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "балет П. И. Чајковског",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/krcko-orascic",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/7443/home/krcko_novi_baner.jpg"
+    },
+    {
+      "date": "2027-01-15T20:00",
+      "type": "Koncert",
+      "title": "Скаљоне и Књазев",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Кејс Скаљоне. Солиста: Aлександар Књазев, виолончело",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/skalone-i-knazev/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-01-16T19:00",
+      "type": "Opera",
+      "title": "Пепељуга",
+      "place": "Narodno pozorište, Велика сцена",
+      "description": "опера Ђоакина Росинија",
+      "source": "Narodno pozorište",
+      "url": "https://www.narodnopozoriste.rs/predstave/pepeljuga",
+      "imageUrl": "https://www.narodnopozoriste.rs/media/images/performances/36/home/pepeljuga_sajt.jpg"
+    },
+    {
+      "date": "2027-01-22",
+      "type": "Koncert",
+      "title": "Ksenija Sidorova",
+      "place": "Kolarac",
+      "description": "Жанр: classical. С участием: Belgrade Philharmonic Orchestra, Sergey Smbatyan",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43421320-ksenija-sidorova-at-kolarac",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/8364543/huge_avatar"
+    },
+    {
+      "date": "2027-01-22T20:00",
+      "type": "Koncert",
+      "title": "Смбатјан и Сидоровa",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Сергеј Смбатјан. Солиста: Ксенија Сидорова, хармоника",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/smbatjan-i-sidorova/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-01-29",
+      "type": "Koncert",
+      "title": "Xiu Xiu",
+      "place": "Teatar 78",
+      "description": "Жанр: indie alternative, rock, hip hop, folk blues, electronic, pop",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43373457-xiu-xiu-at-teatar-78",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/85293/huge_avatar"
+    },
+    {
+      "date": "2027-01-29T20:00",
+      "type": "Koncert",
+      "title": "Хасан и Дебарг",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Керем Хасан. Солиста: Лука Дебарг, клавир",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/kerem-hasan-i-luka-debarg/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-02-05T20:00",
+      "type": "Koncert",
+      "title": "Роберт Тревињо",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Роберт Тревињо",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/robert-trevinjo/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-02-12T20:00",
+      "type": "Koncert",
+      "title": "Кватрини и Бањешевић",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Сесто Кватрини. Солиста: Тамара Бањешевић, сопран",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/sesto-kvatrini-i-tamara-banesevic/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-02-15T20:00",
+      "type": "Koncert",
+      "title": "Сретењски концерт",
+      "place": "Сала Београдске филхармоније",
+      "description": "",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/sretenski-kontsert/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/GLAVNI-BANER-FINAL-1.webp"
+    },
+    {
+      "date": "2027-02-26",
+      "type": "Koncert",
+      "title": "Marsh",
+      "place": "Hangar",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43399715-marsh-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/536513/huge_avatar"
+    },
+    {
+      "date": "2027-02-26T20:00",
+      "type": "Koncert",
+      "title": "Бастијан и Ким",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Јозеф Бастијан. Солиста: Бомсори Ким, виолина",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/jozef-bastijan-i-bomsori-kim/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-02-27",
+      "type": "Koncert",
+      "title": "СОЮЗ",
+      "place": "Karmakoma",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43180694-soiuz-at-karmakoma",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/10020304/huge_avatar"
+    },
+    {
+      "date": "2027-03-05T20:00",
+      "type": "Koncert",
+      "title": "Грифитс и Пејчић",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Хауард Грифитс. Солиста: Петар Пејчић, виолончело",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/hauard-grifits-i-petar-pejcic/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-03-12T20:00",
+      "type": "Koncert",
+      "title": "Онофри и Мун",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Енрико Онофри. Солиста: Арсени Мун, клавир",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/enriko-onofri-i-arseni-mun/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-03-16",
+      "type": "Koncert",
+      "title": "Tarja",
+      "place": "Luka Beograd",
+      "description": "Жанр: metal",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43449745-tarja-at-luka-beograd",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/92661/huge_avatar"
+    },
+    {
+      "date": "2027-03-16T19:00",
+      "type": "Koncert",
+      "title": "The Rasmus",
+      "place": "MTS Dvorana",
+      "description": "Жанр: metal",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43445648-rasmus-at-mts-dvorana",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/475787/huge_avatar"
+    },
+    {
+      "date": "2027-03-19T20:00",
+      "type": "Koncert",
+      "title": "Патињо-Осорио и Кобекин",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Ана Марија Патињо-Осорио. Солиста: Анастасија Кобекина, виолончело",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/ana-marija-patinjo-osorio-i-anastasija-kobekin/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-04-09T20:00",
+      "type": "Koncert",
+      "title": "Гнан и Милошевић",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Мориц Гнан. Солиста: Владимир Милошевић, клавир",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/moric-gnan-i-vladimir-milosevic/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-04-10",
+      "type": "Koncert",
+      "title": "Katatonia",
+      "place": "Hangar",
+      "description": "Жанр: metal. С участием: Bonnie Trash",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43503184-katatonia-at-hangar",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/58766/huge_avatar"
+    },
+    {
+      "date": "2027-04-16T20:00",
+      "type": "Koncert",
+      "title": "Бараез и Хор Collegium musicum",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Родолфо Бараез. Солисти: Хор Collegium musicum",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/rodolfo-baraez-i-hor-collegium-musicum/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-04-23T20:00",
+      "type": "Koncert",
+      "title": "Синковски и Лежњевa",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Дмитри Синковски. Солиста: Јулија Лежњева, сопран",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/dmitri-sinkovski-i-julija-leznjeva/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-04-27",
+      "type": "Koncert",
+      "title": "16 Horsepower",
+      "place": "Zappa Barka",
+      "description": "",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43456398-16-horsepower-at-zappa-barka",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/407824/huge_avatar"
+    },
+    {
+      "date": "2027-05-07T20:00",
+      "type": "Koncert",
+      "title": "Гордан Николић",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Уметнички вођа: Гордан Николић, виолина",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/gordan-nikolic/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-05-14T20:00",
+      "type": "Koncert",
+      "title": "Вендити и VooDoo Piano Duo",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Нил Вендити. Солисти: VooDoo Piano Duo",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/nil-venditi-i-voodoo-piano-duo/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-05-21T20:00",
+      "type": "Koncert",
+      "title": "Менголи и Борисо-Глебски",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Ђузепе Менголи. Солиста: Никита Борисо-Глебски, виолина",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/djuzepe-mengoli-i-nikita-boriso-glebski/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-05-28T20:00",
+      "type": "Koncert",
+      "title": "Пишкар и Чои",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Хосеин Пишкар. Солиста: Јасмин Чои, флаута",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/hosein-pishkar-i-jasmin-choi/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-06-04T20:00",
+      "type": "Koncert",
+      "title": "Кватрини и Ченг",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Сесто Кватрини. Солиста: Брајан Ченг, виолончело",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/sesto-kvatrini-i-brajan-ceng/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-06-11",
+      "type": "Koncert",
+      "title": "Борис Николаенов",
+      "place": "Kalemegdan",
+      "description": "С участием: Rehfhgh, Splin, Werksgi",
+      "source": "Songkick",
+      "url": "https://www.songkick.com/concerts/43412353-boris-nikolaienov-at-kalemegdan",
+      "imageUrl": "https://images.sk-static.com/images/media/profile_images/artists/10413224/huge_avatar"
+    },
+    {
+      "date": "2027-06-11T20:00",
+      "type": "Koncert",
+      "title": "Александер Блох",
+      "place": "Велика дворана Kоларчеве задужбине",
+      "description": "Диригент: Александер Блох",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/aleksander-bloh/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/glavni-baner-bez-teksta.webp"
+    },
+    {
+      "date": "2027-06-28T20:00",
+      "type": "Koncert",
+      "title": "Видовдански концерт",
+      "place": "Сала Београдске филхармоније",
+      "description": "",
+      "source": "BGF",
+      "url": "https://www.bgf.rs/repertoar_cp/vidovdanski-kontsert/",
+      "imageUrl": "http://www.bgf.rs/wp-content/uploads/2026/06/GLAVNI-BANER-FINAL-1.webp"
+    }
+  ]
+}
