@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="pages.css">
+    <title>Run-Balkan: Kulturni događaji u Beogradu</title>
+    <style>
+        .events-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin: 16px 0;
+        }
+
+        .events-toolbar select,
+        .events-toolbar input {
+            font: inherit;
+            padding: 4px 8px;
+        }
+
+        .events-toolbar input {
+            flex: 1 1 160px;
+            min-width: 0;
+        }
+
+        .events-updated {
+            color: #777;
+            font-size: 0.85em;
+        }
+
+        .events-day {
+            margin-top: 28px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #ccc;
+            color: #4a8c4d;
+        }
+
+        .event {
+            display: flex;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .event-image {
+            flex: 0 0 160px;
+            width: 160px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #eee;
+        }
+
+        .event-body {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .event-title {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .event-meta {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .event-time {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .event-description {
+            margin: 4px 0 0;
+            font-size: 0.9em;
+        }
+
+        .event-source {
+            color: #777;
+            font-size: 0.8em;
+        }
+
+        .events-message {
+            margin: 24px 0;
+            color: #777;
+        }
+
+        @media (max-width: 520px) {
+            .event {
+                flex-direction: column;
+            }
+
+            .event-image {
+                width: 100%;
+                flex-basis: auto;
+                height: auto;
+                aspect-ratio: 16 / 9;
+            }
+        }
+    </style>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106339243', 'ym');
+
+    ym(106339243, 'init', {ssr:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106339243" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Map</a>
+
+    <h1>Kulturni događaji u Beogradu</h1>
+
+    <div class="events-toolbar">
+        <select id="typeFilter" aria-label="Event type">
+            <option value="">Svi tipovi</option>
+        </select>
+        <input id="textFilter" type="search" placeholder="Pretraži po naslovu ili mestu" aria-label="Search">
+        <span id="updatedAt" class="events-updated"></span>
+    </div>
+
+    <div id="events"><p class="events-message">Loading…</p></div>
+
+    <footer>
+        <p>&copy; Boogier 2026</p>
+    </footer>
+
+    <script>
+        (function () {
+            'use strict';
+
+            var LOCALE = 'sr-Latn-RS';
+            var container = document.getElementById('events');
+            var typeFilter = document.getElementById('typeFilter');
+            var textFilter = document.getElementById('textFilter');
+            var updatedAt = document.getElementById('updatedAt');
+            var events = [];
+
+            function el(tag, className, text) {
+                var node = document.createElement(tag);
+                if (className) {
+                    node.className = className;
+                }
+                if (text !== undefined && text !== null) {
+                    node.textContent = text;
+                }
+                return node;
+            }
+
+            function isHttpUrl(url) {
+                return typeof url === 'string' && /^https?:\/\//i.test(url);
+            }
+
+            // Dates have no timezone ("2026-11-07T19:00") and are Belgrade local time:
+            // split the string instead of using Date to avoid any timezone shift.
+            function parseDate(value) {
+                var m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(value || '');
+                if (!m) {
+                    return null;
+                }
+                return {day: m[1] + '-' + m[2] + '-' + m[3], time: m[4] ? m[4] + ':' + m[5] : ''};
+            }
+
+            function formatDay(day) {
+                var p = day.split('-');
+                var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+                var text = d.toLocaleDateString(LOCALE, {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                    timeZone: 'UTC',
+                });
+                return text.charAt(0).toUpperCase() + text.slice(1);
+            }
+
+            // Today's date in Belgrade as YYYY-MM-DD ('sv-SE' formats dates as ISO).
+            function todayInBelgrade() {
+                return new Date().toLocaleDateString('sv-SE', {timeZone: 'Europe/Belgrade'});
+            }
+
+            function renderEvent(ev, time) {
+                var row = el('div', 'event');
+
+                if (isHttpUrl(ev.imageUrl)) {
+                    var img = el('img', 'event-image');
+                    img.src = ev.imageUrl;
+                    img.alt = '';
+                    img.loading = 'lazy';
+                    img.referrerPolicy = 'no-referrer';
+                    img.onerror = function () {
+                        img.remove();
+                    };
+                    row.appendChild(img);
+                }
+
+                var body = el('div', 'event-body');
+                var title = el('h3', 'event-title');
+                if (isHttpUrl(ev.url)) {
+                    var link = el('a', null, ev.title || ev.url);
+                    link.href = ev.url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    title.appendChild(link);
+                } else {
+                    title.textContent = ev.title || '';
+                }
+                body.appendChild(title);
+
+                var meta = el('div', 'event-meta');
+                if (time) {
+                    meta.appendChild(el('span', 'event-time', time));
+                }
+                var rest = [ev.place, ev.type].filter(Boolean).join(' · ');
+                if (rest) {
+                    meta.appendChild(document.createTextNode((time ? ' · ' : '') + rest));
+                }
+                body.appendChild(meta);
+
+                if (ev.description) {
+                    body.appendChild(el('p', 'event-description', ev.description));
+                }
+                if (ev.source) {
+                    body.appendChild(el('div', 'event-source', 'Source: ' + ev.source));
+                }
+
+                row.appendChild(body);
+                return row;
+            }
+
+            function render() {
+                var type = typeFilter.value;
+                var query = textFilter.value.trim().toLowerCase();
+                var lastDay = null;
+                var shown = 0;
+                var fragment = document.createDocumentFragment();
+
+                events.forEach(function (item) {
+                    var ev = item.ev;
+                    if (type && ev.type !== type) {
+                        return;
+                    }
+                    if (query && ((ev.title || '') + ' ' + (ev.place || '')).toLowerCase().indexOf(query) === -1) {
+                        return;
+                    }
+                    if (item.date.day !== lastDay) {
+                        lastDay = item.date.day;
+                        fragment.appendChild(el('h2', 'events-day', formatDay(lastDay)));
+                    }
+                    fragment.appendChild(renderEvent(ev, item.date.time));
+                    shown += 1;
+                });
+
+                container.textContent = '';
+                if (shown) {
+                    container.appendChild(fragment);
+                } else {
+                    container.appendChild(el('p', 'events-message', 'No events found.'));
+                }
+            }
+
+            function init(data) {
+                var list = Array.isArray(data) ? data : (data && data.Events) || [];
+                var today = todayInBelgrade();
+
+                events = list
+                    .map(function (ev) {
+                        return {ev: ev, date: parseDate(ev.date)};
+                    })
+                    .filter(function (item) {
+                        return item.date && item.date.day >= today;
+                    })
+                    .sort(function (a, b) {
+                        return (a.ev.date < b.ev.date ? -1 : a.ev.date > b.ev.date ? 1 : 0);
+                    });
+
+                var types = [];
+                events.forEach(function (item) {
+                    if (item.ev.type && types.indexOf(item.ev.type) === -1) {
+                        types.push(item.ev.type);
+                    }
+                });
+                types.sort().forEach(function (t) {
+                    var option = el('option', null, t);
+                    option.value = t;
+                    typeFilter.appendChild(option);
+                });
+
+                if (data && data.UpdatedAt) {
+                    var updated = new Date(data.UpdatedAt);
+                    if (!isNaN(updated)) {
+                        updatedAt.textContent = 'Ažurirano: ' + updated.toLocaleString(LOCALE, {
+                            dateStyle: 'medium',
+                            timeStyle: 'short',
+                        });
+                    }
+                }
+
+                render();
+            }
+
+            typeFilter.addEventListener('change', render);
+            textFilter.addEventListener('input', render);
+
+            fetch('/Events.json', {cache: 'no-cache'})
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(init)
+                .catch(function () {
+                    container.textContent = '';
+                    container.appendChild(el('p', 'events-message', 'Could not load events. Please try again later.'));
+                });
+        })();
+    </script>
+</body>
+</html>
