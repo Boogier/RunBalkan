@@ -97,6 +97,12 @@ const plugins = [
         chunks: ['track'],
         minify: false,
     }),
+    new HtmlWebpackPlugin({
+        template: paths.appRacesHtml,
+        filename: 'races.html',
+        chunks: ['races'],
+        minify: false,
+    }),
     ...(isProduction || isDevelopment
         ? [
               new MiniCssExtractPlugin({
@@ -213,6 +219,7 @@ module.exports = {
     entry: {
         app: paths.appIndexJs,
         track: paths.appTrackJs,
+        races: paths.appRacesJs,
     },
 
     optimization: {
