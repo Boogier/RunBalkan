@@ -68,6 +68,7 @@ const STRINGS = {
     distance: {en: 'Distance', sr: 'Distanca', ru: 'Дистанция'},
     search: {en: 'Search by name or city', sr: 'Pretraga po nazivu ili gradu', ru: 'Поиск по названию или городу'},
     showPast: {en: 'Show past', sr: 'Prikaži prošle', ru: 'Показать прошедшие'},
+    total: {en: 'Total: {count}', sr: 'Ukupno: {count}', ru: 'Всего {count}'},
     noMatch: {
         en: 'No races match these filters.',
         sr: 'Nema trka za izabrane filtere.',

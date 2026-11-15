@@ -376,7 +376,7 @@ function render() {
     }
     els.list.textContent = '';
     els.list.appendChild(fragment);
-    els.count.textContent = formatCount(lang, shown.length);
+    els.count.textContent = t(lang, 'total', {count: formatCount(lang, shown.length)});
 }
 
 function applyLanguage() {
