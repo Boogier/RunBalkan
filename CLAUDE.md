@@ -58,6 +58,9 @@ Lives in `src/lib/leaflet.control.track-list/track-list.js` (methods `reloadBalk
 
 The track **name filter** (`nameFilter` observable, hash key `nf`) and `showTooltipForFilteredTrack()` are also Balkan additions in this file.
 
+### Races page
+`src/races.html` + `src/races.js` (webpack entry `races`, like `track`) shows Clean competitions from the Trcara DB fetched from `config.balkanServerUrl + 'competitions'` (wwwOrient `CompetitionsController`). Pure logic lives in `src/racesLogic.js` (tested by `test/test_races_logic.js`); filters and language (en/sr/ru) live in the page's own hash keys `lang`, `c`, `t`, `d`, `q`, `past`.
+
 ### Build script
 `scripts/build.js` (run by `npm run build`) computes `RELEASE_VER` from git (`<date>-<branch>-<commit>[-dirty]`), injects it via webpack `DefinePlugin`, runs webpack, and prints gzipped asset sizes with diffs vs. the previous build. `NODE_ENV` must be one of `production|development|testing` or webpack aborts. `public/` is copied verbatim into `build/` (static pages: about.html, donate.html, robots.txt, web.config).
 

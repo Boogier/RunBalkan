@@ -7,7 +7,7 @@ const balkanServerUrl = NODE_ENV === 'production'
 const config = {
     caption: `
         <a href="about.html" target="_self">About</a> |
-        <a href="https://docs.google.com/spreadsheets/d/1o3LivaIhBS0M1_bG9H8Pq_9K57AVFo0H40h0MzCOICs/edit?usp=sharing" target="_blank">Running events in Balkans and near</a> |
+        <a href="races.html" target="_self">Running events in Balkans and near</a> |
         <a href="events.html" target="_self">Kulturni događaji u Beogradu</a> |
         <a href="https://t.me/boogier">Contact</a> |
         <a href="donate.html" target="_self">Donate</a>`,

@@ -14,5 +14,7 @@ module.exports = {
     appIndexHtml: resolveApp('src/index.html'),
     appTrackJs: resolveApp('src/track.js'),
     appTrackHtml: resolveApp('src/track.html'),
+    appRacesJs: resolveApp('src/races.js'),
+    appRacesHtml: resolveApp('src/races.html'),
     appSrc: resolveApp('src'),
 };
