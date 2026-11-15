@@ -233,8 +233,13 @@ function createDateCell(competition) {
 function createNameCell(competition) {
     const cell = document.createElement('div');
     cell.className = 'race-name';
-    const website = competition.links.find((link) => link.type === 'website');
-    const href = website ? safeHref(website) : null;
+    // Name links to the website; without one, fall back to Facebook, then Instagram.
+    let href = null;
+    for (const type of ['website', 'facebook', 'instagram']) {
+        for (const link of competition.links.filter((l) => l.type === type)) {
+            href = href || safeHref(link);
+        }
+    }
     let el;
     if (href) {
         el = document.createElement('a');
