@@ -84,6 +84,18 @@
             font-size: 0.8em;
         }
 
+        /* Event whose date may be out of date (e.g. marked as postponed on the organizer's site). */
+        .event-status {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 0 6px;
+            border: 1px solid #c2610c;
+            border-radius: 3px;
+            color: #c2610c;
+            font-size: 0.85em;
+            cursor: help;
+        }
+
         .events-message {
             margin: 24px 0;
             color: #777;
@@ -214,6 +226,11 @@
                 var rest = [ev.place, ev.type].filter(Boolean).join(' · ');
                 if (rest) {
                     meta.appendChild(document.createTextNode((time ? ' · ' : '') + rest));
+                }
+                if (ev.needsConfirmation === true) {
+                    var status = el('span', 'event-status', 'Potrebna provera');
+                    status.title = 'Kontaktirajte organizatore događaja da biste proverili da li je još aktuelan';
+                    meta.appendChild(status);
                 }
                 body.appendChild(meta);
 
