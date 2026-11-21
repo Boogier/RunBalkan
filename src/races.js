@@ -342,13 +342,6 @@ function createLinksCell(competition) {
     return cell;
 }
 
-function createSourceCell(competition) {
-    const cell = document.createElement('div');
-    cell.className = 'race-source';
-    cell.textContent = competition.source || '';
-    return cell;
-}
-
 function createRow(competition, today) {
     const row = document.createElement('div');
     row.className = isPast(competition, today) ? 'race race--past' : 'race';
@@ -358,7 +351,6 @@ function createRow(competition, today) {
     row.appendChild(createTypeCell(competition));
     row.appendChild(createDistancesCell(competition));
     row.appendChild(createLinksCell(competition));
-    row.appendChild(createSourceCell(competition));
     return row;
 }
 
