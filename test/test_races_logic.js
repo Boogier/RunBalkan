@@ -29,7 +29,7 @@ function race(overrides) {
 }
 
 function emptyState(overrides) {
-    return {lang: null, countries: [], type: '', distance: '', query: '', past: false, ...overrides};
+    return {lang: null, countries: [], types: [], distance: '', query: '', past: false, ...overrides};
 }
 
 function rangeByKey(key) {
@@ -61,7 +61,7 @@ test('round trip', () => {
     assert.deepEqual(parsed, {
         lang: 'sr',
         countries: ['RS'],
-        type: 'Trail',
+        types: ['Trail'],
         distance: '21.1-42.2',
         query: 'zlatibor',
         past: true,
@@ -79,6 +79,14 @@ test('several countries round trip', () => {
 });
 test('invalid and duplicate country codes are dropped', () => {
     assert.deepEqual(parseHash('c=RS,serbia,,RS,me,BA').countries, ['RS', 'BA']);
+});
+test('several types round trip', () => {
+    const parsed = parseHash('t=Trail,OCR');
+    assert.deepEqual(parsed.types, ['Trail', 'OCR']);
+    assert.equal(serializeHash(parsed), 't=Trail,OCR');
+});
+test('invalid and duplicate types are dropped', () => {
+    assert.deepEqual(parseHash('t=Trail,Road,,Trail,ocr,OCR').types, ['Trail', 'OCR']);
 });
 test('empty state serializes to an empty string', () => {
     assert.equal(serializeHash(emptyState()), '');
@@ -119,15 +127,20 @@ test('multi-day race whose distance starts today is not past', () => {
 });
 test('country and type filters', () => {
     const competition = race();
-    assert.isTrue(matchesFilters(competition, emptyState({countries: ['RS'], type: 'Trail'}), TODAY));
+    assert.isTrue(matchesFilters(competition, emptyState({countries: ['RS'], types: ['Trail']}), TODAY));
     assert.isFalse(matchesFilters(competition, emptyState({countries: ['ME']}), TODAY));
-    assert.isFalse(matchesFilters(competition, emptyState({type: 'OCR'}), TODAY));
+    assert.isFalse(matchesFilters(competition, emptyState({types: ['OCR']}), TODAY));
     assert.isFalse(matchesFilters(race({country: null}), emptyState({countries: ['RS']}), TODAY));
 });
 test('several countries match any of them', () => {
     const competition = race();
     assert.isTrue(matchesFilters(competition, emptyState({countries: ['ME', 'RS']}), TODAY));
     assert.isFalse(matchesFilters(competition, emptyState({countries: ['ME', 'BA']}), TODAY));
+});
+test('several types match any of them', () => {
+    const competition = race();
+    assert.isTrue(matchesFilters(competition, emptyState({types: ['OCR', 'Trail']}), TODAY));
+    assert.isFalse(matchesFilters(competition, emptyState({types: ['OCR', 'Asphalt']}), TODAY));
 });
 test('query is diacritic-insensitive', () => {
     assert.isTrue(matchesFilters(race({city: 'Čačak'}), emptyState({query: 'cacak'}), TODAY));

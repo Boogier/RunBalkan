@@ -36,9 +36,23 @@
 
 .races-filters select,
 .races-filters input[type='search'],
-.country-toggle {
+.country-toggle,
+.filter-reset {
     font: inherit;
     padding: 4px 8px;
+}
+
+.filter-reset {
+    background: #fff;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.filter-reset:disabled {
+    color: #999;
+    border-color: #ccc;
+    cursor: default;
 }
 
 .country-filter {

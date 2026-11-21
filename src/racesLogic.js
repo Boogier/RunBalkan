@@ -66,9 +66,11 @@ const STRINGS = {
     country: {en: 'Country', sr: 'Zemlja', ru: 'Страна'},
     countries: {en: 'Countries', sr: 'Zemlje', ru: 'Страны'},
     type: {en: 'Type', sr: 'Tip', ru: 'Тип'},
+    types: {en: 'Types', sr: 'Tipovi', ru: 'Типы'},
     distance: {en: 'Distance', sr: 'Distanca', ru: 'Дистанция'},
     search: {en: 'Search by name or city', sr: 'Pretraga po nazivu ili gradu', ru: 'Поиск по названию или городу'},
     showPast: {en: 'Show past', sr: 'Prikaži prošle', ru: 'Показать прошедшие'},
+    resetFilters: {en: 'Reset filters', sr: 'Resetuj filtere', ru: 'Сбросить фильтр'},
     total: {en: 'Total: {count}', sr: 'Ukupno: {count}', ru: 'Всего {count}'},
     noMatch: {
         en: 'No races match these filters.',
@@ -143,15 +145,20 @@ function parseCountries(value) {
     return [...new Set(codes)];
 }
 
+// Race types are separated by commas ('Trail,OCR'); a single type is the legacy one-type form.
+function parseTypes(value) {
+    const types = (value || '').split(',').filter((type) => TYPES.includes(type));
+    return [...new Set(types)];
+}
+
 function parseHash(hashString) {
     const params = new URLSearchParams((hashString || '').replace(/^#/u, ''));
     const lang = params.get('lang');
-    const type = params.get('t') || '';
     const distance = params.get('d') || '';
     return {
         lang: LANGUAGES.includes(lang) ? lang : null,
         countries: parseCountries(params.get('c')),
-        type: TYPES.includes(type) ? type : '',
+        types: parseTypes(params.get('t')),
         distance: DISTANCE_RANGES.some((range) => range.key === distance) ? distance : '',
         query: params.get('q') || '',
         past: params.get('past') === '1',
@@ -166,8 +173,8 @@ function serializeHash(state) {
     if (state.countries && state.countries.length) {
         params.set('c', state.countries.join(','));
     }
-    if (state.type) {
-        params.set('t', state.type);
+    if (state.types && state.types.length) {
+        params.set('t', state.types.join(','));
     }
     if (state.distance) {
         params.set('d', state.distance);
@@ -251,7 +258,7 @@ function matchesFilters(competition, state, todayIso) {
     if (state.countries.length && !(competition.country && state.countries.includes(competition.country.code))) {
         return false;
     }
-    if (state.type && competition.type !== state.type) {
+    if (state.types.length && !state.types.includes(competition.type)) {
         return false;
     }
     if (state.distance && !matchesDistance(competition, state.distance)) {

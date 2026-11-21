@@ -35,13 +35,12 @@
             <div id="country-menu" class="country-menu" role="group" data-i18n-aria="countries"
                 aria-label="Countries" hidden></div>
         </div>
-        <select id="filter-type" data-i18n-aria="type" aria-label="Type">
-            <option value="" data-i18n="allTypes">All types</option>
-            <option value="Trail">Trail</option>
-            <option value="Asphalt">Asphalt</option>
-            <option value="OCR">OCR</option>
-            <option value="Other">Other</option>
-        </select>
+        <div id="filter-type" class="country-filter">
+            <button id="type-toggle" type="button" class="country-toggle" aria-haspopup="true"
+                aria-expanded="false">All types</button>
+            <div id="type-menu" class="country-menu" role="group" data-i18n-aria="types"
+                aria-label="Types" hidden></div>
+        </div>
         <select id="filter-distance" data-i18n-aria="distance" aria-label="Distance">
             <option value="" data-i18n="anyDistance">Any distance</option>
             <option value="0-10">Up to 10 km</option>
@@ -52,6 +51,7 @@
         <input id="filter-search" type="search" placeholder="Search by name or city" data-i18n-placeholder="search"
             data-i18n-aria="search" aria-label="Search by name or city">
         <label class="races-past"><input id="filter-past" type="checkbox"> <span data-i18n="showPast">Show past</span></label>
+        <button id="filter-reset" type="button" class="filter-reset" data-i18n="resetFilters" disabled>Reset filters</button>
     </div>
 
     <div id="races-count" class="races-count"></div>

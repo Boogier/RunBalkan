@@ -58,9 +58,12 @@ const els = {
     countryToggle: document.getElementById('country-toggle'),
     countryMenu: document.getElementById('country-menu'),
     type: document.getElementById('filter-type'),
+    typeToggle: document.getElementById('type-toggle'),
+    typeMenu: document.getElementById('type-menu'),
     distance: document.getElementById('filter-distance'),
     search: document.getElementById('filter-search'),
     past: document.getElementById('filter-past'),
+    reset: document.getElementById('filter-reset'),
     count: document.getElementById('races-count'),
     list: document.getElementById('races-list'),
     updated: document.getElementById('races-updated'),
@@ -130,7 +133,6 @@ function updateHash() {
 function readControls() {
     state = {
         ...state,
-        type: els.type.value,
         distance: els.distance.value,
         query: els.search.value,
         past: els.past.checked,
@@ -179,6 +181,29 @@ function syncCountryControl() {
     els.countryToggle.textContent = text;
 }
 
+// Same dropdown with checkboxes as the country filter, over the fixed list of race types.
+function syncTypeControl() {
+    for (const input of els.typeMenu.querySelectorAll('input')) {
+        input.checked = input.value ? state.types.includes(input.value) : state.types.length === 0;
+    }
+    let text = t(lang, 'allTypes');
+    if (state.types.length === 1) {
+        text = t(lang, `type${state.types[0]}`);
+    } else if (state.types.length > 1) {
+        text = `${t(lang, 'types')}: ${state.types.length}`;
+    }
+    els.typeToggle.textContent = text;
+}
+
+function buildTypeOptions() {
+    els.typeMenu.textContent = '';
+    els.typeMenu.appendChild(createCountryOption('', t(lang, 'allTypes'), null));
+    for (const type of TYPES) {
+        els.typeMenu.appendChild(createCountryOption(type, t(lang, `type${type}`), null));
+    }
+    syncTypeControl();
+}
+
 function buildCountryOptions() {
     const names = new Map();
     for (const competition of competitions) {
@@ -202,7 +227,7 @@ function buildCountryOptions() {
 
 function writeControls() {
     syncCountryControl();
-    els.type.value = state.type;
+    syncTypeControl();
     els.distance.value = state.distance;
     els.search.value = state.query;
     els.past.checked = state.past;
@@ -218,10 +243,7 @@ function applyStaticTexts() {
     for (const el of document.querySelectorAll('[data-i18n-aria]')) {
         el.setAttribute('aria-label', t(lang, el.dataset.i18nAria));
     }
-    setOptionText(els.type, '', t(lang, 'allTypes'));
-    for (const type of TYPES) {
-        setOptionText(els.type, type, t(lang, `type${type}`));
-    }
+    buildTypeOptions();
     setOptionText(els.distance, '', t(lang, 'anyDistance'));
     for (const range of DISTANCE_RANGES) {
         setOptionText(els.distance, range.key, t(lang, DISTANCE_LABEL_KEYS[range.key]));
@@ -404,7 +426,12 @@ function createMonthHeader(competition) {
     return header;
 }
 
+function hasActiveFilters() {
+    return Boolean(state.countries.length || state.types.length || state.distance || state.query || state.past);
+}
+
 function render() {
+    els.reset.disabled = !hasActiveFilters();
     if (!loaded) {
         return;
     }
@@ -530,13 +557,50 @@ function onFiltersChanged() {
     render();
 }
 
-function setCountryMenuOpen(isOpen) {
-    els.countryMenu.hidden = !isOpen;
-    els.countryToggle.setAttribute('aria-expanded', String(isOpen));
+function onResetClick() {
+    state = {...state, countries: [], types: [], distance: '', query: '', past: false};
+    writeControls();
+    updateHash();
+    render();
 }
 
+function setMenuOpen(menu, toggle, isOpen) {
+    menu.hidden = !isOpen;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+}
+
+function setCountryMenuOpen(isOpen) {
+    setMenuOpen(els.countryMenu, els.countryToggle, isOpen);
+}
+
+function setTypeMenuOpen(isOpen) {
+    setMenuOpen(els.typeMenu, els.typeToggle, isOpen);
+}
+
+// Only one dropdown is open at a time.
 function onCountryToggleClick() {
+    setTypeMenuOpen(false);
     setCountryMenuOpen(els.countryMenu.hidden);
+}
+
+function onTypeToggleClick() {
+    setCountryMenuOpen(false);
+    setTypeMenuOpen(els.typeMenu.hidden);
+}
+
+function onTypeMenuChange(changeEvent) {
+    const input = changeEvent.target;
+    const selected = new Set(state.types);
+    if (input.checked) {
+        selected.add(input.value);
+    } else {
+        selected.delete(input.value);
+    }
+    // "All types" (empty value) clears the selection; it cannot be unchecked on its own.
+    state.types = input.value ? TYPES.filter((type) => selected.has(type)) : [];
+    syncTypeControl();
+    updateHash();
+    render();
 }
 
 function onCountryMenuChange(changeEvent) {
@@ -558,12 +622,22 @@ function onDocumentClick(clickEvent) {
     if (!els.countryMenu.hidden && !els.country.contains(clickEvent.target)) {
         setCountryMenuOpen(false);
     }
+    if (!els.typeMenu.hidden && !els.type.contains(clickEvent.target)) {
+        setTypeMenuOpen(false);
+    }
 }
 
 function onDocumentKeydown(keyEvent) {
-    if (keyEvent.key === 'Escape' && !els.countryMenu.hidden) {
+    if (keyEvent.key !== 'Escape') {
+        return;
+    }
+    if (!els.countryMenu.hidden) {
         setCountryMenuOpen(false);
         els.countryToggle.focus();
+    }
+    if (!els.typeMenu.hidden) {
+        setTypeMenuOpen(false);
+        els.typeToggle.focus();
     }
 }
 
@@ -595,14 +669,17 @@ function start() {
     applyLanguage();
     writeControls();
 
-    for (const control of [els.type, els.distance, els.past]) {
+    for (const control of [els.distance, els.past]) {
         control.addEventListener('change', onFiltersChanged);
     }
     els.countryToggle.addEventListener('click', onCountryToggleClick);
     els.countryMenu.addEventListener('change', onCountryMenuChange);
+    els.typeToggle.addEventListener('click', onTypeToggleClick);
+    els.typeMenu.addEventListener('change', onTypeMenuChange);
     document.addEventListener('click', onDocumentClick);
     document.addEventListener('keydown', onDocumentKeydown);
     els.search.addEventListener('input', onFiltersChanged);
+    els.reset.addEventListener('click', onResetClick);
     els.langSwitch.addEventListener('click', onLangClick);
     window.addEventListener('hashchange', onHashChange);
 
