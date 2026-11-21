@@ -105,6 +105,16 @@
     margin-right: 4px;
 }
 
+.race-flag {
+    width: 18px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -1px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 20%);
+}
+
 .race-badge--trail {
     background-color: #4a8c4d;
 }

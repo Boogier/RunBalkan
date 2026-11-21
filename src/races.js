@@ -1,6 +1,7 @@
 import config from '~/config';
 
 import './races.css';
+import {flagUrl} from './racesFlags';
 import {
     DISTANCE_LABEL_KEYS,
     DISTANCE_RANGES,
@@ -268,12 +269,24 @@ function createPlaceCell(competition) {
     const cell = document.createElement('div');
     cell.className = 'race-place';
     if (competition.country) {
-        const badge = document.createElement('span');
-        badge.className = 'race-country';
-        badge.textContent = competition.country.code;
-        badge.style.backgroundColor = countryColor(competition.country.code);
-        badge.title = countryLabel(competition.country.code, competition.country.name);
-        cell.appendChild(badge);
+        const {code, name: countryName} = competition.country;
+        const label = countryLabel(code, countryName);
+        const url = flagUrl(code);
+        if (url) {
+            const flag = document.createElement('img');
+            flag.className = 'race-flag';
+            flag.src = url;
+            flag.alt = code;
+            flag.title = label;
+            cell.appendChild(flag);
+        } else {
+            const badge = document.createElement('span');
+            badge.className = 'race-country';
+            badge.textContent = code;
+            badge.style.backgroundColor = countryColor(code);
+            badge.title = label;
+            cell.appendChild(badge);
+        }
     }
     if (competition.city) {
         cell.appendChild(document.createTextNode(competition.city));
