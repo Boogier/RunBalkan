@@ -1,5 +1,6 @@
 import {
     DISTANCE_RANGES,
+    actualRangeStart,
     detectLanguage,
     formatCount,
     formatDistances,
@@ -119,6 +120,23 @@ test('query is diacritic-insensitive', () => {
     assert.isTrue(matchesFilters(race({city: 'Čačak'}), emptyState({query: 'cacak'}), TODAY));
     assert.isTrue(matchesFilters(race({city: 'Đerdap'}), emptyState({query: 'djerdap'}), TODAY));
     assert.isFalse(matchesFilters(race({city: 'Niš'}), emptyState({query: 'cacak'}), TODAY));
+});
+
+suite('races - actualRangeStart');
+test('goes back by the lookback window', () => {
+    assert.equal(actualRangeStart('2026-11-21', 14), '2026-11-07');
+    assert.equal(actualRangeStart('2026-11-21', 0), '2026-11-21');
+});
+test('crosses month and year boundaries', () => {
+    assert.equal(actualRangeStart('2026-01-05', 14), '2025-12-22');
+    assert.equal(actualRangeStart('2026-03-05', 14), '2026-02-19');
+});
+test('by default the range starts today', () => {
+    assert.equal(actualRangeStart('2026-11-21'), '2026-11-21');
+});
+test('invalid date gives null', () => {
+    assert.isNull(actualRangeStart('garbage'));
+    assert.isNull(actualRangeStart(undefined));
 });
 
 suite('races - formatDistances');

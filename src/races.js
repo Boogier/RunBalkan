@@ -7,6 +7,7 @@ import {
     HTML_LANG,
     LOCALES,
     TYPES,
+    actualRangeStart,
     countryColor,
     detectLanguage,
     formatCount,
@@ -26,6 +27,11 @@ const API_URL = `${new URL(config.balkanServerUrl, window.location.origin).href}
 const LANG_STORAGE_KEY = 'runBalkanRacesLang';
 const TIME_ZONE = 'Europe/Belgrade';
 const LINK_ORDER = ['website', 'facebook', 'instagram', 'email'];
+
+// 'actual': only upcoming and running races (fast first load); 'all': what the API returns by default,
+// past races included. 'all' is requested when "Show past" is turned on.
+const SCOPE_ACTUAL = 'actual';
+const SCOPE_ALL = 'all';
 
 // Constant icon markup; the only place where innerHTML is used (never for API data).
 const SVG_OPEN = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">';
@@ -61,6 +67,9 @@ const els = {
 let competitions = [];
 let updatedAt = null;
 let loaded = false;
+let loadedScope = null; // scope of the data in `competitions`
+let pendingScope = null; // scope of the request in flight
+let requestId = 0;
 let state = parseHash(window.location.hash.slice(1));
 let lang = 'en';
 
@@ -401,9 +410,88 @@ function setLanguage(newLang) {
     applyLanguage();
 }
 
+function showError() {
+    els.list.textContent = '';
+    els.list.appendChild(createMessage('loadError'));
+}
+
+function onDataLoaded(data, scope) {
+    competitions = Array.isArray(data.competitions) ? data.competitions : [];
+    updatedAt = data.updatedAt || null;
+    loaded = true;
+    loadedScope = scope;
+    pendingScope = null;
+    buildCountryOptions();
+    applyUpdated();
+    writeControls();
+    render();
+}
+
+function competitionsUrl(scope) {
+    const url = new URL(API_URL);
+    if (scope === SCOPE_ACTUAL) {
+        const from = actualRangeStart(todayIso());
+        if (from) {
+            url.searchParams.set('from', from);
+        }
+    }
+    return url.href;
+}
+
+function showLoading() {
+    els.list.textContent = '';
+    els.list.appendChild(createMessage('loading'));
+    els.count.textContent = '';
+}
+
+function loadCompetitions(scope) {
+    requestId += 1;
+    const id = requestId;
+    loaded = false;
+    loadedScope = null;
+    pendingScope = scope;
+    showLoading();
+    fetch(competitionsUrl(scope))
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            // A newer request has been started since: its answer is the one to show.
+            if (id === requestId) {
+                onDataLoaded(data, scope);
+            }
+        })
+        .catch(() => {
+            if (id === requestId) {
+                pendingScope = null;
+                showError();
+            }
+        });
+}
+
+function scopeCovers(available, needed) {
+    return available === SCOPE_ALL || available === needed;
+}
+
+// Loads data only when the current "Show past" state needs more than is loaded or already requested.
+// Turning "Show past" off needs no request: the loaded data is filtered on the client.
+function ensureData() {
+    const needed = state.past ? SCOPE_ALL : SCOPE_ACTUAL;
+    if (!scopeCovers(loadedScope, needed) && !scopeCovers(pendingScope, needed)) {
+        loadCompetitions(needed);
+    }
+}
+
 function onFiltersChanged() {
+    const wasPast = state.past;
     readControls();
     updateHash();
+    if (state.past !== wasPast) {
+        ensureData();
+    }
     render();
 }
 
@@ -413,6 +501,7 @@ function onHashChange() {
     const langChanged = newLang !== lang;
     lang = newLang;
     state = parsed;
+    ensureData();
     if (langChanged) {
         applyLanguage();
     } else {
@@ -429,33 +518,6 @@ function onLangClick(clickEvent) {
     }
 }
 
-function showError() {
-    els.list.textContent = '';
-    els.list.appendChild(createMessage('loadError'));
-}
-
-function onDataLoaded(data) {
-    competitions = Array.isArray(data.competitions) ? data.competitions : [];
-    updatedAt = data.updatedAt || null;
-    loaded = true;
-    buildCountryOptions();
-    applyUpdated();
-    writeControls();
-    render();
-}
-
-function loadCompetitions() {
-    fetch(API_URL)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(onDataLoaded)
-        .catch(showError);
-}
-
 function start() {
     lang = state.lang || readStoredLang() || detectLanguage(window.navigator.languages);
     applyLanguage();
@@ -468,7 +530,7 @@ function start() {
     els.langSwitch.addEventListener('click', onLangClick);
     window.addEventListener('hashchange', onHashChange);
 
-    loadCompetitions();
+    ensureData();
 }
 
 start();

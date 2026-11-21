@@ -185,6 +185,20 @@ function isoToUtcDate(s) {
     return parts ? new Date(Date.UTC(parts.y, parts.m - 1, parts.d)) : null;
 }
 
+// While "Show past" is off the page asks the API for races starting from today. The API filters by the start
+// date of a competition, so a multi-day race that started earlier is not returned until "Show past" is on.
+const ACTUAL_LOOKBACK_DAYS = 0;
+
+// ISO date the "actual" range starts from, or null when todayIso is not a valid date.
+function actualRangeStart(todayIso, lookbackDays = ACTUAL_LOOKBACK_DAYS) {
+    const date = isoToUtcDate(todayIso);
+    if (!date) {
+        return null;
+    }
+    date.setUTCDate(date.getUTCDate() - lookbackDays);
+    return date.toISOString().slice(0, 10);
+}
+
 // The last day of a race: the latest of its start date and the start dates of its distances.
 function lastDay(competition) {
     let last = competition.startDate;
@@ -289,6 +303,7 @@ function safeHref(link) {
 
 export {
     DISTANCE_LABEL_KEYS,
+    actualRangeStart,
     DISTANCE_RANGES,
     HTML_LANG,
     LOCALES,
