@@ -29,9 +29,12 @@
     <h1 data-i18n="heading">Running events in the Balkans and near</h1>
 
     <div class="races-filters">
-        <select id="filter-country" data-i18n-aria="country" aria-label="Country">
-            <option value="" data-i18n="allCountries">All countries</option>
-        </select>
+        <div id="filter-country" class="country-filter">
+            <button id="country-toggle" type="button" class="country-toggle" aria-haspopup="true"
+                aria-expanded="false">All countries</button>
+            <div id="country-menu" class="country-menu" role="group" data-i18n-aria="countries"
+                aria-label="Countries" hidden></div>
+        </div>
         <select id="filter-type" data-i18n-aria="type" aria-label="Type">
             <option value="" data-i18n="allTypes">All types</option>
             <option value="Trail">Trail</option>

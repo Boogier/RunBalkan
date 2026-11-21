@@ -64,6 +64,7 @@ const STRINGS = {
     dist21to42: {en: '21–42 km', sr: '21–42 km', ru: '21–42 км'},
     dist42: {en: 'Ultra 42+ km', sr: 'Ultra 42+ km', ru: 'Ультра 42+ км'},
     country: {en: 'Country', sr: 'Zemlja', ru: 'Страна'},
+    countries: {en: 'Countries', sr: 'Zemlje', ru: 'Страны'},
     type: {en: 'Type', sr: 'Tip', ru: 'Тип'},
     distance: {en: 'Distance', sr: 'Distanca', ru: 'Дистанция'},
     search: {en: 'Search by name or city', sr: 'Pretraga po nazivu ili gradu', ru: 'Поиск по названию или городу'},
@@ -136,15 +137,20 @@ function detectLanguage(navigatorLanguages) {
     return 'en';
 }
 
+// Country codes are separated by commas ('RS,ME'); a single code is the legacy one-country form.
+function parseCountries(value) {
+    const codes = (value || '').split(',').filter((code) => /^[A-Z]{2}$/u.test(code));
+    return [...new Set(codes)];
+}
+
 function parseHash(hashString) {
     const params = new URLSearchParams((hashString || '').replace(/^#/u, ''));
     const lang = params.get('lang');
-    const country = params.get('c') || '';
     const type = params.get('t') || '';
     const distance = params.get('d') || '';
     return {
         lang: LANGUAGES.includes(lang) ? lang : null,
-        country: /^[A-Z]{2}$/u.test(country) ? country : '',
+        countries: parseCountries(params.get('c')),
         type: TYPES.includes(type) ? type : '',
         distance: DISTANCE_RANGES.some((range) => range.key === distance) ? distance : '',
         query: params.get('q') || '',
@@ -157,8 +163,8 @@ function serializeHash(state) {
     if (state.lang) {
         params.set('lang', state.lang);
     }
-    if (state.country) {
-        params.set('c', state.country);
+    if (state.countries && state.countries.length) {
+        params.set('c', state.countries.join(','));
     }
     if (state.type) {
         params.set('t', state.type);
@@ -172,7 +178,8 @@ function serializeHash(state) {
     if (state.past) {
         params.set('past', '1');
     }
-    return params.toString();
+    // Keep commas readable in the URL: '#c=RS,ME' instead of '#c=RS%2CME'.
+    return params.toString().replace(/%2C/gu, ',');
 }
 
 function parseIsoDate(s) {
@@ -241,7 +248,7 @@ function matchesFilters(competition, state, todayIso) {
     if (!state.past && isPast(competition, todayIso)) {
         return false;
     }
-    if (state.country && !(competition.country && competition.country.code === state.country)) {
+    if (state.countries.length && !(competition.country && state.countries.includes(competition.country.code))) {
         return false;
     }
     if (state.type && competition.type !== state.type) {

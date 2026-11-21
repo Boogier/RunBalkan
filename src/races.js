@@ -55,6 +55,8 @@ const ICONS = {
 
 const els = {
     country: document.getElementById('filter-country'),
+    countryToggle: document.getElementById('country-toggle'),
+    countryMenu: document.getElementById('country-menu'),
     type: document.getElementById('filter-type'),
     distance: document.getElementById('filter-distance'),
     search: document.getElementById('filter-search'),
@@ -66,6 +68,7 @@ const els = {
 };
 
 let competitions = [];
+let countryItems = []; // [{code, label}] sorted by label; the options of the country filter
 let updatedAt = null;
 let loaded = false;
 let loadedScope = null; // scope of the data in `competitions`
@@ -127,20 +130,11 @@ function updateHash() {
 function readControls() {
     state = {
         ...state,
-        country: loaded ? els.country.value : state.country,
         type: els.type.value,
         distance: els.distance.value,
         query: els.search.value,
         past: els.past.checked,
     };
-}
-
-function writeControls() {
-    els.country.value = loaded ? state.country : '';
-    els.type.value = state.type;
-    els.distance.value = state.distance;
-    els.search.value = state.query;
-    els.past.checked = state.past;
 }
 
 function setOptionText(select, value, text) {
@@ -151,6 +145,40 @@ function setOptionText(select, value, text) {
     }
 }
 
+function createCountryOption(code, labelText, flagCode) {
+    const label = document.createElement('label');
+    label.className = 'country-option';
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.value = code;
+    label.appendChild(input);
+    const url = flagCode ? flagUrl(flagCode) : null;
+    if (url) {
+        const flag = document.createElement('img');
+        flag.className = 'race-flag';
+        flag.src = url;
+        flag.alt = '';
+        label.appendChild(flag);
+    }
+    label.appendChild(document.createTextNode(labelText));
+    return label;
+}
+
+// Shows the selected countries on the toggle button and keeps the checkboxes in step with the state.
+function syncCountryControl() {
+    for (const input of els.countryMenu.querySelectorAll('input')) {
+        input.checked = input.value ? state.countries.includes(input.value) : state.countries.length === 0;
+    }
+    let text = t(lang, 'allCountries');
+    if (state.countries.length === 1) {
+        const item = countryItems.find((i) => i.code === state.countries[0]);
+        text = item ? item.label : countryLabel(state.countries[0]);
+    } else if (state.countries.length > 1) {
+        text = `${t(lang, 'countries')}: ${state.countries.length}`;
+    }
+    els.countryToggle.textContent = text;
+}
+
 function buildCountryOptions() {
     const names = new Map();
     for (const competition of competitions) {
@@ -158,24 +186,26 @@ function buildCountryOptions() {
             names.set(competition.country.code, competition.country.name);
         }
     }
-    const items = [...names].map(([code, countryName]) => ({code, label: countryLabel(code, countryName)}));
-    items.sort((a, b) => a.label.localeCompare(b.label, LOCALES[lang]));
+    countryItems = [...names].map(([code, countryName]) => ({code, label: countryLabel(code, countryName)}));
+    countryItems.sort((a, b) => a.label.localeCompare(b.label, LOCALES[lang]));
 
-    els.country.textContent = '';
-    const all = document.createElement('option');
-    all.value = '';
-    all.textContent = t(lang, 'allCountries');
-    els.country.appendChild(all);
-    for (const item of items) {
-        const option = document.createElement('option');
-        option.value = item.code;
-        option.textContent = item.label;
-        els.country.appendChild(option);
+    els.countryMenu.textContent = '';
+    els.countryMenu.appendChild(createCountryOption('', t(lang, 'allCountries'), null));
+    for (const item of countryItems) {
+        els.countryMenu.appendChild(createCountryOption(item.code, item.label, item.code));
     }
-    if (loaded && state.country && !names.has(state.country)) {
-        state.country = '';
+    if (loaded) {
+        state.countries = state.countries.filter((code) => names.has(code));
     }
-    els.country.value = state.country;
+    syncCountryControl();
+}
+
+function writeControls() {
+    syncCountryControl();
+    els.type.value = state.type;
+    els.distance.value = state.distance;
+    els.search.value = state.query;
+    els.past.checked = state.past;
 }
 
 function applyStaticTexts() {
@@ -500,6 +530,43 @@ function onFiltersChanged() {
     render();
 }
 
+function setCountryMenuOpen(isOpen) {
+    els.countryMenu.hidden = !isOpen;
+    els.countryToggle.setAttribute('aria-expanded', String(isOpen));
+}
+
+function onCountryToggleClick() {
+    setCountryMenuOpen(els.countryMenu.hidden);
+}
+
+function onCountryMenuChange(changeEvent) {
+    const input = changeEvent.target;
+    const selected = new Set(state.countries);
+    if (input.checked) {
+        selected.add(input.value);
+    } else {
+        selected.delete(input.value);
+    }
+    // "All countries" (empty value) clears the selection; it cannot be unchecked on its own.
+    state.countries = input.value ? countryItems.map((i) => i.code).filter((code) => selected.has(code)) : [];
+    syncCountryControl();
+    updateHash();
+    render();
+}
+
+function onDocumentClick(clickEvent) {
+    if (!els.countryMenu.hidden && !els.country.contains(clickEvent.target)) {
+        setCountryMenuOpen(false);
+    }
+}
+
+function onDocumentKeydown(keyEvent) {
+    if (keyEvent.key === 'Escape' && !els.countryMenu.hidden) {
+        setCountryMenuOpen(false);
+        els.countryToggle.focus();
+    }
+}
+
 function onHashChange() {
     const parsed = parseHash(window.location.hash.slice(1));
     const newLang = parsed.lang || lang;
@@ -528,9 +595,13 @@ function start() {
     applyLanguage();
     writeControls();
 
-    for (const control of [els.country, els.type, els.distance, els.past]) {
+    for (const control of [els.type, els.distance, els.past]) {
         control.addEventListener('change', onFiltersChanged);
     }
+    els.countryToggle.addEventListener('click', onCountryToggleClick);
+    els.countryMenu.addEventListener('change', onCountryMenuChange);
+    document.addEventListener('click', onDocumentClick);
+    document.addEventListener('keydown', onDocumentKeydown);
     els.search.addEventListener('input', onFiltersChanged);
     els.langSwitch.addEventListener('click', onLangClick);
     window.addEventListener('hashchange', onHashChange);
