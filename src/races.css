@@ -156,6 +156,12 @@
 }
 
 @media (max-width: 859px) {
+    /* The filters wrap on mobile, so the count would sit right under the "Show past" checkbox
+       and read as if it described the past races. Separate it from the filters. */
+    .races-count {
+        margin-top: 0;
+    }
+
     .race {
         grid-template-columns: 110px minmax(0, 1fr);
     }
