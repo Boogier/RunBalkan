@@ -16,6 +16,7 @@ import {
     groupDistanceLines,
     isPast,
     isoToUtcDate,
+    linkTitle,
     matchesFilters,
     parseHash,
     safeHref,
@@ -383,8 +384,9 @@ function createLinkEl(link) {
     const a = document.createElement('a');
     a.className = 'race-link';
     a.href = href;
-    a.title = t(lang, link.type);
-    a.setAttribute('aria-label', t(lang, link.type));
+    const title = linkTitle(lang, link);
+    a.title = title;
+    a.setAttribute('aria-label', title);
     if (link.type !== 'email') {
         a.target = '_blank';
         a.rel = 'noopener noreferrer';

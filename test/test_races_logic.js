@@ -6,6 +6,7 @@ import {
     formatDistances,
     groupDistanceLines,
     inDistanceRange,
+    linkTitle,
     matchesFilters,
     parseHash,
     safeHref,
@@ -230,6 +231,20 @@ test('accepts https and mailto', () => {
     assert.equal(safeHref({type: 'email', url: 'mailto:a@b.rs'}), 'mailto:a@b.rs');
     assert.isNull(safeHref({type: 'email', url: 'a@b.rs'}));
     assert.isNull(safeHref({type: 'unknown', url: 'https://x'}));
+});
+
+suite('races - linkTitle');
+test('website title shows the host', () => {
+    assert.equal(linkTitle('ru', {type: 'website', url: 'https://example.rs/race/2026?x=1'}), 'Сайт: example.rs');
+    assert.equal(linkTitle('en', {type: 'website', url: 'https://www.example.rs/'}), 'Website: www.example.rs');
+});
+test('email title shows the address', () => {
+    assert.equal(linkTitle('ru', {type: 'email', url: 'mailto:info@race.rs'}), 'Почта: info@race.rs');
+    assert.equal(linkTitle('en', {type: 'email', url: 'mailto:info@race.rs?subject=Hi'}), 'Email: info@race.rs');
+});
+test('other types and bad urls keep the plain label', () => {
+    assert.equal(linkTitle('ru', {type: 'facebook', url: 'https://facebook.com/x'}), 'Facebook');
+    assert.equal(linkTitle('ru', {type: 'website', url: 'not a url'}), 'Сайт');
 });
 
 suite('races - formatCount');

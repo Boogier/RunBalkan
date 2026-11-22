@@ -315,6 +315,28 @@ function safeHref(link) {
     return null;
 }
 
+// Tooltip of a link icon: "Website: host" / "Email: address"; other types keep the plain label.
+function linkTitle(lang, link) {
+    const label = t(lang, link.type);
+    const url = link && link.url ? String(link.url) : '';
+    let detail = '';
+    if (link.type === 'website') {
+        try {
+            detail = new URL(url).hostname;
+        } catch {
+            detail = '';
+        }
+    } else if (link.type === 'email') {
+        detail = url.replace(/^mailto:/iu, '').split('?')[0];
+        try {
+            detail = decodeURIComponent(detail);
+        } catch {
+            // keep the raw text
+        }
+    }
+    return detail ? `${label}: ${detail}` : label;
+}
+
 export {
     DISTANCE_LABEL_KEYS,
     actualRangeStart,
@@ -330,6 +352,7 @@ export {
     inDistanceRange,
     isPast,
     isoToUtcDate,
+    linkTitle,
     matchesFilters,
     parseHash,
     safeHref,
