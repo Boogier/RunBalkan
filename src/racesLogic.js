@@ -84,6 +84,7 @@ const STRINGS = {
         ru: 'Не удалось загрузить соревнования. Попробуйте позже.',
     },
     regTill: {en: 'reg. till {date}', sr: 'prijave do {date}', ru: 'рег. до {date}'},
+    cancelled: {en: 'Cancelled', sr: 'Otkazano', ru: 'Отменено'},
     km: {en: 'km', sr: 'km', ru: 'км'},
     sources: {en: 'Sources:', sr: 'Izvori:', ru: 'Источники:'},
     website: {en: 'Website', sr: 'Sajt', ru: 'Сайт'},

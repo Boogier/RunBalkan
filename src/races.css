@@ -170,6 +170,30 @@
     text-overflow: ellipsis;
 }
 
+.race-cancelled {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 0 5px;
+    border-radius: 3px;
+    background-color: #c6363c;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.race--cancelled .race-name a,
+.race--cancelled .race-name > span:not(.race-cancelled) {
+    text-decoration: line-through;
+}
+
+.race--cancelled .race-date,
+.race--cancelled .race-place,
+.race--cancelled .race-type,
+.race--cancelled .race-distances {
+    color: #999;
+}
+
 .race-country,
 .race-badge {
     display: inline-block;

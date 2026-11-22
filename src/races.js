@@ -314,6 +314,13 @@ function createNameCell(competition) {
     }
     el.textContent = competition.name;
     el.title = competition.description ? `${competition.name}\n\n${competition.description}` : competition.name;
+    // The badge goes first so that the ellipsis of a long name never hides it.
+    if (competition.cancelled) {
+        const badge = document.createElement('span');
+        badge.className = 'race-cancelled';
+        badge.textContent = t(lang, 'cancelled');
+        cell.appendChild(badge);
+    }
     cell.appendChild(el);
     return cell;
 }
@@ -411,7 +418,14 @@ function createLinksCell(competition) {
 
 function createRow(competition, today) {
     const row = document.createElement('div');
-    row.className = isPast(competition, today) ? 'race race--past' : 'race';
+    const classes = ['race'];
+    if (isPast(competition, today)) {
+        classes.push('race--past');
+    }
+    if (competition.cancelled) {
+        classes.push('race--cancelled');
+    }
+    row.className = classes.join(' ');
     row.appendChild(createDateCell(competition));
     row.appendChild(createNameCell(competition));
     row.appendChild(createPlaceCell(competition));
